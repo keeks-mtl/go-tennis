@@ -1,6 +1,43 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-<h1 class="display-4 text-success">IT Works!!!</h1>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Go-Tennis</h1>
+        <p class="lead">World class tennis lessons by professional tennis players</p>
+        <hr class="my-4">
+        <p>Teaching that suits your capabilities when it's suitable for you</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col 4 my-5">
+                <h2>Get Ready For Lessons</h2>
+                <a href="" class="btn btn-light btn-large text-uppercase rounded-0">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2>Keep up to date on Go-Tennis</h2>
+                <a href="" class="btn btn-light btn-large"><i class="fas fa-plus-circle"></i> Join Our Newsletter</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="http://clissoldpark.com/wp-content/uploads/2014/03/clissold-park-map-web.jpg" alt="map of park">
+            </div>
+        </div>
+    </div>
 {% endblock %}
