@@ -15,6 +15,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -33,11 +34,14 @@
     <title>Go-Tennis {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
-        <div class="row">
-            <div class="col-12 col-lg-2 my-auto py-1 py-lg-0 text-lg-left">
+    <header class="nav-container container-fluid fixed-top">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2><strong>Go</strong>-Tennis</h2>
+                    <h3>
+                        <img src="/media/go_tennis_logo.png" class="d-inline-block" width="69" height="60" alt="">
+                        <strong>Go</strong>-Tennis
+                    </h3>
                 </a>
             </div>
             <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
@@ -54,8 +58,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-8 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <div class="col-12 col-lg-7 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
