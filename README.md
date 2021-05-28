@@ -254,14 +254,13 @@ Image_url | image_url | max_length=1024, null=True, blank=True | models.URLField
 Image | image | upload_to='', null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
 Rating | rating | max_digits=6, decimals_places=2, null=True, blank=True | models.DecimalField
 Has_sizes | has_sizes | default=False, null=True, blank=True | models.BooleanField
-has_skills | has_skills | default=False, null=True, blank=True | models.BooleanField
 
 #### Category
 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
 Name | name | max_length=254 | models.CharField 
-Friendly_name | friendly_name | `maxlength="254"` | models.CharField
+Friendly_name | friendly_name | `maxlength="254", null=True, blank=True` | models.CharField
 
 ### Profile App
 #### User Profile
