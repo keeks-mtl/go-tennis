@@ -37,6 +37,10 @@ body {
     color: black;
     border-color: var(--extra-color);
 }
+.badge-green {
+    background-color: var(--main-color);
+    color: white;
+}
 
 /* containers */
 .container-shop {
