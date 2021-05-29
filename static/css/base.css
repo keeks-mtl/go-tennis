@@ -27,6 +27,10 @@ body {
     background-color: var(--secondary-color);
     color: var(--third-color);
 }
+.btn-main:hover {
+    background-color: var(--main-color);
+    color: var(--third-color);
+}
 
 .btn-grey {
     background-color: var(--third-color);
@@ -40,6 +44,11 @@ body {
 .badge-green {
     background-color: var(--main-color);
     color: white;
+}
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
 }
 
 /* containers */
