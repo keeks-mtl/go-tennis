@@ -17,10 +17,10 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="categories-link">
-                <a href="" class="dropdown-item">Tennis Rackets</a>
-                <a href="" class="dropdown-item">Tennis Racket Bags</a>
-                <a href="" class="dropdown-item">Tennis Balls</a>
-                <a href="" class="dropdown-item">All Categories</a>
+                <a href="{% url 'products' %}?category=rackets" class="dropdown-item">Tennis Rackets</a>
+                <a href="{% url 'products' %}?category=bags" class="dropdown-item">Tennis Racket Bags</a>
+                <a href="{% url 'products' %}?category=balls" class="dropdown-item">Tennis Balls</a>
+                <a href="{% url 'products' %}?category=rackets,bags,balls" class="dropdown-item">All Categories</a>
             </div>
         </li>
     </ul>
