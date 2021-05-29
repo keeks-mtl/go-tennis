@@ -99,6 +99,23 @@ body {
     margin-top: 100px;
 }
 
+/* toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* jumbotron */
 .jumbotron {
     background: url('/media/homepage_background.jpg') no-repeat center center fixed;
