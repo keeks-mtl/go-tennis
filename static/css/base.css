@@ -50,7 +50,14 @@ body {
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
-
+.decrement-qty:disabled {
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+}
+.increment-qty:disabled {
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+}
 /* containers */
 .container-shop {
     padding: 40px;
