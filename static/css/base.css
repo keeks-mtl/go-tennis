@@ -13,12 +13,16 @@ body {
     height: calc(100vh - 164px);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* nav bar */
 #topnav {
     background-color:var(--extra-color) !important;
 }
 #topnav a {
     color: black;
 }
+
+/* buttons */
 .btn-main {
     background-color: var(--secondary-color);
     color: var(--third-color);
@@ -34,6 +38,7 @@ body {
     border-color: var(--extra-color);
 }
 
+/* containers */
 .container-shop {
     padding: 40px;
     background-color: var(--secondary-color);
@@ -52,6 +57,11 @@ body {
 .container-map img{
     height: 300px;
 }
+
+.header-container {
+    margin-top: 120px;
+}
+
 /* jumbotron */
 
 .jumbotron {
