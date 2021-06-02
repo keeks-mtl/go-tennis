@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-space container">
+        <div class="row text-center">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">About Lessons</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="image-container my-5">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1602012846858-0727988e215b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="tennis shoes on a tennis court">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-8 text-center">
+                <div class="lessons-details-container mb-5 mt-md-5">
+                    <p>
+                        Go-Tennis is adult tennis coaching located in Stoke Newington, Borough of Hackney, East London. Adult tennis lessons for 
+                        all levels.
+                    </p>
+                    <p>
+                        Go-Tennis is an innovative social enterprise, it was founded in 2012 sharing the Lawn Tennis Association's (LTA) vision 
+                        to open tennis up to anyone and everyone. With the firm purpose of providing access to high-quality tennis coaching and 
+                        professional management services into places it has never been before, developing successful people in all aspects of life, 
+                        using tennis as the vehicle for personal development. 
+                    </p>
+                </div>
+                <a href="" class="btn btn-info btn-large text-uppercase">Coaches</a>
+                <a href="" class="btn btn-info btn-large text-uppercase">Book a Lesson</a>
+            </div>
+        <hr class="w-50 mb-1">
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="lessons-details-container mb-5 mt-md-5">
+                    <h2>Beginner Lessons</h2>
+                    <p>
+                        This class is designed to introduce new players to the basics of tennis. Throughout the course, 
+                        adults will cover groundstrokes, footwork, netplay and serve. Learn techniques, practice drills,
+                        and approaches to the game of tennis, by learning tennis fundamentals and basic skills.
+                    </p>
+                </div>
+                <a href="" class="btn btn-info btn-med text-uppercase">Book Now</a>
+            </div>
+        <hr class="w-50 mb-1">
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="lessons-details-container mb-5 mt-md-5">
+                    <h2>Intermediate Lessons</h2>
+                    <p>
+                        This course is for players with some basic tennis skills who can hit an oncoming ball regularly. 
+                        Here players will further develop the technical forms of their forehand, backhand, volley and serve. 
+                        Players will also develop a greater understanding of the net play, footwork, court placement, and basic 
+                        tactics.
+                    </p>
+                </div>
+                <a href="" class="btn btn-info btn-med text-uppercase">Book Now</a>
+            </div>
+        <hr class="w-50 mb-1">
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="lessons-details-container mb-5 mt-md-5">
+                    <h2>Advanced Lessons</h2>
+                    <p>
+                        This course is focused on competition. It will be an important physical and tactical part, finding the 
+                        individual natural technique and tactics for each player getting the max of them in a game environment. 
+                        Players will be invited to join our tennis teams in order to start competing in local tournaments.
+                    </p>
+                </div>
+                <a href="" class="btn btn-info btn-med text-uppercase">Book Now</a>
+            </div>
+        <hr class="w-50 mb-1">
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="lessons-details-container mb-5 mt-md-5">
+                    <h2>Private Lessons</h2>
+                    <p>
+                        Go-Tennis has a group of professionals who are focused and committed to work on the game of each individual. 
+                        What characterizes us is: a modern approach to the training, the most advanced methodologies, work programs 
+                        and development of each individual - the players, amateurs, beginners, formed professionals...
+                    </p>
+                    <p>
+                        Each player has a potential, which we develop through sessions that will be suitable for each individual in 
+                        particular, and we help them form their own style, which will guide them to find solutions to the problems on 
+                        the court. We always motivate players to try to reach their full potential. Our one to one sessions are designed 
+                        according to the LTA´s coaching pathway, combining the physical, mental, technical and strategic aspects of the 
+                        game to ensure that all players reach their highest level. 
+                    </p>
+                </div>
+                <a href="" class="btn btn-info btn-med text-uppercase">Book Now</a>
+            </div>
+        <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="container-fluid container-shop">
+        <div class="row text-center">
+            <div class="col">
+                <h2>Get Ready For Lessons</h2>
+                <a href="{% url 'products' %}" class="btn btn-grey btn-large text-uppercase">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
