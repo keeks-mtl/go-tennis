@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-space container">
+        <div class="row text-center">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Lessons Schedule</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            {% for lesson in lessons %}
+            <div class="col-12">
+                <h2>{{ lesson.id }}</h2>
+            </div>
+            {% endfor %}
+        </div>
+    
+    <div class="container-fluid container-shop">
+        <div class="row text-center">
+            <div class="col">
+                <h2>Get Ready For Lessons</h2>
+                <a href="{% url 'products' %}" class="btn btn-grey btn-large text-uppercase">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
