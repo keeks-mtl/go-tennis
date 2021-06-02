@@ -18,7 +18,7 @@ class Lesson(models.Model):
         'ClassType', null=True, blank=True, on_delete=models.SET_NULL)
     id = models.CharField(primary_key=True, max_length=40, null=False, blank=False)
     coach = models.CharField(max_length=30, null=True, blank=True)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     price = models.DecimalField(
         max_digits=6, decimal_places=2)
     date = models.DateField(null=True, blank=True)
