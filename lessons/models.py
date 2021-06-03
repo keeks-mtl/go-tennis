@@ -16,7 +16,7 @@ class ClassType(models.Model):
 class Lesson(models.Model):
     class_type = models.ForeignKey(
         'ClassType', null=True, blank=True, on_delete=models.SET_NULL)
-    id = models.CharField(primary_key=True, max_length=40, null=False, blank=False)
+    name = models.CharField(max_length=40, null=True, blank=True)
     coach = models.CharField(max_length=30, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     price = models.DecimalField(
@@ -27,4 +27,4 @@ class Lesson(models.Model):
     students = models.CharField(max_length=30, null=True, blank=True)
 
     def __str__(self):
-        return self.id
+        return self.name
