@@ -7,6 +7,7 @@ from .models import ClassType, Lesson
 class LessonAdmin(admin.ModelAdmin):
     list_display = (
         'id',
+        'name',
         'price',
         'coach',
         'date',
