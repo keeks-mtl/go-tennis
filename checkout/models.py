@@ -7,6 +7,7 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from products.models import Product
+from lessons.models import Lesson
 
 
 class Order(models.Model):
@@ -76,3 +77,20 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
+
+
+class LessonLineItem(models.Model):
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lessonlineitems')
+    lesson = models.ForeignKey(Lesson, null=False, blank=False, on_delete=models.CASCADE)
+    lesson_lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the lineitem total
+        and update the order total.
+        """
+        self.lesson_lineitem_total = self.lesson.price
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f'Lesson on {self.lesson.date} at {self.lesson.time} on order {self.order.order_number}'

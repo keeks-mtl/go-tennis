@@ -4,8 +4,9 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, LessonLineItem
 from products.models import Product
+from lessons.models import Lesson
 from bag.contexts import bag_contents
 
 import stripe
@@ -18,6 +19,7 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
+            'lesson_bag': json.dumps(request.session.get('lesson_bag', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -34,6 +36,7 @@ def checkout(request):
 
     if request.method == "POST":
         bag = request.session.get('bag', {})
+        lesson_bag = request.session.get('lesson_bag', {})
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -52,7 +55,24 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            order.original_lesson_bag = json.dumps(lesson_bag)
             order.save()
+            for item_id, item_data in lesson_bag.items():
+                try:
+                    lesson = Lesson.objects.get(id=item_id)
+                    if isinstance(item_data, int):
+                        lesson_line_item = LessonLineItem(
+                            order=order,
+                            lesson=lesson,
+                        )
+                        lesson_line_item.save()
+                except Lesson.DoesNotExist:
+                    messages.error(request, (
+                        "One of the lesson's in your bag wasn't found in our database. "
+                        "Please call us for assistance!")
+                    )
+                    order.delete()
+                    return redirect(reverse('view_bag'))
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -88,7 +108,8 @@ def checkout(request):
 
     else:
         bag = request.session.get('bag', {})
-        if not bag:
+        lesson_bag = request.session.get('lesson_bag', {})
+        if not bag or not lesson_bag:
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
@@ -129,6 +150,9 @@ def checkout_success(request, order_number):
 
     if 'bag' in request.session:
         del request.session['bag']
+
+    if 'lesson_bag' in request.session:
+        del request.session['lesson_bag']
 
     template = 'checkout/checkout_success.html'
     context = {
