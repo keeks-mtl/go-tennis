@@ -19,8 +19,25 @@
         </div>
         <div class="row">
             {% for lesson in lessons %}
-            <div class="col-12">
-                <h2>{{ lesson.id }}</h2>
+            <div class="col-2">
+                <form action="" method="">
+                {% csrf_token %}
+                    <div class="card">
+                        <div class="card-body">
+                        {% if lesson.class_type %}
+                            <h5 class="card-title">{{ lesson.class_type.friendly_name }}</h5>
+                        {% endif %}
+                        <p class="card-text">{{ lesson.coach }}</p>
+                        <p class="card-text">{{ lesson.date }}</p>
+                        <p class="card-text">{{ lesson.time }}</p>
+                        <p class="card-text">{{ lesson.price }}</p>
+                        {% if lesson.spots > 0 %}
+                            <input type="submit" class="btn btn-main text-uppercase mt-5" value="Add to Bag">
+                        {% endif %}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </div>
+                </form>
             </div>
             {% endfor %}
         </div>
