@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 
-from products.models import  Product
+from products.models import Product
+from lessons.models import Lesson
 
 # Create your views here.
 
@@ -45,6 +46,24 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
+
+def book_lesson(request, item_id):
+    """ Add a lesson to the shopping bag """
+
+    lesson = get_object_or_404(Lesson, pk=item_id)
+    lesson_bag = request.session.get('lesson_bag', {})
+    quantity = int(1)
+
+    if item_id in list(lesson_bag.keys()):
+        messages.success(request, f'Lesson on {lesson.date} is already in your bag')
+    else:
+        lesson_bag[item_id] = quantity
+        messages.success(request, f"You've booked a lesson on {lesson.date} at {lesson.time}")
+
+    request.session['lesson_bag'] = lesson_bag
+    return redirect('view_bag')
+
+
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
@@ -73,7 +92,7 @@ def adjust_bag(request, item_id):
             messages.success(request, f'Removed {product.name} from your bag')
 
     request.session['bag'] = bag
-    return redirect(reverse('view_bag'))
+    return redirect('view_bag')
 
 
 def remove_from_bag(request, item_id):
@@ -100,4 +119,21 @@ def remove_from_bag(request, item_id):
 
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
+
+
+def remove_lesson(request, item_id):
+    """Remove lesson from the shopping bag"""
+
+    try:
+        lesson = get_object_or_404(Lesson, pk=item_id)
+        lesson_bag = request.session.get('lesson_bag', {})
+        lesson_bag.pop(item_id)
+        messages.success(request, f'Removed lesson on {lesson.date} from your bag at {lesson.time}')
+
+        request.session['lesson_bag'] = lesson_bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing lesson: {e}')
         return HttpResponse(status=500)
