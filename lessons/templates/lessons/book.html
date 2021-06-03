@@ -20,7 +20,7 @@
         <div class="row">
             {% for lesson in lessons %}
             <div class="col-2">
-                <form action="" method="">
+                <form class="form" action="{% url 'book_lesson' lesson.id %}" method="POST">
                 {% csrf_token %}
                     <div class="card">
                         <div class="card-body">
@@ -32,9 +32,8 @@
                         <p class="card-text">{{ lesson.time }}</p>
                         <p class="card-text">{{ lesson.price }}</p>
                         {% if lesson.spots > 0 %}
-                            <input type="submit" class="btn btn-main text-uppercase mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn-main text-uppercase mt-5" value="Book Lesson">
                         {% endif %}
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </div>
                 </form>
