@@ -1,0 +1,1 @@
+[{"model": "products.category", "pk": 1, "fields": {"name": "rackets", "friendly_name": "Tennis Rackets"}}, {"model": "products.category", "pk": 2, "fields": {"name": "balls", "friendly_name": "Tennis Balls"}}, {"model": "products.category", "pk": 3, "fields": {"name": "bags", "friendly_name": "Tennis Racket Bags"}}]
