@@ -69,7 +69,8 @@ body {
 
 .btt-link,
 .update-link,
-.remove-item {
+.remove-item,
+.remove-lesson {
     cursor: pointer;
 }
 /* containers */
