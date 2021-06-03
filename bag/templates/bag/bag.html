@@ -21,6 +21,7 @@
         </div>
 
         {% if lesson_bag_items or bag_items %}
+            {% if lesson_bag_items %}
             <h5><strong>Lesson Info</strong></h5>
             <div class="row">
                 <div class="col">
@@ -57,6 +58,7 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
         <div class="row">
             <div class="col">
                     <div class="table-responsive rounded">
