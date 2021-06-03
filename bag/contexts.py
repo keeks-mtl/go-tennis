@@ -2,7 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
-
+from lessons.models import Lesson
 
 def bag_contents(request):
 
@@ -10,6 +10,21 @@ def bag_contents(request):
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
+    lesson_bag_items = []
+    lesson_total = 0
+    lesson_count = 0
+    lesson_bag = request.session.get('lesson_bag', {})
+
+    for item_id, item_data in lesson_bag.items():
+        if isinstance(item_data, int):
+            lesson = get_object_or_404(Lesson, pk=item_id)
+            lesson_total += item_data * lesson.price
+            lesson_count += item_data
+            lesson_bag_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'lesson': lesson,
+            })
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
@@ -40,12 +55,15 @@ def bag_contents(request):
         delivery = 0
         free_delivery_delta = 0
 
-    grand_total = delivery + total
+    grand_total = delivery + total + lesson_total
 
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
+        'lesson_bag_items': lesson_bag_items,
+        'lesson_total': lesson_total,
+        'lesson_count': lesson_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
