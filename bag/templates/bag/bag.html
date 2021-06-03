@@ -20,12 +20,49 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col">
-                {% if bag_items %}
+        {% if lesson_bag_items or bag_items %}
+            <h5><strong>Lesson Info</strong></h5>
+            <div class="row">
+                <div class="col">
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Date & Time</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Coach</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            {% for item in lesson_bag_items %}
+                                <tr>
+                                    <td class="p-3 w-40">
+                                        <p class="card-text">Lesson on {{ item.lesson.date }} at {{ item.lesson.time}} for 1 hour</p>
+                                    </td>
+                                    <td class="py-3">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="card-text text-capitalize">{{ item.lesson.coach }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="card-text">${{ item.lesson.price }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <a class="remove-lesson text-danger float-right" id="remove_lesson_{{ item.item_id }}"<small>Remove</small></a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col">
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                {% if bag_items %}
                                 <tr>
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
@@ -33,6 +70,7 @@
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
                                 </tr>
+                                {% endif %}
                             </thead>
 
                             {% for item in bag_items %}
@@ -89,7 +127,10 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                    {% if lesson_total %}
+                                    <h6><strong>Lesson Total: ${{ lesson_total|floatformat:2 }}</strong></h6>
+                                    {% endif %}
+                                    <h6><strong>Shop Total: ${{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
@@ -149,6 +190,19 @@
         var size = $(this).data('product_size');
         var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+
+     // Remove lesson and reload on click
+    $('.remove-lesson').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_lesson_')[1];
+        var url = `/bag/remove_lesson/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
          .done(function() {
