@@ -53,7 +53,18 @@ def all_lessons(request):
 
 def add_lesson(request):
     """ Add a lesson to the booking page """
-    form = LessonForm()
+    
+    if request.method == 'POST':
+        form = LessonForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added lesson!')
+            return redirect(reverse('add_lesson'))
+        else:
+            messages.error(request, 'Failed to add lesson. Please ensure the form is valid.')
+    else:
+        form = LessonForm()
+
     template = 'lessons/add_lesson.html'
     context = {
         'form': form,
