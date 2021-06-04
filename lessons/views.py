@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models.functions import Lower
 
 from .models import Lesson, ClassType
+from .forms import LessonForm
 
 # Create your views here.
 
@@ -48,3 +49,14 @@ def all_lessons(request):
     }
 
     return render(request, 'lessons/book.html', context)
+
+
+def add_lesson(request):
+    """ Add a lesson to the booking page """
+    form = LessonForm()
+    template = 'lessons/add_lesson.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
