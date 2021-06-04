@@ -4,14 +4,21 @@
 {% block content %}
     <div class="container-fluid container-space">
         <div class="row">
-            <div class="col col-md-5 text-center">
+            <div class="col text-center">
                 <h2 class="logo-font">Coaches</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        <div class="row">
-            <div class="col col-md-10 offset-1">
+        <div class="row text-center">
+            {% for coach in coaches %}
+            <div class="col col-md-5 offset-1">
+                <img class="w-75" src="{{ coach.image.url }}" alt="">
+                <p>{{ coach.first_name}}</p>
             </div>
+            <div class="col col-md-5">
+                {{ coach.description}}
+            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
