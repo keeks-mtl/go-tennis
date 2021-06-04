@@ -134,6 +134,10 @@ input[name='q']::placeholder {
     margin-top: 100px;
 }
 
+.header-margin {
+    margin-top: 100px;
+}
+
 /* toasts */
 
 .message-container {
