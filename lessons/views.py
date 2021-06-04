@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 
 from .models import Lesson, ClassType
 from .forms import LessonForm
@@ -51,9 +52,14 @@ def all_lessons(request):
     return render(request, 'lessons/book.html', context)
 
 
+@login_required
 def add_lesson(request):
     """ Add a lesson to the booking page """
-    
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = LessonForm(request.POST, request.FILES)
         if form.is_valid():
@@ -73,8 +79,14 @@ def add_lesson(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_lesson(request, lesson_id):
     """ Edit a lesson in the store """
+    
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     if request.method == 'POST':
         form = LessonForm(request.POST, request.FILES, instance=lesson)
@@ -97,8 +109,14 @@ def edit_lesson(request, lesson_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_lesson(request, lesson_id):
     """ Delete a lesson from the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     lesson.delete()
     messages.success(request, 'Lesson deleted!')
