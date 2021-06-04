@@ -54,6 +54,12 @@
                                                     {% endif %}{{ item.product.name }} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}
+                                            {% for item in order.lessonlineitems.all %}
+                                                <li class="small text-capitalize">
+                                                    lesson on {{ item.lesson.date }}
+                                                    @ {{ item.lesson.time }}
+                                                </li>
+                                            {% endfor %}
                                         </ul>
                                     </td>
                                     <td>${{ order.grand_total }}</td>
