@@ -36,11 +36,19 @@ body {
     background-color: var(--third-color);
     color: black;
 }
+
 .btn-info {
     background-color: var(--extra-color);
     color: black;
     border-color: var(--extra-color);
 }
+
+.btn-info:hover {
+    background-color: var(--main-color);
+    color: white;
+    border-color: var(--main-color);
+}
+
 .badge-green {
     background-color: var(--main-color);
     color: white;
