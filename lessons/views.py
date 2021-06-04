@@ -79,9 +79,9 @@ def edit_lesson(request, lesson_id):
     if request.method == 'POST':
         form = LessonForm(request.POST, request.FILES, instance=lesson)
         if form.is_valid():
-            form.save()
+            lesson = form.save()
             messages.success(request, 'Successfully updated Lesson!')
-            return redirect(reverse('lesson'))
+            return redirect(reverse('all_lessons'))
         else:
             messages.error(request, 'Failed to update lesson. Please ensure the form is valid.')
     else:
@@ -95,3 +95,11 @@ def edit_lesson(request, lesson_id):
     }
 
     return render(request, template, context)
+
+
+def delete_lesson(request, lesson_id):
+    """ Delete a lesson from the store """
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
+    lesson.delete()
+    messages.success(request, 'Lesson deleted!')
+    return redirect(reverse('lessons'))

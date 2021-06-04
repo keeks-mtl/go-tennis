@@ -1,14 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
     <div class="container-space container">
         <div class="row text-center">
@@ -67,6 +59,12 @@
                             <p class="card-text">{{ lesson.date }}</p>
                             <p class="card-text">{{ lesson.time }}</p>
                             <p class="card-text">{{ lesson.price }}</p>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_lesson' lesson.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_lesson' lesson.id %}">Delete</a>
+                            </small>
+                        {% endif %}
                         </div>
                         <div class="card-body p-0">
                             {% if lesson.spots > 0 %}
