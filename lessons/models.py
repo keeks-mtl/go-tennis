@@ -1,5 +1,7 @@
 from django.db import models
 
+from coaches.models import Coach
+
 
 class ClassType(models.Model):
 
@@ -17,7 +19,7 @@ class Lesson(models.Model):
     class_type = models.ForeignKey(
         'ClassType', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=40, null=True, blank=True)
-    coach = models.CharField(max_length=30, null=True, blank=True)
+    coach = models.ForeignKey(Coach, null=True, blank=True, on_delete=models.SET_NULL)
     description = models.TextField(null=True, blank=True)
     price = models.DecimalField(
         max_digits=6, decimal_places=2)
