@@ -73,6 +73,11 @@ body {
 .remove-lesson {
     cursor: pointer;
 }
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 /* containers */
 .container-shop {
     padding: 40px;
