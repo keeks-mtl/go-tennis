@@ -16,7 +16,15 @@
                 <p>{{ coach.first_name}}</p>
             </div>
             <div class="col col-md-5">
-                {{ coach.description}}
+                {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_coach' coach.id %}">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_coach' coach.id %}">Delete</a>
+                    </small>
+                {% endif %}
+                <div>
+                    {{ coach.description}}
+                </div>
                 <div>
                     <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
                 </div>
