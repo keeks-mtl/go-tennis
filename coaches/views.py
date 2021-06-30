@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Coach
 from .forms import CoachForm
@@ -18,8 +19,13 @@ def view_coaches(request):
     return render(request, 'coaches/coaches.html', context)
 
 
+@login_required
 def add_coach(request):
     """ Add a coach to the coaches page """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the owners can do that.')
+        return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = CoachForm(request.POST, request.FILES)
@@ -40,8 +46,14 @@ def add_coach(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_coach(request, lesson_id):
     """ Edit a coach's information """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the owners can do that.')
+        return redirect(reverse('home'))
+
     coach = get_object_or_404(Coach, pk=coach_id)
     if request.method == 'POST':
         form = CoachForm(request.POST, request.FILES, instance=coach)
@@ -64,8 +76,14 @@ def edit_coach(request, lesson_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_coach(request, coach_id):
     """ Delete a coach from the coaches page """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     coach = get_object_or_404(Coach, pk=coach_id)
     coach.delete()
     messages.success(request, 'Coach deleted!')
