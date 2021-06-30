@@ -12,8 +12,18 @@
         <div class="row text-center">
             {% for coach in coaches %}
             <div class="col col-md-5 offset-1">
-                <img class="w-75" src="{{ coach.image.url }}" alt="">
-                <p>{{ coach.first_name}}</p>
+                {% if coach.image %}
+                    <a href="{{ coach.image.url }}" target="_blank">
+                        <img class="w-75" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
+                    </a>
+                {% else %}
+                    <a href="">
+                        <img class="w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ coach.first_name }}">
+                    </a>
+                {% endif %}
+                <p>{{ coach.first_name }}</p>
+                <button class="btn btn-large btn-light">{{ coach.coach_id }}</button>
+                
             </div>
             <div class="col col-md-5">
                 {% if request.user.is_superuser %}
@@ -22,12 +32,10 @@
                         <a class="text-danger" href="{% url 'delete_coach' coach.id %}">Delete</a>
                     </small>
                 {% endif %}
-                <div>
+                <p>
                     {{ coach.description}}
-                </div>
-                <div>
-                    <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
-                </div>
+                </p>
+                <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
             </div>
             {% endfor %}
         </div>
