@@ -38,3 +38,26 @@ def add_coach(request):
     }
 
     return render(request, template, context)
+
+def edit_coach(request, lesson_id):
+    """ Edit a coach's information """
+    coach = get_object_or_404(Coach, pk=coach_id)
+    if request.method == 'POST':
+        form = CoachForm(request.POST, request.FILES, instance=coach)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated coach!')
+            return redirect(reverse('coach'))
+        else:
+            messages.error(request, 'Failed to update coach. Please ensure the form is valid.')
+    else:
+        form = CoachForm(instance=coach)
+        messages.info(request, f"You are editing a coach's informaiton")
+
+    template = 'coaches/edit_coach.html'
+    context = {
+        'form': form,
+        'coach': coach,
+    }
+
+    return render(request, template, context)
