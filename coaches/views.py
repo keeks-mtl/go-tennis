@@ -20,7 +20,18 @@ def view_coaches(request):
 
 def add_coach(request):
     """ Add a coach to the coaches page """
-    form = CoachForm()
+
+    if request.method == 'POST':
+        form = CoachForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added coach!')
+            return redirect(reverse('add_coach'))
+        else:
+            messages.error(request, 'Failed to add coach. Please ensure the form is valid.')
+    else:
+        form = CoachForm()
+
     template = 'coaches/add_coach.html'
     context = {
         'form': form,
