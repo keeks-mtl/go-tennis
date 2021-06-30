@@ -47,7 +47,7 @@ def add_coach(request):
 
 
 @login_required
-def edit_coach(request, lesson_id):
+def edit_coach(request, coach_id):
     """ Edit a coach's information """
 
     if not request.user.is_superuser:
