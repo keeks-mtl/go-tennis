@@ -8,6 +8,7 @@ class LessonForm(forms.ModelForm):
         model = Lesson
         fields = '__all__'
 
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         class_type = ClassType.objects.all()
