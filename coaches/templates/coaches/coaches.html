@@ -17,6 +17,9 @@
             </div>
             <div class="col col-md-5">
                 {{ coach.description}}
+                <div>
+                    <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
+                </div>
             </div>
             {% endfor %}
         </div>

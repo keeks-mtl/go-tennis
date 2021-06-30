@@ -17,4 +17,4 @@ class CoachAdmin(admin.ModelAdmin):
     ordering = ('first_name',)
 
 
-admin.site.register(Coach)
+admin.site.register(Coach, CoachAdmin)
