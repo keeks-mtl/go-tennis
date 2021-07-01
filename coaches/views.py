@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Coach
-from .forms import CoachForm
+from .models import Coach, Comment
+from .forms import CoachForm, CommentForm
 
 # Create your views here.
 
@@ -17,6 +17,18 @@ def view_coaches(request):
         'coaches': coaches,
     }
     return render(request, 'coaches/coaches.html', context)
+
+
+def view_coach(request, coach_id):
+    """ A view to show a particular coaches page and their comments"""
+
+    coach = get_object_or_404(Coach, pk=coach_id)
+
+    context = {
+        "coach": coach,
+    }
+
+    return render(request, 'coaches/coach.html', context)
 
 
 @login_required

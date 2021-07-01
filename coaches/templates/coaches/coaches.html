@@ -11,32 +11,34 @@
         </div>
         <div class="row text-center">
             {% for coach in coaches %}
-            <div class="col col-md-5 offset-1">
-                {% if coach.image %}
-                    <a href="{{ coach.image.url }}" target="_blank">
-                        <img class="w-75" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
-                    </a>
-                {% else %}
-                    <a href="">
-                        <img class="w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ coach.first_name }}">
-                    </a>
-                {% endif %}
-                <p>{{ coach.first_name }}</p>
-                <button class="btn btn-large btn-light">{{ coach.coach_id }}</button>
-                
-            </div>
-            <div class="col col-md-5">
-                {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_coach' coach.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_coach' coach.id %}">Delete</a>
-                    </small>
-                {% endif %}
-                <p>
-                    {{ coach.description}}
-                </p>
-                <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
-            </div>
+                <div class="col col-md-5 offset-1">
+                    {% if coach.image %}
+                        <a href="{{ coach.image.url }}" target="_blank">
+                            <img class="w-75" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ coach.first_name }}">
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="col col-md-5">
+                    <h3> 
+                        <a href="{% url 'view_coach' coach.id %}">
+                            {{ coach.first_name }}
+                        </a>
+                    </h3>
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3">
+                            <a href="{% url 'edit_coach' coach.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_coach' coach.id %}">Delete</a>
+                        </small>
+                    {% endif %}
+                    <p>
+                        {{ coach.description}}
+                    </p>
+                    <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
+                </div>
             {% endfor %}
         </div>
     </div>
