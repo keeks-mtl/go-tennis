@@ -33,7 +33,7 @@ class Comment(models.Model):
     coach = models.ForeignKey(Coach, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(auto_now_add=True)
     stars = models.IntegerField(null=False, blank=False)
 
     def __str__(self):

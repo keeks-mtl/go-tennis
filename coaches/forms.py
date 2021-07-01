@@ -23,6 +23,7 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = (
             "comment",
+            "stars",
         )
 
     def __init__(self, *args, **kwargs):

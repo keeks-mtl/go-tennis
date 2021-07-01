@@ -24,8 +24,27 @@ def view_coach(request, coach_id):
 
     coach = get_object_or_404(Coach, pk=coach_id)
 
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.coach = coach
+            comment.author = request.user
+            form.save()
+            messages.success(request, "Your comment has been added.")
+            return redirect(reverse("view_coach", args=[coach_id]))
+        else:
+            messages.error(request,
+                           "Error adding your comment please try again")
+            return redirect(reverse("view_coach", args=[coach_id]))
+    comments = Comment.objects.filter(coach=coach)
+
+    form = CommentForm()
+
     context = {
         "coach": coach,
+        "form": form,
+        "comments": comments
     }
 
     return render(request, 'coaches/coach.html', context)
