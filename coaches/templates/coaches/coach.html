@@ -35,22 +35,44 @@
     <div class="container">
         <h3 class="text-center">Comments</h3>
         <div class="row">
+                {% for comment in comments %}
+                    <hr>
+                    <div class="col-12 col-md-4 text-center ">
+                        <div class="stars">
+                            {% if comment.stars == 1 %}
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            {% elif comment.stars == 2 %}
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            {% elif comment.stars == 3 %}
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            {% elif comment.stars == 4 %}
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            {% else %}
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            {% endif %}
+                        </div>
+                        <p class="text-muted">- {{ comment.author}}</p>
+                        <p class="fs-4 my-2">{{ comment.comment }}</p>
+                        <p class="text-muted">{{ comment.date }}</p>
+                    </div>
+                {% endfor %}
                 <div class="col-12 col-md-4 "> 
                     <form id="comment-form" method="POST" action="">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <button class="item-link-button flex-center item-link-dark" type="submit">Add comment</button>
+                        <button class="btn btn-main text-uppercase" type="submit">Add comment</button>
                     </form>
                 </div>
-                {% for comment in comments %}
-                    <hr>
-                    <div class="col-12 col-md-4 ">
-                        {{ comment.stars }}
-                        <p class="text-muted">{{ comment.date }}</p>
-                        <p class="fs-4 my-2">{{ comment.comment }}</p>
-                        <p class="text-muted">- {{ comment.author}}</p>
-                    </div>
-                {% endfor %}
         </div>
     </div>
 {% endblock %}
