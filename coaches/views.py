@@ -30,7 +30,7 @@ def add_coach(request):
     if request.method == 'POST':
         form = CoachForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            coach = form.save()
             messages.success(request, 'Successfully added coach!')
             return redirect(reverse('add_coach'))
         else:
