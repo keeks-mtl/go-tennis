@@ -45,38 +45,51 @@
                         </p>
                     </div>
                 </div>
-        <div class="row">
-            {% for lesson in lessons %}
-            <div class="col-2">
-                <form class="form" action="{% url 'book_lesson' lesson.id %}" method="POST">
-                {% csrf_token %}
-                    <div class="card">
-                        <div class="card-body">
-                        {% if lesson.class_type %}
-                            <h5 class="card-title">{{ lesson.class_type.friendly_name }}</h5>
-                        {% endif %}
-                            <p class="card-text">{{ lesson.coach }}</p>
-                            <p class="card-text">{{ lesson.date }}</p>
-                            <p class="card-text">{{ lesson.time }}</p>
-                            <p class="card-text">{{ lesson.price }}</p>
-                        {% if request.user.is_superuser %}
-                            <small class="ml-3">
-                                <a class="text-info" href="{% url 'edit_lesson' lesson.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_lesson' lesson.id %}">Delete</a>
-                            </small>
-                        {% endif %}
-                        </div>
-                        <div class="card-body p-0">
-                            {% if lesson.spots > 0 %}
-                                <input type="submit" class="btn btn-main btn-block text-uppercase mt-2" value="Book Lesson">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Class Type</th>
+                        <th scope="col">Coach</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Start Time</th>
+                        <th scope="col">Price</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for lesson in lessons %}
+                    <form class="form" action="{% url 'book_lesson' lesson.id %}" method="POST">
+                        {% csrf_token %}
+                        <tr>
+                            {% if lesson.class_type %}
+                                <th scope="row">{{ lesson.class_type.friendly_name }}</th>
                             {% endif %}
-                        </div>
-                    </div>
-                </form>
-            </div>
-            {% endfor %}
+                            <td>{{ lesson.coach }}</td>
+                            <td>{{ lesson.date }}</td>
+                            <td>{{ lesson.time }}</td>
+                            <td>{{ lesson.price }}</td>
+                            {% if lesson.spots > 0 %}
+                                <td><input type="submit" class="btn btn-main btn-block text-uppercase mt-2" value="Book Lesson"></td>         
+                            {% endif %}   
+                            {% if request.user.is_superuser %}
+                            <td>
+                                <small class="ml-3">
+                                    <a class="text-info" href="{% url 'edit_lesson' lesson.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_lesson' lesson.id %}">Delete</a>
+                                </small>
+                            </td>
+                            {% endif %}                            
+                        </tr>
+                    </form>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
-    
+
+
+
     <div class="container-fluid container-shop">
         <div class="row text-center">
             <div class="col">
