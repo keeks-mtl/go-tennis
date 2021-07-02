@@ -18,6 +18,16 @@ a {
     color: black;
 }
 
+.bg-yellow {
+    background-color: var(--extra-color);
+}
+.bg-white {
+    background-color: white;
+}
+.bg-green {
+    background-color: var(--main-color);
+}
+
 /* nav bar */
 .main-nav-link {
     padding: 20px 20px;
@@ -36,12 +46,6 @@ a {
 .nav-container.container-fluid {
     height: 100px;
 } */
-.bg-yellow {
-    background-color: var(--extra-color);
-}
-.bg-white {
-    background-color: white;
-}
 /* .navbar.navbar-expand-lg ul {
     padding-left: 0;
 } */
@@ -229,6 +233,13 @@ input[name='q']::placeholder {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* footer */
+
+.social-links {
+    padding-left: 2em;
+    font-size: 2rem;
 }
 
 /* -------------------------------- Media Queries */
