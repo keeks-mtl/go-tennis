@@ -147,7 +147,7 @@ input[name='q']::placeholder {
 }
 
 .container-space {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .header-margin {
@@ -265,6 +265,10 @@ input[name='q']::placeholder {
     }
     .jumbotron {
         padding-top: 170px;
+    }
+    
+    .container-space {
+        margin-top: 150px;
     }
 }
 

@@ -6,12 +6,12 @@
         <div class="row">
             <div class="col text-center">
                 <h2 class="logo-font">Coaches</h2>
-                <hr class="w-50 mb-1">
+                <hr class="w-50 mb-3">
             </div>
         </div>
-        <div class="row text-center">
-            {% for coach in coaches %}
-                <div class="col col-md-5 offset-1">
+        {% for coach in coaches %}
+            <div class="row text-center justify-content-center">
+                <div class="col-12 col-md-5 px-4">
                     {% if coach.image %}
                         <a href="{{ coach.image.url }}" target="_blank">
                             <img class="w-75" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
@@ -22,7 +22,7 @@
                         </a>
                     {% endif %}
                 </div>
-                <div class="col col-md-5">
+                <div class="col-12 col-md-5 px-5">
                     <h3> 
                         <a href="{% url 'view_coach' coach.id %}">
                             {{ coach.first_name }}
@@ -39,7 +39,8 @@
                     </p>
                     <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+            <hr class="w-50 mb-3">
+        {% endfor %}
     </div>
 {% endblock %}
