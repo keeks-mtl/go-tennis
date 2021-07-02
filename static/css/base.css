@@ -146,12 +146,12 @@ input[name='q']::placeholder {
     margin-top: 100px;
 }
 
-.container-space {
+/* .container-space {
     margin-top: 80px;
-}
+} */
 
 .header-margin {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 /* toasts */
@@ -267,7 +267,10 @@ input[name='q']::placeholder {
         padding-top: 170px;
     }
     
-    .container-space {
+    /* .container-space {
+        margin-top: 150px;
+    } */
+    .header-margin {
         margin-top: 150px;
     }
 }

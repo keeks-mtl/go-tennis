@@ -3,8 +3,8 @@
 
 {% block content %}
     <div class="container-fluid header-margin">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-5 px-4">
                 <div class="image-container my-5">
                     {% if coach.image %}
                         <a href="{{ coach.image.url }}" target="_blank">
@@ -17,7 +17,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-5 px-5">
                 <div class="product-details-container mb-5 mt-md-5 text-center">
                     <h2 class="mb-0">{{ coach.first_name }}</h2>
                     {% if request.user.is_superuser %}
@@ -32,8 +32,8 @@
         </div>
     </div>
     <!-- comment section -->
-    <div class="container">
-        <h3 class="text-center">Comments</h3>
+    <div class="container px-4">
+        <h3 class="text-center"><strong>Comments</strong></h3>
         <div class="row">
                 {% for comment in comments %}
                     <hr>
@@ -66,13 +66,29 @@
                         <p class="text-muted">{{ comment.date }}</p>
                     </div>
                 {% endfor %}
-                <div class="col-12 col-md-4 "> 
-                    <form id="comment-form" method="POST" action="">
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <button class="btn btn-main text-uppercase" type="submit">Add comment</button>
-                    </form>
-                </div>
+                    <div class="col-12 col-md-4 "> 
+                        <form id="comment-form" method="POST" action="{% url 'view_coach' coach_id=coach.id %}">
+                            {% csrf_token %}
+                            {{ form.comment| as_crispy_field }}
+                                <div class="div stars-input flex-row-between">
+                                    <div class="mb-3">
+                                        <label for="stars" class="form-label">Stars</label>
+                                        <div>
+                                            <input class="form-control" type="number" name="stars" value="1" min="1" max="5" id="stars">
+                                        </div>
+                                    </div>
+                                </div>
+                            {% if request.user.is_authenticated %}
+                            <button class="btn btn-main text-uppercase btn-block" type="submit">Add comment</button>
+                            {% else %}
+                                <p class="mb-2 text-center">Can only comment if you:</p>
+                                <p class="text-center">
+                                    <a href="{% url 'account_login' %}"> Login</a> or
+                                    <a href="{% url 'account_signup' %}"> Register </a>
+                                </p>
+                            {% endif %}
+                        </form>
+                    </div>
         </div>
     </div>
 {% endblock %}

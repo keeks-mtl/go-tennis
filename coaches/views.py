@@ -30,6 +30,7 @@ def view_coach(request, coach_id):
             comment = form.save(commit=False)
             comment.coach = coach
             comment.author = request.user
+            comment.stars = int(request.POST.get("stars"))
             form.save()
             messages.success(request, "Your comment has been added.")
             return redirect(reverse("view_coach", args=[coach_id]))
