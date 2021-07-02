@@ -13,22 +13,25 @@
         <div class="row text-center">
             <div class="col">
                 <h2>About Go-Tennis</h2>
+                <h5 class="text-capitalize">
+                    Who we are
+                </h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam elit nisi, congue sed molestie eu, 
-                    luctus finibus nulla. Aenean luctus, diam et efficitur maximus, libero sapien tincidunt lectus, sit amet 
-                    semper libero urna at dolor. Nunc faucibus magna nisl, vitae pulvinar enim ultricies quis. Mauris sollicitudin 
-                    vitae elit et commodo. Vivamus est mauris, eleifend pellentesque nulla et, luctus elementum quam. Nullam mauris 
-                    ipsum, cursus quis placerat rutrum, placerat at nulla. In et ultrices ante. Cras tempor semper volutpat. Etiam 
-                    tellus arcu, tristique at turpis quis, iaculis ornare ante. Vestibulum varius turpis id nibh dignissim, a elementum 
-                    massa lobortis. Nulla feugiat tellus nec mauris pellentesque, ac porttitor lorem volutpat.
+                    Go-Tennis provides tennis lessons in the heart of London since 2005. Located in East London, Go-Tennis
+                    has been the go to professionals to help all adults with their tennis game. 
+                    We are particularly popular for providing fun, recreational and yet productive tennis courses for those 
+                    of all standards. Our coaches speak many languages (English, Italian, Spanish, French, Russian). 
+                    They are all LTA licensed, insured, DBS checked, First Aid qualified. Our services can cater for complete beginners all the way up to ATP and WTA ranked players.
                 </p>
+                <h5 class="text-capitalize">
+                    Our Ethos
+                </h5>
                 <p>
-                    Vestibulum odio ipsum, blandit tempus interdum a, eleifend quis lorem. Ut condimentum, arcu eget lobortis lobortis, 
-                    lectus purus finibus risus, et eleifend lorem leo sit amet sem. Proin semper vitae elit ut imperdiet. Aliquam erat 
-                    volutpat. Suspendisse potenti. Curabitur dignissim elit sed orci mollis feugiat. Cras at ullamcorper augue. Aliquam 
-                    et ipsum a metus cursus molestie ut quis velit.
+                    Our aim doesn't stop at teaching tennis skills. We strive to teach life skills such as 
+                    respect, friendliness, politeness, camaraderie, team bulding, leadership, competitiveness 
+                    and reliability.
                 </p>
-                <a href="" class="btn btn-info btn-large text-uppercase">Coaches</a>
+                <a href="{% url 'view_coaches' %}" class="btn btn-info btn-large text-uppercase">Coaches</a>
                 <a href="{% url 'lessons' %}" class="btn btn-info btn-large text-uppercase">Lessons</a>
             </div>
         </div>
@@ -44,15 +47,20 @@
     <div class="container-fluid container-newsletter">
         <div class="row text-center">
             <div class="col">
-                <h2>Keep up to date on Go-Tennis</h2>
-                <a href="" class="btn btn-info btn-large"><i class="fas fa-plus-circle"></i> Join Our Newsletter</a>
+                <h2>See our upcoming lessons</h2>
+                <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large text-uppercase">Book a lesson</a>
             </div>
         </div>
     </div>
     <div class="container container-map">
         <div class="row text-center">
             <div class="col">
-               <img src="http://clissoldpark.com/wp-content/uploads/2014/03/clissold-park-map-web.jpg" alt="map of clissold park">
+                <h3>Located at:</h3>
+                <a href="https://www.google.com/maps/search/clissold+park+tennis+map/@51.563125,-0.0884502,17z/data=!3m1!4b1?hl=en" target="_blank" rel="noopener noreferrer">
+                    <img class="img-fluid" src="/media/clissold-park.PNG" alt="map of clissold park">
+                    <p>Clissold Park, London N16 0BF</p>
+                </a>
+               
             </div>
         </div>
     </div>
