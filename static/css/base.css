@@ -190,6 +190,11 @@ input[name='q']::placeholder {
     background-color: var(--third-color);
 }
 
+/* coach & coaches page */
+.fa-star {
+    color: var(--extra-color);
+}
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
