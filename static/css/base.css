@@ -107,6 +107,12 @@ a {
     bottom: 10px;
     right: 10px;
 }
+.btn-words {
+    background-color: white;
+    border-color: white;
+    color: red;
+    border-style: none;
+}
 
 .btt-link,
 .update-link,
