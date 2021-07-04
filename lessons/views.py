@@ -132,4 +132,4 @@ def delete_lesson(request, lesson_id):
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     lesson.delete()
     messages.success(request, 'Lesson deleted!')
-    return redirect(reverse('lessons'))
+    return redirect(reverse('all_lessons'))
