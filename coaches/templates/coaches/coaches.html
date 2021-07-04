@@ -39,7 +39,7 @@
                     <p>
                         {{ coach.description}}
                     </p>
-                    <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
+                    <a href="{% url 'all_lessons' %}?coach={{ coach.id }}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
                 </div>
             </div>
             <hr class="w-50 mb-3">
