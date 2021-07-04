@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models.functions import Lower
 from django.contrib.auth.decorators import login_required
 
-from .models import Lesson, ClassType
+from .models import Lesson, ClassType, Coach
 from .forms import LessonForm
 
 # Create your views here.
@@ -19,9 +19,11 @@ def all_lessons(request):
     """ A view to return the book lessons page """
 
     lessons = Lesson.objects.all()
+    coaches = Coach.objects.all()
     class_types = None
     sort = None
     direction = None
+    coach_name = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -39,13 +41,23 @@ def all_lessons(request):
             lessons = lessons.order_by(sortkey)
 
         if 'class_type' in request.GET:
+            class_types = request.GET['class_type'].split(',')
             lessons = lessons.filter(class_type__name__in=class_types)
+            class_types = ClassType.objects.filter(name__in=class_types)
+
+        if 'coach' in request.GET:
+            coach_name = request.GET['coach']
+            coach_name = int(coach_name)
+            lessons = lessons.filter(coach=coach_name)
+            all_coaches = Coach.objects.filter(first_name=coach_name)
 
     current_sorting = f'{sort}_{direction}'
 
     context = {
         'lessons': lessons,
+        'coaches': coaches,
         'current_class_types': class_types,
+        'current_coach_name' : coach_name,
         'current_sorting': current_sorting,
     }
 

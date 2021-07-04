@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <div class="container-space container">
+    <div class="header-margin container">
         <div class="row text-center">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Lessons Schedule</h2>
@@ -19,6 +19,15 @@
                     <span class="p-2 mt-2 badge badge-green badge-pill">Private Class</span>
                 </a>
                 <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col text-center">
+                {% for coach in coaches %}
+                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?coach={{ coach.id }}"">
+                    <span class="p-2 mt-2 badge badge-blue badge-pill">{{ coach.first_name }}</span>
+                </a>
+                {% endfor %}
             </div>
         </div>
         <div class="row">
@@ -39,10 +48,13 @@
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
-                            {% if current_class_types or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'lessons' %}">Lessons Home</a> | </span>
+                            {% if current_class_types or current_coach_name or current_sorting != 'None_None' %}
+                                <span class="badge-pill badge badge-yellow"><a href="{% url 'all_lessons' %}">All Lessons</a></span>
+                            {% endif %}
+                            {{ lessons|length }} Lessons{% if current_class_types %} found
                             {% endif %}
                         </p>
+                        
                     </div>
                 </div>
         <div class="table-responsive">
@@ -64,7 +76,7 @@
                         {% csrf_token %}
                         <tr>
                             {% if lesson.class_type %}
-                                <th scope="row">{{ lesson.class_type.friendly_name }}</th>
+                                <th class="text-capitalize" scope="row">{{ lesson.class_type.friendly_name }}</th>
                             {% endif %}
                             <td>{{ lesson.coach }}</td>
                             <td>{{ lesson.date }}</td>
@@ -87,7 +99,7 @@
                 </tbody>
             </table>
         </div>
-
+    </div>
 
 
     <div class="container-fluid container-shop">

@@ -86,6 +86,17 @@ a {
     background-color: var(--main-color);
     color: white;
 }
+.badge-yellow {
+    background-color: var(--extra-color);
+    color: black;
+}
+.badge-yellow a:hover {
+    color: black;
+}
+.badge-blue {
+    background-color: var(--secondary-color);
+    color: white;
+}
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
