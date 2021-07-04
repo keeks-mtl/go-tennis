@@ -88,8 +88,10 @@
                             {% if request.user.is_superuser %}
                             <td>
                                 <small class="ml-3">
-                                    <a class="text-info" href="{% url 'edit_lesson' lesson.id %}">Edit</a> | 
-                                    <a class="text-danger" href="{% url 'delete_lesson' lesson.id %}">Delete</a>
+                                    <a class="text-info" href="{% url 'edit_lesson' lesson.id %}">Edit</a>  
+                                    <button type="button" class="btn-words" data-toggle="modal" data-target="#delete-modal" data-url="{% url 'delete_lesson' lesson.id %}" data-name="lesson by {{lesson.coach}} on {{ lesson.date }}" data-topic="Lesson">
+                                        Delete
+                                    </button>
                                 </small>
                             </td>
                             {% endif %}                            
@@ -110,7 +112,12 @@
             </div>
         </div>
     </div>
+    
+{% endblock %}
 
+{% block extra_js %}
+{{ block.super }}
+<script src="{% static 'js/main.js' %}"></script>
 {% endblock %}
 
 {% block postloadjs %}
