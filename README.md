@@ -474,10 +474,37 @@ During the development stage I worked with Django's default sqlite3 database.
 
 ## Data Modelling
 
+### Bag App
+
+### Coaches App
+#### Coach
+
+| Name | Key | Validation | Field Type |
+--- | --- | --- | ---
+First Name | first_name | max_length=50, null=False, blank=False| models.CharField 
+Last Name | last_name | max_length=50, null=False, blank=False | models.CharField 
+Email | email | max_length=254, null=False, blank=False | models.EmailField
+Phone Number | phone_number | max_length=20, null=False, blank=False | models.CharField 
+Description | description | | models.TextField
+Rating | rating | max_digits=6, decimal_places=2, null=True, blank=True | models.DecimalField
+Image URL | image_url | max_length=1024, null=True, blank=True | models.URLField
+image | image | null=True, blank=True | models.ImageField
+    
+#### Comment
+
+| Name | Key | Validation | Field Type |
+--- | --- | --- | ---
+Coach | coach | Coach, on_delete=models.CASCADE, related_name="comments" | models.ForeignKey 
+Author | author | User, on_delete=models.CASCADE | models.ForeignKey 
+Comment | comment |  | models.TextField
+Date | date | auto_now_add=True | models.DateField
+Stars | stars | null=False, blank=False | models.IntegerField
+
 ### Products App
 #### Products
 | Name | Key | Validation | Field Type |
---- | --- | --- | --- 
+--- | --- | --- | ---
+Category | category | 'Category', null=True, blank=True, on_delete=models.SET_NULL| models.ForeignKey  
 SKU | sku | max_length=254 | models.CharField 
 Name | name | `maxlength="50"` | models.CharField
 Description | description | `` | models.TextField
@@ -543,19 +570,33 @@ Product | product | Product, on_delete=models.CASCADE, null=False, blank=False |
 Quantity | quantity | null=False, blank=False, default=0 | models.IntegerField
 Item Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | models.DecimalField
 
+#### Lesson Line Item
+
+| Name | Key | Validation | Field Type |
+--- | --- | --- | --- 
+Order | order | Order, null=False, blank=False, on_delete=models.CASCADE | models.ForeignKey 
+Lesson | lesson | Lesson, null=False, blank=False, on_delete=models.CASCADE | models.ForeignKey 
+Lesson line item total | lesson_lineitem_total | ax_digits=6, decimal_places=2, null=False, blank=False, editable=False | models.DecimalField 
+
 ### Lessons App
+#### Class Type
+
+| Name | Key | Validation | Field Type |
+--- | --- | --- | --- 
+Name | name | max_length=254 | models.CharField 
+Friendly Name | friendly_name | max_length=254, null=True, blank=True | models.CharField 
+
 #### Lessons
 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
-Lesson id | lesson_id | max_length=32, null=False, blank=False, on_delete=models.CASCADE | models.CharField 
-Type | type | max_length=32, null=False, blank=False | models.CharField
+Class Type | class_type | 'ClassType', null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
 Coach | coach | Profile, maxlength="40", null=True, blank=True | models.ForeignKey
-Date | date |  | models.DateTimeField 
-Time | time | max_length=32, null=False, blank=False | models.DateTimeField 
-Spots | spots | null=False, blank=False, default=0 | models.IntegerField
-Skill Level | skill_level | max_length=32, null=False, blank=False | models.CharField 
-Students | students | Profile, max_length=32, null=True, blank=True | models.ForeignKey  
+Description | description | null=True, blank=True | models.TextField 
+Date | date | default="2021-09-05" | models.DateField 
+Time | time |  | models.TimeField 
+Spots | spots | default=4 | models.IntegerField
+Students | students | User, null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey  
 
 ## Technologies Used
 
@@ -567,7 +608,7 @@ Students | students | Profile, max_length=32, null=True, blank=True | models.For
   - Used for the styling of the site.
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [JQuery](https://jquery.com/)
-    -  
+    - To simplify DOM manipulation.
 - [Python](https://www.python.org/)
     - used to write the logic that operates the site.
 - [Font Awesome](https://fontawesome.com/)
@@ -607,16 +648,14 @@ Students | students | Profile, max_length=32, null=True, blank=True | models.For
     - Used to test accesibility of site.
 - [SQlite3](https://www.sqlite.org/index.html)
     - Used for database functionality in development.
-SQlite3 - development database.
+- [PostgreSQL](https://www.postgresql.org/)
+    - For production database for Heroku deployment
 - [Heroku](https://www.heroku.com/home)
     - Used to host the site
 - [Stripe](https://stripe.com/gb)
     - To facilitate card payments
 - [AWS S3](https://aws.amazon.com/)
     - To store static and media files in production
-
-
-
 - [Favicon](https://favicon.io/)
     - Used to generate the Favicon on the webpage tab.
 - [AmIResponsive](http://ami.responsivedesign.is/#)
@@ -711,19 +750,28 @@ I have used the following websites to get info & images for my website.
 - [Pixabay](https://pixabay.com/)
 - [Unsplash](https://unsplash.com/)
 - [Pexels](https://www.pexels.com/)
+- [IamFy](https://www.iamfy.co/)
+    - Go-Tennis Logo
 
 #### Information
-- 
+- [Sports Direct](https://www.sportsdirect.com/)
+    - The information on products was taken from the tennis section of the Sports Direct Shop.
+- [Clubspark](https://clubspark.lta.org.uk/)
+    - The lesson descriptions where heavily influenced by Clubspark descriptions of lessons.
+- [LTA Britain](https://www.lta.org.uk/)
+    - The coach descriptions were directly taken from coach descriptions of london coaches.
 
 #### Code
+- [Code Institute](https://codeinstitute.net/)
+    - The product, bag, and checkout was inspired by the Boutique Ado tutorial from code institute. 
 - [PrettyPrinted Youtube Channel](https://www.youtube.com/watch?v=I2-JYxnSiB0&ab_channel=PrettyPrinted)
-    - django forms date picker
+    - How to get a Django forms date picker.
 
 ### Acknowledgements
 
-- A special thank you to my mentor Antonija Simic for her help in going through my project thoroughly and guiding me through what 
-    is expected of my website and how to clean up my code.
+- A special thank you to my mentor Antonija Simic for her help in going through my project thoroughly and guiding me through what is expected of my website and how to clean up my code.
 - The Code Institute Slack community for their technical support.
+- My friends for testing out Go-Tennis and helping me fine tune the project. 
 
 ## Disclaimer
 This website is for educational purposes only. 
