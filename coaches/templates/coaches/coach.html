@@ -22,7 +22,7 @@
                     <h2 class="mb-0">{{ coach.first_name }}</h2>
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
-                            <a class="text-info" href="">Edit</a>
+                            <a class="text-info" href="{% url 'edit_coach' coach.id %}">Edit</a>
                             <button type="button" class="btn-words" data-toggle="modal" data-target="#delete-modal" data-url="{% url 'delete_coach' coach.id %}" data-name="{{ coach.first_name }}" data-topic="Coach">
                                 Delete
                             </button>
