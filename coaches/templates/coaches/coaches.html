@@ -13,11 +13,11 @@
             <div class="row text-center justify-content-center">
                 <div class="col-12 col-md-5 px-4">
                     {% if coach.image %}
-                        <a href="{{ coach.image.url }}" target="_blank">
+                        <a href="{% url 'view_coach' coach.id %}" target="_blank">
                             <img class="w-75" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
                         </a>
                     {% else %}
-                        <a href="">
+                        <a href="{% url 'view_coach' coach.id %}">
                             <img class="w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ coach.first_name }}">
                         </a>
                     {% endif %}
