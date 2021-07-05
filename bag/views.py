@@ -61,7 +61,7 @@ def book_lesson(request, item_id):
         messages.success(request, f"You've booked a lesson on {lesson.date} at {lesson.time}")
 
     request.session['lesson_bag'] = lesson_bag
-    return redirect('view_bag')
+    return redirect('all_lessons')
 
 
 def adjust_bag(request, item_id):
