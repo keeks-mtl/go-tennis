@@ -64,7 +64,7 @@ def add_coach(request):
         if form.is_valid():
             coach = form.save()
             messages.success(request, 'Successfully added coach!')
-            return redirect(reverse('add_coach'))
+            return redirect(reverse('view_coach', args=[coach.id]))
         else:
             messages.error(request, 'Failed to add coach. Please ensure the form is valid.')
     else:
@@ -92,7 +92,7 @@ def edit_coach(request, coach_id):
         if form.is_valid():
             coach = form.save()
             messages.success(request, 'Successfully updated coach!')
-            return redirect(reverse('view_coaches'))
+            return redirect(reverse('view_coach', args=[coach.id]))
         else:
             messages.error(request, 'Failed to update coach. Please ensure the form is valid.')
     else:
