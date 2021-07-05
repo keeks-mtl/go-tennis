@@ -72,13 +72,13 @@ a {
 
 .btn-info {
     background-color: var(--extra-color);
-    color: black;
+    color: black !important;
     border-color: var(--extra-color);
 }
 
 .btn-info:hover {
     background-color: var(--main-color);
-    color: white;
+    color: white !important;
     border-color: var(--main-color);
 }
 
