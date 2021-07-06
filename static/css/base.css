@@ -304,9 +304,13 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+    .allauth-form-inner-content {
+        margin-top: 80px;
+    }
 }
 
 /* Allauth form formatting */
+
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
