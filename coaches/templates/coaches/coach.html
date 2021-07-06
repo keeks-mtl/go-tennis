@@ -10,7 +10,7 @@
                         <a href="{{ coach.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
                         </a>
-                        {% else %}
+                    {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ coach.first_name }}">
                         </a>
@@ -39,7 +39,6 @@
         <h3 class="text-center"><strong>Comments</strong></h3>
         <div class="row">
                 {% for comment in comments %}
-                    <hr>
                     <div class="col-12 col-md-4 text-center ">
                         <div class="stars">
                             {% if comment.stars == 1 %}
