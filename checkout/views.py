@@ -111,7 +111,7 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         lesson_bag = request.session.get('lesson_bag', {})
-        if not bag or not lesson_bag:
+        if not bag and not lesson_bag:
             messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
