@@ -13,7 +13,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 ### User Stories
 #### Viewing and Navigation
 - As a user, I want to easily navigate the site in an intuitive way.
-- As a user, To view list of products.
+- As a user, I want to view list of products.
 - As a user, I want to quickly identify product categories. 
 #### Registration and User Accounts
 - As a user, I want a clear & easy way to register and join.
@@ -36,7 +36,6 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 - As a user, I want to see what the lessons entail.
 - As a user, I want to know what the pricing of the lessons are.
 - As a user, I want to know what the lesson schedule looks like. 
-- As a user, I want to be able to stay informed of changes/opportunities. 
 #### Purchasing and Checkout
 - As a user, I want to easily select size and quantity of a product when purchasing it. 
 - As a user, I want to be able to find what tennis equipment I am looking for easily. 
@@ -51,13 +50,10 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 - As the site owner, I want users to be able to use my site easily.
 - As the site owner, I want to be able to promote my shop. 
-- As the site owner, I want to easily change products and lesson options easily.
-- As the site owner, I want to easily add products and pricing options easily.
-- As the site owner, I want to delete products easily.
-- As the site owner, I want to be able to add coaches easily.
-- As the site owner, I want to be able to see schedules and class sizes. 
+- As the site owner, I want to easily add products, lessons, and coaches easily.
+- As the site owner, I want to easily change products, lesson, and coaches easily.
+- As the site owner, I want to delete products, lessons, and coaches easily.
 - As the site owner, generate more business through webshop and single purchases.
-
 
 ### Design Choices
 
