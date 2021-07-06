@@ -9,6 +9,7 @@
 html {
     height: 100%;
 }
+
 body {
     height: calc(100vh - 164px);
     font-family: Arial, Helvetica, sans-serif;
@@ -39,18 +40,6 @@ a {
 .main-nav-link:hover {
     color: var(--secondary-color);
 }
-/* #topnav {
-    background-color:var(--extra-color) !important;
-}
-#topnav a {
-    color: black;
-}
-.nav-container.container-fluid {
-    height: 100px;
-} */
-/* .navbar.navbar-expand-lg ul {
-    padding-left: 0;
-} */
 
 /* dropdown */
 .border-black {
@@ -147,7 +136,7 @@ input[name='q']::placeholder {
 .container-about {
     margin-bottom: 25px;
 }
-.container-newsletter {
+.container-lessons {
     background-color: var(--main-color);
     padding: 35px;
 }
@@ -157,20 +146,8 @@ input[name='q']::placeholder {
 .container-map img {
     height: 300px;
 }
-.products-container {
-    margin-top: 120px;
-}
-
-.bag-container {
-    margin-top: 100px;
-}
-
-/* .container-space {
-    margin-top: 80px;
-} */
-
 .header-margin {
-    margin-top: 80px;
+    margin-top: 75px;
 }
 
 /* toasts */
@@ -275,7 +252,11 @@ input[name='q']::placeholder {
     max-width: 80%;
   }
 }
-
+@media (min-width: 768px){
+    .allauth-form-inner-content {
+        height: calc(100vh - 220px);
+    }
+}
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -292,11 +273,8 @@ input[name='q']::placeholder {
         padding-top: 170px;
     }
     
-    /* .container-space {
-        margin-top: 150px;
-    } */
     .header-margin {
-        margin-top: 150px;
+        margin-top: 145px !important;
     }
 }
 
@@ -312,10 +290,9 @@ input[name='q']::placeholder {
 
 /* Allauth form formatting */
 
-
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #000; /* text-secondary */
+    margin-top: 1.5rem;
+    color: #000;
 }
 
 .allauth-form-inner-content input {
