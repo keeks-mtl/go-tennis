@@ -878,6 +878,8 @@ I have used the following websites to get info & images for my website.
     - The product, bag, and checkout was inspired by the Boutique Ado tutorial from code institute. 
 - [PrettyPrinted Youtube Channel](https://www.youtube.com/watch?v=I2-JYxnSiB0&ab_channel=PrettyPrinted)
     - How to get a Django forms date picker.
+- [StackOverflow](https://stackoverflow.com/questions/19130942/whats-the-best-way-to-store-phone-number-in-django-models)
+    - phone numbers for django
 
 ### Acknowledgements
 
