@@ -51,7 +51,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 - As the site owner, I want users to be able to use my site easily.
 - As the site owner, I want to be able to promote my shop. 
-- As the site owner, I want to easily change products and subscription options easily.
+- As the site owner, I want to easily change products and lesson options easily.
 - As the site owner, I want to easily add products and pricing options easily.
 - As the site owner, I want to delete products easily.
 - As the site owner, I want to be able to add coaches easily.
@@ -91,11 +91,45 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 - The colours felt appropriate because they of their connection to tennis. 
     - Like the green of a tennis court, the light colour of the lines on the tennis court, and the yellow shade from a tennis ball. 
 
+IMAGE
+
+- #458F5F Middle Green
+    - See our upcoming lessons bar background
+    - Footer colour
+    - Class type badges
+    - Category badges
+    - Logout button
+- #3F596E Black Coral
+    - Search Icon
+    - Learn more button
+    - Get ready for lessons section bar background
+    - Coach badges
+    - Book lesson button
+    - Add comment button
+    - Secure Checkout button
+    - Add/Lesson/Coach/Product button
+- #F4EDDD EggShell
+    - Shop Now button
+- #867B6C Shadow
+    -
+- #E4C401 Yellow Munsell
+    - 1st navbar on mobile and 2nd navbar on larger screens
+    - Main button colour
+    - Stars colour
+    - Keep shopping button
+    - Increment/decrement button
+
 ### Wireframes
 
 - The wireframes that were used to initially design each page are below:
-    - link
-
+    - Homepage Desktop
+    - Homepage Mobile
+    - Lessons Page
+    - Coaches Page Desktop
+    - Coaches Page Mobile
+    - Booking Page
+    - Shop Page Desktop
+    - Shop Page Mobile
 
 ## Features Implemented
 
@@ -104,11 +138,26 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 - The navigation bar was created using Bootstrap to ensure that it was fully responsive.
 - An example of a responsiveness change includes a hamburger menu when viewed on smaller viewports and the
     search icon and cart icon.
-- The top navigation bar shows the logo, Go-Tennis, Search, My Account, and Bag (with the price of the goods within the shopping bag currently).
-    - On smaller screens the top navigation bar has the hamburger icon (which shows the contents of the button navigation bar in a dropdown), Home, My Account, Search, and Bag.
-- The bottom navigation bar shows Coaches, Lessons, Book Lesson, and Shop to users on big devices and on smaller devices the contents of the bottom navigation bar is moved to the hamburger icon on the top navigational bar. 
-- When a user is not logged in, My Account shows 
-- When a user is logged in and a superuser, My Account shows Product Management, Lesson Management, Coach Management, My Profile, and Log out.  
+- There are two navigation bars on large sized screens and bigger (>992px). 
+1.  The top nav bar has Go-Tennis logo beside Go-Tennis, a search bar, my account, and shopping bag links.
+2. The second navigational bar has Coaches, Lessons, Book Lesson, and Shop. 
+- On smaller screens there is One navigational bar(<992px).
+    - The hamburger icon which is a dropdown menu with Coaches, Lessons, Book Lesson, and Shop. 
+    - And beside the hamburger icon, Home link, My Account dropdown, Search, and Shopping bag. 
+- When a user is not logged in, the My Account dropdown has links to Register and Log In.
+    - All other links remain the same on the navigational bar. 
+- When a user is logged in and an administrator, the My Account dropdown bar has links to:
+    - Product management, Lesson management, coach management, my profile and log out.
+- When a user is logged in and not an administrator, the My Account dropdown has links to My profile 
+    and log out. 
+
+##### Images
+<details>
+<summary><b>Navigation</b></summary>
+
+![Navigation Layout](wireframes/readme/navbar.png)
+
+</details>
 
 ### Search feature
 
@@ -466,15 +515,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 - Ability to cancel a lesson
 - To check in realtime on register form if the username already exists. 
 
-## Database Design
-
-During the development stage I worked with Django's default sqlite3 database.
-- The collections are associated with one another through the following ways:
-    - 
-
 ## Data Modelling
-
-### Bag App
 
 ### Coaches App
 #### Coach
@@ -598,6 +639,7 @@ Time | time |  | models.TimeField
 Spots | spots | default=4 | models.IntegerField
 Students | students | User, null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey  
 
+
 ## Technologies Used
 
 ### Languages, Libraries and Frameworks
@@ -608,7 +650,7 @@ Students | students | User, null=True, blank=True, on_delete=models.SET_NULL | m
   - Used for the styling of the site.
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [JQuery](https://jquery.com/)
-    - To simplify DOM manipulation.
+    -  
 - [Python](https://www.python.org/)
     - used to write the logic that operates the site.
 - [Font Awesome](https://fontawesome.com/)
@@ -617,8 +659,16 @@ Students | students | User, null=True, blank=True, on_delete=models.SET_NULL | m
   - Was used for added styling and responsiveness of the project.
 - [Django](https://www.djangoproject.com/)
     - To construct and render pages.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+    - To style django forms
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
     -  Simplify how data is displayed from the backend of this project in html.
+- [Pillow](https://pillow.readthedocs.io/en/stable/)
+    - Python imaging library to help processing image files to store in database.
+- [Gunicorn](https://pypi.org/project/gunicorn/)
+    - WSGI HTTP Server for UNIX to help with deployment of the Django project to heroku.
+- [Psycopg2](https://pypi.org/project/psycopg2/)
+    - PostgreSQL database adapter for Python
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
     - A collection of libraries used to create a WSGI compatible web application in Python.
 - [Google Fonts](https://fonts.google.com/)
@@ -660,6 +710,8 @@ Students | students | User, null=True, blank=True, on_delete=models.SET_NULL | m
     - Used to generate the Favicon on the webpage tab.
 - [AmIResponsive](http://ami.responsivedesign.is/#)
     - Used to create responsive images.
+- [Dbdiagram](https://dbdiagram.io/home)
+    - Used to create model relationship diagrams of the database.
 
 ## Testing
 
@@ -670,75 +722,139 @@ Testing information can be found in this file : [testing.md](testing.md)
 ### Local Deployment
 #### Requirements
 
-- An IDE (such as Gitpod or Visual Studio Code)
-- Python3
-- PIP3
-- MongoDB 
+- The following are required to be installed, the instructions for each can be found through the links.
+- An IDE (such as [Gitpod](https://gitpod.io/) or [Visual Studio Code](https://code.visualstudio.com/))
+- [Python3](https://www.python.org/download/releases/3.0/)
+- [PIP3](https://pypi.org/project/pip/)
+
+- To access all functionality on the site locally, accounts with the following services is required (free accounts available)
+    - [Stripe](https://stripe.com/en-gb)
+    - [Amazon AWS](https://aws.amazon.com/)
 
 #### Instructions
 
-- Open your IDE and in your terminal and clone the git repository with the following command.
-    - git clone https://github.com/keeks-mtl/petiole
-- Create environment file called "env.py" and add :
-    - MONGO_URI= mongodb+srv:// (and link to your database)
-    - SECRET_KEY= <your secret key>
-- Add your env.py to your .gitignore. so it's not uploaded to github at any point.
-- Upgrade pip locally with the command:
-    - "pip install -U pip"
-- Install the modules used to run the application using in your terminal:
-    - "pip freeze > requirements.txt"
-- In app.py, switch debug=False to debug=True
-- Create a MongoDB account and create a database called "petiole"
-- Create the following collections:
+1. Open your IDE and in your terminal and clone the git repository with the following command
+```
+git clone https://github.com/keeks-mtl/go-tennis.git
+```
+2. Install all required modules with the command
+```
+pip install -r requirements.txt
+```
+3. Create these environment variables:
 
-users
+| Config Vars      | Value |
+|:------------- |:------------- |
+| AWS_ACCESS_KEY_ID | your_value |
+| AWS_SECRET_ACCESS_KEY | your_value |
+| DATABASE_URL | your_value | 
+| SECRET_KEY | your_value |
+| STRIPE_PUBLIC_KEY | your_value |
+| STRIPE_SECRET_KEY | your_value |
+| STRIPE_WH_SECRES | your_value |
+
+4. Run this code below to test migration
 ```
-fill out later
+python3 manage.py migrate --plan
 ```
 
-plants
+5. If there was any errors, you can find solutions on [Python's Documentation](https://docs.djangoproject.com/en/3.1/ref/django-admin/) 
+
+6. If no issues found, run the following code: 
 ```
-fill out later
+python3 manage.py migrate 
 ```
-- you can now run the application with the command
+
+7. Create a superuser to access the django admin panel and database with the following command:
 ```
-python3 app.py
+python manage.py createsuperuser
 ```
-- you can visit the website now at 
+
+8. Follow the steps shown by the createsuperuser command to set up your superuser.
+
+9. The program can be run locally with the following command:
 ```
-http://127.0.0.1:5000
+python manage.py runserver
 ```
+
+10. If there are no errors, a link will be provided to the local server. Click on the link to open the website. 
+
+11. Add /admin to the end of link address. After doing so you will be able to log in with the superuser credentials you made. 
 
 ### Heroku Deployment
 
-- Open your IDE and in your terminal and clone the git repository with the following command.
+- To deploy Go-Tennis on Heroku, please follow the following steps. 
+1. Create a [Stripe](http://stripe.com/) account if you do not already have one.
+2. Setup Stripe webhook endpoints for checkout/wh
+3. Setup an [Amazon AWS](http://aws.amazon.com/) account if you do not already have one. 
+4. Create the following within AWS:
+    - AWS S3 Bucket
+    - Bucket Policy
+    - Group
+    - Access Policy
+    - User
+5. Create a [Gmail](https://gmail.com/) account if you do not already have one. 
+6. Within Gmail, create an app password by selecting 'mail' as the app and 'other' as the device type (set this to 'Django')
+7. Create a requirements.txt file using the command:
 ```
-git clone https://github.com/keeks-mtl/go-tennis
+ pip freeze > requirements.txt
 ```
-- create a requirements.txt file using the terminal command
+
+8. Create a Procfile with the command:
 ```
-pip freeze > requirements.txt
+ echo web: python app.py > Procfile
 ```
-- Create a Procfile with the terminal command 
+
+9. Push the new requirements and Procfile to your GitHub with the "git add", "git commit", and "git push"
+
+10. Go to [Heroku](https://www.heroku.com/) and create an account if you havent already done so.
+
+11. From the Heroku dashboard select "New"
+12. Select "Create new app" from dropdown.
+13. On this page do the following:
+    - Choose app name
+    - Select region
+    - Click create app
+14. From the Heroku dashboard, select the app from the list.
+15. Select Settings from the menu
+16. On the this page do the following:
+    - Select "Reveal Config Vars"
+    - Add environment variables in key value pairs
+    - Click "Add" to add each key/value pair
+
+| Config Vars      | Value |
+|:------------- |:------------- |
+| AWS_ACCESS_KEY_ID | your_value |
+| AWS_SECRET_ACCESS_KEY | your_value |
+| USE_AWS | True |
+| DATABASE_URL | your_value | 
+| DOMAIN_URL | your_value | 
+| EMAIL_HOST_PASSL | your_value | 
+| EMAIL_HOST_USERL | your_value | 
+| SECRET_KEY | your_value |
+| STRIPE_PUBLIC_KEY | your_value |
+| STRIPE_SECRET_KEY | your_value |
+| STRIPE_WH_SECRES | your_value |
+
+17. Create the database, by selecting the app from the list on Heroku
+18. Select 'Resources' from the menu
+20. In the 'addons' section select the search bar
+    - Type 'Postgres' and select Heroku Postgres
+    - From the order form select 'submit order form'
+** Maybe migrate data
+21. Change the allowed hosts in settings.py to match your new heroku app
+22. Import the coaches, lessons, products app data by typing:
 ```
-echo web: python app.py > Procfile
+python manage.py loaddata coaches
 ```
-- 'git add' and 'git commit' the new requirements and Procfile and then 'git push'
-    to GitHub
-- Create an account on [Heroku](https://www.heroku.com/home)
-- Create a new app on Heroku by clicking the "New" button in your dashboard and then 'Create New App'.
-- Give the app an unique name and set the region.
-- In the dashboard for your new app, click on "Deploy" > "Deployment method" and select GitHub
-- Confirm the linking of the Heroku app to the correct GitHub repository.
-- In the heroku dashboard for the app, click on 'Settings' > 'Reveal Config Vars'
-- Set the following config vars:
 ```
-IP = 0.0.0.0
-PORT = 5000 
-SECRET_KEY = `<your_secret_key>`
+python manage.py loaddata lessons
 ```
-- in the Heroku dashboard, click "Deploy"
-- Make sure master branch is selected and then click "Deploy Branch"
+```
+python manage.py loaddata products
+```
+23. In your Heroku dashboard, click 'Deploy'
+24. Scroll down to 'Manual Deploy' select the master branch for your repository and click 'Deploy Branch'
 
 ## Credits
 
@@ -774,4 +890,4 @@ I have used the following websites to get info & images for my website.
 - My friends for testing out Go-Tennis and helping me fine tune the project. 
 
 ## Disclaimer
-This website is for educational purposes only. 
+This website is for educational purposes only.
