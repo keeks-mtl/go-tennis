@@ -36,6 +36,9 @@ body {
 a {
     color: black;
 }
+a:hover {
+    text-decoration: none;
+}
 
 .bg-yellow {
     background-color: var(--extra-color);
