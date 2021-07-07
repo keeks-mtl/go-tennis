@@ -882,6 +882,8 @@ I have used the following websites to get info & images for my website.
     - phone numbers for django
 - [Free Code Camp](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
     - How to keep footer at bottom.
+- [Django Docs](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#now)
+    - Add copyright
 
 ### Acknowledgements
 
