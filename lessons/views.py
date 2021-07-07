@@ -18,7 +18,7 @@ def lessons(request):
 def all_lessons(request):
     """ A view to return the book lessons page """
 
-    lessons = Lesson.objects.all()
+    lessons = Lesson.objects.all().order_by("date")
     coaches = Coach.objects.all()
     class_types = None
     sort = None
