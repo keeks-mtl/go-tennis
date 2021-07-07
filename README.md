@@ -880,6 +880,8 @@ I have used the following websites to get info & images for my website.
     - How to get a Django forms date picker.
 - [StackOverflow](https://stackoverflow.com/questions/19130942/whats-the-best-way-to-store-phone-number-in-django-models)
     - phone numbers for django
+- [Free Code Camp](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
+    - How to keep footer at bottom.
 
 ### Acknowledgements
 

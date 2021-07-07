@@ -8,6 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
     {% endblock %}
 
     {% block extra_meta %}
@@ -36,6 +37,8 @@
     <title>Go-Tennis {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+    <div id="page-container">
+    <div id="content-wrap">
     <header class="nav-container container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex bg-white">
             <div class="col-12 col-lg-4 py-auto">
@@ -136,7 +139,7 @@
 
     {% block content %}
     {% endblock %}
-
+    </div>
     <!-- footer -->
     <div class="footer mt-3">
         <div class="row footer-row pb-4 bg-green">
@@ -179,6 +182,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- delete coach modal -->
