@@ -6,10 +6,6 @@
   --extra-color: #e4c301;
 }
 
-.checkout-container {
-    margin-top: 120px;
-}
-
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
