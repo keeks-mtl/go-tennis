@@ -8,6 +8,7 @@ class CoachForm(forms.ModelForm):
     class Meta:
         model = Coach
         fields = '__all__'
+        exclude = ('rating',)
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
