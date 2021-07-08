@@ -1,5 +1,5 @@
 from django import forms
-from .models import Lesson, ClassType
+from .models import Lesson, ClassType, Coach
 
 
 class DateInput(forms.DateInput):
@@ -17,14 +17,18 @@ class LessonForm(forms.ModelForm):
         fields = ('class_type', 'coach',
                   'description', 'price',
                   'date', 'time', 'spots')
+        exclude = ('students',)
 
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         class_type = ClassType.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in class_type]
+        coach = Coach.objects.all()
+        first_names = [(c.id, c.get_first_name()) for c in coach]
 
         self.fields['class_type'].choices = friendly_names
+        self.fields['coach'].choices = first_names
         self.fields['date'] = forms.DateField(widget=DateInput)
         self.fields['time'] = forms.TimeField(widget=TimeInput)
         for field_name, field in self.fields.items():
