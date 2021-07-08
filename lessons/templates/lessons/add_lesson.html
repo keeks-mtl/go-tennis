@@ -16,7 +16,27 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'add_lesson' %}" class="form mb-2">
                     {% csrf_token %}
-                    {{ form | crispy }}
+                    {{ form.class_type | as_crispy_field }}
+                    {{ form.coach | as_crispy_field }}
+                    {{ form.description | as_crispy_field }}
+                    <div class="div  flex-row-between">
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price*</label>
+                            <div>
+                                <input class="form-control btn-outline-black" type="number" name="price" min="0" max="1000" id="price" required>
+                            </div>
+                        </div>
+                    </div>
+                    {{ form.date | as_crispy_field }}
+                    {{ form.time | as_crispy_field }}
+                    <div class="div  flex-row-between">
+                        <div class="mb-3">
+                            <label for="spots" class="form-label">Spots*</label>
+                            <div>
+                                <input class="form-control btn-outline-black" type="number" name="spots" value="4" min="1" max="8" id="spots" required>
+                            </div>
+                        </div>
+                    </div>
                     <div class="text-right">
                         <a class="btn btn-info" href="{% url 'lessons' %}">Cancel</a>
                         <button class="btn btn-main" type="submit">Add Lesson</button>
