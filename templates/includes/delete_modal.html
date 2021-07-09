@@ -1,0 +1,23 @@
+<!-- delete confirmation modal -->
+<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="delete-modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!-- title topic to modal -->
+                <h5 class="modal-title">Delete <span id="delete-topic"></span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- what is being deleted -->
+            <div class="modal-body">
+                <p>Are you sure you'd like to delete <span id="topic-name"></span>?</p>
+            </div>
+            <!-- replaced with specific url to delete -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a class="btn btn-danger" id="confirm-delete">Delete</a>
+            </div>
+        </div>
+    </div>
+</div> 
