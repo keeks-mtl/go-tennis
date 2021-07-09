@@ -635,8 +635,6 @@ Description | description | null=True, blank=True | models.TextField
 Date | date | default="2021-09-05" | models.DateField 
 Time | time |  | models.TimeField 
 Spots | spots | default=4 | models.IntegerField
-Students | students | User, null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey  
-
 
 ## Technologies Used
 

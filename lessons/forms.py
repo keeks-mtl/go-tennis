@@ -17,7 +17,6 @@ class LessonForm(forms.ModelForm):
         fields = ('class_type', 'coach',
                   'description', 'price',
                   'date', 'time', 'spots')
-        exclude = ('students',)
 
 
     def __init__(self, *args, **kwargs):

@@ -27,7 +27,7 @@ class Lesson(models.Model):
     date = models.DateField(default="2021-09-05")
     time = models.TimeField()
     spots = models.IntegerField(default=4)
-    students = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.id
+
