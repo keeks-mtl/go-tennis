@@ -169,6 +169,7 @@ input[name='q']::placeholder {
 }
 .header-margin {
     margin-top: 75px;
+    margin-bottom: 2rem;
 }
 
 /* toasts */
