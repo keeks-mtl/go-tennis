@@ -165,6 +165,7 @@
                         </div>
                     </div>
 
+                    {% if order.order_total %}
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0">Shop Total</p>
@@ -182,6 +183,18 @@
                             <p class="mb-0 text-muted">{{ order.delivery_cost }}</p>
                         </div>
                     </div>
+                    {% endif %}
+
+                    {% if order.lesson_total %}
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0">Lesson Cost</p>
+                        </div>
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0 text-muted">{{ order.lesson_total }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
 
                     <div class="row">
                         <div class="col-12 col-md-4">
