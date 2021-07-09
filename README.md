@@ -246,7 +246,6 @@ IMAGE
     - Email (required)
     - Phone number (required)
     - Description (required)
-    - Rating
     - Image url
     - Select image button (when once an image is selected text that tells the user what image was selected)
 - Once the form has be filled in properly (must pass validations) the user is redirected to the coach's page with a toast that pops up in the top right hand corner letting the user know they succesfully added coach. 
@@ -511,7 +510,8 @@ IMAGE
 
 - Ability to delete a comment
 - Ability to cancel a lesson
-- To check in realtime on register form if the username already exists. 
+- To check in realtime on register form if the username already exists.
+- Ability for coaches to log in and see all their lessons & students who have signed up for them.
 
 ## Data Modelling
 
@@ -525,7 +525,6 @@ Last Name | last_name | max_length=50, null=False, blank=False | models.CharFiel
 Email | email | max_length=254, null=False, blank=False | models.EmailField
 Phone Number | phone_number | max_length=20, null=False, blank=False | models.CharField 
 Description | description | | models.TextField
-Rating | rating | max_digits=6, decimal_places=2, null=True, blank=True | models.DecimalField
 Image URL | image_url | max_length=1024, null=True, blank=True | models.URLField
 image | image | null=True, blank=True | models.ImageField
     
@@ -573,9 +572,6 @@ Town or City | default_town_or_city | `maxlength="40", null=True, Blank=True` | 
 County, State or Locality | default_county | `maxlength="80", null=True, Blank=True` | models.CharField
 Postcode | default_postcode | `maxlength="20", null=True, Blank=True` | models.CharField
 Country | default_country | blank_label='Country', null=True, Blank=True` | CountryField
-Rating | rating | max_digits=6, decimals_places=2, null=True, blank=True | models.DecimalField
-Skill Level | skill_level | max_digits=6, decimals_places=2, null=True, blank=True | models.CharField
-Role| role | maxlength="40", null=True, Blank=True | models.CharField
 
 ### Checkout App
 #### Order
@@ -585,7 +581,7 @@ Role| role | maxlength="40", null=True, Blank=True | models.CharField
 Order Number | order_number | maxlength="32", null=False, editable=False | models.CharField 
 User Profile | user_profile | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name="orders"` | models.ForeignKey
 Full Name | full_name | `maxlength="50", null=True, blank=True` | models.CharField
-Email | Email | `maxlength="254", null=True, blank=True` | models.CharField
+Email | Email | `maxlength="254", null=True, blank=True` | models.CharField 
 Phone Number | phone_number | `maxlength="20", null=True, blank=True` | models.CharField
 Street Address 1 | street_address1 | `maxlength="80", null=True, Blank=True` | models.CharField
 Street Address 2 | street_address2 | `maxlength="80", null=True, Blank=True` | models.CharField
