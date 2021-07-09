@@ -400,15 +400,15 @@
 
 ## Bugs
 
-### Bugname Bug
+### Checkout order total not correct Bug
 #### Bug
-- bug description
+- The grand total on the checkout success page and the order admin wasn't correct
 #### Fix
-- fix description
+- add lesson_lineitem_total to the checkout model order
 
-### Bugname Bug
+### lesson cost Bug
 #### Bug
-- bug description
+- the lesson cost doesn't show on the checkout_success.html when only a lesson is bought but shows when a lesson & product is bought. 
 #### Fix
 - fix description
 
