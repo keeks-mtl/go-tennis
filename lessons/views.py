@@ -63,13 +63,12 @@ def all_lessons(request):
 
     return render(request, 'lessons/book.html', context)
 
-
 @login_required
 def add_lesson(request):
     """ Add a lesson to the booking page """
 
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only staff members can do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -95,8 +94,8 @@ def add_lesson(request):
 def edit_lesson(request, lesson_id):
     """ Edit a lesson in the store """
     
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only staff members can do that.')
         return redirect(reverse('home'))
 
     lesson = get_object_or_404(Lesson, pk=lesson_id)
@@ -125,8 +124,8 @@ def edit_lesson(request, lesson_id):
 def delete_lesson(request, lesson_id):
     """ Delete a lesson from the store """
 
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+    if not request.user.is_staff:
+        messages.error(request, 'Sorry, only staff members can do that.')
         return redirect(reverse('home'))
 
     lesson = get_object_or_404(Lesson, pk=lesson_id)

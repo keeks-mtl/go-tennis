@@ -142,8 +142,10 @@ IMAGE
     - And beside the hamburger icon, Home link, My Account dropdown, Search, and Shopping bag. 
 - When a user is not logged in, the My Account dropdown has links to Register and Log In.
     - All other links remain the same on the navigational bar. 
-- When a user is logged in and an administrator, the My Account dropdown bar has links to:
-    - Product management, Lesson management, coach management, my profile and log out.
+- When a user is logged in and a staff member, the My Account dropdown bar has links to:
+    - Lesson management, my profile and log out.
+- When a user is logged in and a superuser, the My Account dropdown bar has links to:
+    - Lesson management, product management, coach management, my profile and log out.
 - When a user is logged in and not an administrator, the My Account dropdown has links to My profile 
     and log out. 
 
@@ -251,7 +253,7 @@ IMAGE
 
 ### Edit Coach Page
 
-- The edit coach page gives the superuser the ability to edit a particular coach.
+- The edit coach page gives a superuser the ability to edit a particular coach.
 - Once the superuser has been redirected to the edit coach page a toast pops up in the top right hand corner letting the user know that they are editing the information on a coach. 
 - The edit coach form is prepopulated with all the information in the database about the coach.
 - The user has the ability to click the cancel button to be redirected to the coaches page or the update coach button or the update coach button to submit the form and be redirected to that coach's page. 
@@ -259,8 +261,8 @@ IMAGE
 
 ### Delete Coach
 
-- The delete coach functionality allows the superuser to delete a coach from the database permanently. 
-- Once the superuser clicks the delete link next to the coach's name on either the coach page or coaches page, a confirmation modal pops up. 
+- The delete coach functionality allows a superuser to delete a coach from the database permanently. 
+- Once the staff member clicks the delete link next to the coach's name on either the coach page or coaches page, a confirmation modal pops up. 
 - The delete confirmation modal has the following:
     - Title: Delete Coach
     - Confirmation question
@@ -287,7 +289,7 @@ IMAGE
     - Start Time
     - Price
 - The user then has a button which allows them to put that lesson in their bag. 
-- If the user is a superuser there is also the ability to edit or delete the lesson. 
+- If the user is a staff member there is also the ability to edit or delete the lesson. 
 - If the user clicks the book lesson button, the lesson is added to the users bag. 
 - A toast then appears in the top right hand corner that lets them know they've booked a lesson on that date and shows the other things the user has in their bag. 
 
@@ -316,7 +318,7 @@ IMAGE
 
 ### Lesson Management Page
 
-- The lesson management page allows a administrative user to add a lesson.
+- The lesson management page allows a user who is a staff member to add a lesson.
 - There is a form that has the following information
     - Class type
         - a dropdown with the different class types
@@ -337,7 +339,7 @@ IMAGE
 
 ### Edit Lesson Page
 
-- The edit lesson page allows an administrative user the ability to edit a lesson.
+- The edit lesson page allows an user who is a staff member the ability to edit a lesson.
 - The edit lesson form is prepopulated with all the information in the database about the lesson. 
 - The user has the ability to press the cancel button which takes the user back to the book a lesson page. 
 - If the user presses the update lesson button the form is submitted and the information on the lesson is changed and the user is redirected to the book a lesson page. 
@@ -345,7 +347,7 @@ IMAGE
 
 ### Delete Lesson
 
-- The delete lesson feature allows an administrative user the ability to delete a lesson. 
+- The delete lesson feature allows an user who is a staff member the ability to delete a lesson. 
 - Once they click on the delete link on the book lessons page a confirmation modal pops up to confirm they'd like to delete the lesson. 
 - the confirmation modal asks the user if they are sure if they'd like to delete the lesson on that date by the coach it is taught by.
 - The user has the ability to close the confirmation modal by pressing the X or the close button. 
@@ -884,6 +886,8 @@ I have used the following websites to get info & images for my website.
     - How to keep footer at bottom.
 - [Django Docs](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#now)
     - Add copyright
+- [Django Dcs](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
+    - is_staff for lessons views.
 
 ### Acknowledgements
 
