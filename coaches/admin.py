@@ -11,7 +11,6 @@ class CoachAdmin(admin.ModelAdmin):
         'last_name',
         'email',
         'phone_number',
-        'rating',
         'image',
     )
 
