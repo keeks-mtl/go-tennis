@@ -18,7 +18,6 @@ class LessonForm(forms.ModelForm):
                   'description', 'price',
                   'date', 'time', 'spots')
 
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         class_type = ClassType.objects.all()

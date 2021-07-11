@@ -57,11 +57,12 @@ def all_lessons(request):
         'lessons': lessons,
         'coaches': coaches,
         'current_class_types': class_types,
-        'current_coach_name' : coach_name,
+        'current_coach_name': coach_name,
         'current_sorting': current_sorting,
     }
 
     return render(request, 'lessons/book.html', context)
+
 
 @login_required
 def add_lesson(request):
@@ -78,7 +79,8 @@ def add_lesson(request):
             messages.success(request, 'Successfully added lesson!')
             return redirect(reverse('add_lesson'))
         else:
-            messages.error(request, 'Failed to add lesson. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to add lesson. Please ensure the form is valid.'))
     else:
         form = LessonForm()
 
@@ -93,7 +95,7 @@ def add_lesson(request):
 @login_required
 def edit_lesson(request, lesson_id):
     """ Edit a lesson in the store """
-    
+
     if not request.user.is_staff:
         messages.error(request, 'Sorry, only staff members can do that.')
         return redirect(reverse('home'))
@@ -106,7 +108,8 @@ def edit_lesson(request, lesson_id):
             messages.success(request, 'Successfully updated Lesson!')
             return redirect(reverse('all_lessons'))
         else:
-            messages.error(request, 'Failed to update lesson. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to update lesson. Please ensure the form is valid.'))
     else:
         form = LessonForm(instance=lesson)
         messages.info(request, f'You are editing a lesson on {lesson.date}')
