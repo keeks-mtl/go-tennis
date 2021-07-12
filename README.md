@@ -87,7 +87,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 - The colours felt appropriate because they of their connection to tennis. 
     - Like the green of a tennis court, the light colour of the lines on the tennis court, and the yellow shade from a tennis ball. 
 
-IMAGE
+<div align="center"><img src="readme-images/color-theme.png" alt="image of the go-tennis color theme"></div>
 
 - #458F5F Middle Green
     - See our upcoming lessons bar background
@@ -117,19 +117,71 @@ IMAGE
 
 ### Wireframes
 
-- The wireframes that were used to initially design each page are below:
-    - Homepage Desktop
-    - Homepage Mobile
-    - Lessons Page
-    - Coaches Page Desktop
-    - Coaches Page Mobile
-    - Booking Page
-    - Shop Page Desktop
-    - Shop Page Mobile
+#### Desktop Wireframes
+<details><summary>Homepage</summary>
+<p>
+![Homepage](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/homepage-desktop.png)
+</p>
+</details>
+
+<details><summary>Coaches Page</summary>
+<p>
+![Coaches Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-page-desktop.png)
+</p>
+</details>
+
+<details><summary>Booking Page</summary>
+<p>
+![Booking Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/booking-desktop.png)
+</p>
+</details>
+
+<details><summary>Lessons Page</summary>
+<p>
+![Lessons Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/lessons-page-desktop.png)
+</p>
+</details>
+
+<details><summary>Shop Page</summary>
+<p>
+![Shop Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/shop-page-desktop.png)
+</p>
+</details>
+    
+#### Mobile Wireframes
+<details><summary>Homepage</summary>
+<p>
+![Homepage](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/homepage-mobile.png)
+</p>
+</details>
+
+<details><summary>Coaches Page</summary>
+<p>
+![Coaches Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-page-mobile.png)
+</p>
+</details>
+
+<details><summary>Shop Page</summary>
+<p>
+![Shop Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/shop-page-mobile.png)
+</p>
+</details>
 
 ## Features Implemented
 
 ### Navigation
+
+<details><summary>Desktop Navigation</summary>
+<p>
+![Desktop Navigation](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/desktop-nav.png)
+</p>
+</details>
+
+<details><summary>Mobile Navigation</summary>
+<p>
+![Mobile Navigation](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/mobile-nav.png)
+</p>
+</details>
 
 - The navigation bar was created using Bootstrap to ensure that it was fully responsive.
 - An example of a responsiveness change includes a hamburger menu when viewed on smaller viewports and the
@@ -149,15 +201,13 @@ IMAGE
 - When a user is logged in and not an administrator, the My Account dropdown has links to My profile 
     and log out. 
 
-##### Images
-<details>
-<summary><b>Navigation</b></summary>
-
-![Navigation Layout](wireframes/readme/navbar.png)
-
-</details>
-
 ### Search feature
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/search-desktop.png)
+</p>
+</details>
 
 - On the navigation bar there is the search feature.
 - The search feature allows users to search for something in the shop. 
@@ -165,6 +215,12 @@ IMAGE
 - The search bar is shown on the top navigational bar on large devices and on smaller devices it's an icon that activates a dropdown where mobile users can type their search query.  
 
 ### Home Page
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/search-desktop.png)
+</p>
+</details>
 
 - First seen on the home page is the hero image to evoke a feeling and get a sense of playing tennis. 
 - The home page starts by giving users a brief description of what Go-Tennis offers.
@@ -175,16 +231,34 @@ IMAGE
  
 ### Footer
 
+<details><summary>Image Desktop</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/footer-desktop.png)
+</p>
+</details>
+
+<details><summary>Image Mobile</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/footer-mobile.png)
+</p>
+</details>
+
 - The footer is in a contrasting colour to stand out against the rest of the Go-Tennis pages. 
 - On the footer there is the contact information for Go-tennis including the telephone number and email address which both link to either calling the number (on mobiles) or emailing the email address. 
 - Following the contact information there are social media icons which are links that open on another page so that people can stay connected to Go-Tennis.
 - Below the social media links is the copyright.
 - Next to the icons is the address of Go-Tennis. 
 
-### Register
+### Signup
 
-- The registration page allows users to register to use Go-Tennis' features.
-- The registration form requires all of the following information to create an account:
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/signup.png)
+</p>
+</details>
+
+- The signup page allows users to register to use Go-Tennis' features.
+- The signup form requires all of the following information to create an account:
     - User's email
     - Email confirmation
     - User's username
@@ -192,9 +266,15 @@ IMAGE
     - Password confirmation
 - All the data is then stored in a "users" collection in the database.
 - The passwords are hashed.
-- Once the register form is completed and the data is stored the user is redirected to a page letting them know they have to verify their email address and a toast appears in the right hand corner letting them know a confirmation email was sent and to what email address it was sent to.  
+- Once the signup form is completed and the data is stored the user is redirected to a page letting them know they have to verify their email address and a toast appears in the right hand corner letting them know a confirmation email was sent and to what email address it was sent to.  
 
 ### Log In
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/login.png)
+</p>
+</details>
 
 - Returning users who have already registered can use the log in form to 
     access Go-Tennis and their account. 
@@ -206,21 +286,31 @@ IMAGE
 
 ### Log Out
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/logout.png)
+</p>
+</details>
+
 - The log out button is located in the dropdown under My Account. 
 - Once an user clicks the log out button they are redirected to a confirmation page.
 - The confirmation page asks the user if they are sure they'd like to log out.
 - The cancel button redirects the user to the home page.
-- The log out button also redirects the user to the home page but a toast pops up in the top right hand corner letting them know they have succesfully logged out. 
-
-### Profile Page
-
-- The profile page allows users to see their order history and their already scheduled lessons. 
-- Each subsection of the profile page is ordered my date (either ascending or descending). 
-- The Profile page shows the user's username and users also have the ability to change their default    delivery information.  
-- The default delivery information is a form that is prepopulated with information alreadyd gathered on the user.
-- The user then has the ability to send the form and save the information by clicking the update informaiton button.   
+- The log out button also redirects the user to the home page but a toast pops up in the top right hand corner letting them know they have succesfully logged out.  
 
 ### Coaches Page
+
+<details><summary>Image Desktop</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-desktop.png)
+</p>
+</details>
+
+<details><summary>Image Mobile</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-mobile.png)
+</p>
+</details>
 
 - The coaches page has the coaches names and images of the coaches. 
 - The coaches page also shows visitors a description of the coach. 
@@ -230,6 +320,19 @@ IMAGE
 - If the user is a superuser, the user has the ability to edit the coach's information or delete the coach. 
 
 ### Coach Page
+
+<details><summary>Coach Page Mobile Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coach-mobile.png)
+</p>
+</details>
+
+<details><summary>Comment Image Desktop</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/comment-desktop.png)
+</p>
+</details>
+
 - The coach page shows information on a particular coach. 
 - There is an image of the coach, their name, a description, and a link to book a lesson with that particular coach.
 - If the user is a superuser then they have the ability to edit or delete the coach. 
@@ -238,6 +341,12 @@ IMAGE
 - Past comments are shown with the amount of stars they were give, the user who made the comment, the comment, and the date they commented. 
 
 ### Coach Management Page
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coach-management.png)
+</p>
+</details>
 
 - The coach management page allows a superuser to add a coach. 
 - The page has a form that has the following information:
@@ -252,6 +361,12 @@ IMAGE
 
 ### Edit Coach Page
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/edit-coach.png)
+</p>
+</details>
+
 - The edit coach page gives a superuser the ability to edit a particular coach.
 - Once the superuser has been redirected to the edit coach page a toast pops up in the top right hand corner letting the user know that they are editing the information on a coach. 
 - The edit coach form is prepopulated with all the information in the database about the coach.
@@ -259,6 +374,12 @@ IMAGE
 - Once the form has been submitted, a toast pops up in the top right hand corner letting the user know they have successfully edited the coach's information. 
 
 ### Delete Coach
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/delete-coach.png)
+</p>
+</details>
 
 - The delete coach functionality allows a superuser to delete a coach from the database permanently. 
 - Once the staff member clicks the delete link next to the coach's name on either the coach page or coaches page, a confirmation modal pops up. 
@@ -272,12 +393,30 @@ IMAGE
 
 ### Lessons Page
 
+<details><summary>Image mobile</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/lessons-mobile.png)
+</p>
+</details>
+
 - The lessons page shows users the different lesson options available to them.
 - On the lessons page there is a brief description of Go-Tennis and links to the coaches page or the book lesson page. 
 - The lessons are divided into group lessons by skill level and solo private lessons.  
 - The different lessons also have a brief description and then are linked to the book lesson page for that lesson type.
 
 ### Book Lesson Page
+
+<details><summary>Coach Book Lesson iPad image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/book-lesson-ipad.png)
+</p>
+</details>
+
+<details><summary>Book Lesson Desktop</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/book-lesson-desktop.png)
+</p>
+</details>
 
 - The Book page allows users to book a lesson.
 - The are badges that allow users to see just the lessons for each lesson type and another set of badges to allow users to see just the lessons by each individual coach. 
@@ -294,6 +433,12 @@ IMAGE
 
 
 ### Sort Feature
+
+<details><summary>Image mobile</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/sort.png)
+</p>
+</details>
 
 - The sort feature appears on two seperate pages, the book lesson page and the shop page. 
 - On the book lesson page the sort dropdown has the following options:
@@ -317,6 +462,12 @@ IMAGE
 
 ### Lesson Management Page
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/lesson-management.png)
+</p>
+</details>
+
 - The lesson management page allows a user who is a staff member to add a lesson.
 - There is a form that has the following information
     - Class type
@@ -338,6 +489,12 @@ IMAGE
 
 ### Edit Lesson Page
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/edit-lesson.png)
+</p>
+</details>
+
 - The edit lesson page allows an user who is a staff member the ability to edit a lesson.
 - The edit lesson form is prepopulated with all the information in the database about the lesson. 
 - The user has the ability to press the cancel button which takes the user back to the book a lesson page. 
@@ -345,6 +502,12 @@ IMAGE
 - The user also has a pop up on the top right hand corner letting them know they succesfully edited the lesson. 
 
 ### Delete Lesson
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/delete-lesson.png)
+</p>
+</details>
 
 - The delete lesson feature allows an user who is a staff member the ability to delete a lesson. 
 - Once they click on the delete link on the book lessons page a confirmation modal pops up to confirm they'd like to delete the lesson. 
@@ -354,17 +517,24 @@ IMAGE
 
 ### Shop Page
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/shop.png)
+</p>
+</details>
+
 - The shop page is available to everyone. 
 - There will be 3 badges at the top with the 3 product lines available in the product shop.
     - When a particular badge is clicked only those products in the product line are shown.
 - The users will have the ability to sort through the products by price, rating, name and category.
 
-### Pagination**
-
-- The feature is used to make sure pages aren't filled with shop products and slowing down users' viewing. 
-- The main shopping page displays 12 products and displays the products on serveral pages. 
-
 ### Product Management Page
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/product-management.png)
+</p>
+</details>
 
 - The product management page allows the superuser to add products to the shop. 
 - The form on the product management page has the following fields:
@@ -384,6 +554,12 @@ IMAGE
 
 ### Edit Product Page
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/edit-product.png)
+</p>
+</details>
+
 - The edit product page can be reached by the edit button on either the shop page or the product detail page. 
 - The edit product page allows the superuser to edit a particular product's information.
 - When a user visits the edit product page a toast appears to notify the user they are editing the product. 
@@ -395,6 +571,12 @@ IMAGE
 
 ### Delete Product Feature
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/delete-product.png)
+</p>
+</details>
+
 - The delete product feature allows a superuser the ability to delete a product.
 - The delete product feature can be found on the shop page and the product detail page but can only be seen by the superuser. 
 - Once the delete link is pressed, a confirmation modal appears. 
@@ -403,6 +585,12 @@ IMAGE
 - Once the product is deleted the user is redirected to the shop page and a toast appears letting the user know they have succesfully deleted the product. 
 
 #### Product Detail Page
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/product-detail.png)
+</p>
+</details>
 
 - The Product detail page can be navigated to by clicking the image of the product on the shop page.
 - The page shows the following about the product:
@@ -417,6 +605,12 @@ IMAGE
 - If the user adds the product to their bag they are shown a toast that tells them it was added to their bag. 
 
 ### Bag Page
+
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/bag.png)
+</p>
+</details>
 
 - The bag page shows the contents of the user's bag. 
 - Shown first is lesson info which shows a responsive table with the following headers:
@@ -450,6 +644,12 @@ IMAGE
 
 ### Checkout
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/checkout.png)
+</p>
+</details>
+
 - The checkout page has an order summary which shows the details of the products and lessons in the users bag and the subtotal of each.
 - The order summary also shows the following:
     - Shop total
@@ -478,6 +678,12 @@ IMAGE
 
 ### Checkout Success Page
 
+<details><summary>Image</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/checkout-success.png)
+</p>
+</details>
+
 - A user is redirected to the checkout success page once they've successfully purchased the things in their bag. 
 - The Heading is a thank you message with the user's full name.
 - The user is also reminded to what email the confirmation email was sent to.
@@ -492,6 +698,18 @@ IMAGE
 - There is also a link to the shop.
 
 ### Profile
+
+<details><summary>Image Desktop</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/profile-desktop.png)
+</p>
+</details>
+
+<details><summary>Image Mobile</summary>
+<p>
+![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/profile-mobile.png)
+</p>
+</details>
 
 - The profile page shows users the delivery information on file and their past orders. 
 - The heading for the page is My Profile and the username of the user. 
@@ -525,7 +743,6 @@ Last Name | last_name | max_length=50, null=False, blank=False | models.CharFiel
 Email | email | max_length=254, null=False, blank=False | models.EmailField
 Phone Number | phone_number | max_length=20, null=False, blank=False | models.CharField 
 Description | description | | models.TextField
-Image URL | image_url | max_length=1024, null=True, blank=True | models.URLField
 image | image | null=True, blank=True | models.ImageField
     
 #### Comment
@@ -544,10 +761,9 @@ Stars | stars | null=False, blank=False | models.IntegerField
 --- | --- | --- | ---
 Category | category | 'Category', null=True, blank=True, on_delete=models.SET_NULL| models.ForeignKey  
 SKU | sku | max_length=254 | models.CharField 
-Name | name | `maxlength="50"` | models.CharField
-Description | description | `` | models.TextField
+Name | name | maxlength="50" | models.CharField
+Description | description |  | models.TextField
 Price | price | max_digits=6, decimals_places=2 | models.DecimalField
-Image_url | image_url | max_length=1024, null=True, blank=True | models.URLField
 Image | image | upload_to='', null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
 Rating | rating | max_digits=6, decimals_places=2, null=True, blank=True | models.DecimalField
 Has_sizes | has_sizes | default=False, null=True, blank=True | models.BooleanField
@@ -557,7 +773,7 @@ Has_sizes | has_sizes | default=False, null=True, blank=True | models.BooleanFie
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
 Name | name | max_length=254 | models.CharField 
-Friendly_name | friendly_name | `maxlength="254", null=True, blank=True` | models.CharField
+Friendly_name | friendly_name | maxlength="254", blank=True | models.CharField
 
 ### Profile App
 #### User Profile
@@ -565,13 +781,13 @@ Friendly_name | friendly_name | `maxlength="254", null=True, blank=True` | model
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
 User | user | User, on_delete=models.CASCADE | models.OneToOneField 
-Phone Number | default_phone_number | `maxlength="20", null=True, blank=True` | models.CharField
-Street Address 1 | default_street_address1 | `maxlength="80", null=True, Blank=True` | models.CharField
-Street Address 2 | default_street_address2 | `maxlength="80", null=True, Blank=True` | models.CharField
-Town or City | default_town_or_city | `maxlength="40", null=True, Blank=True` | models.CharField
-County, State or Locality | default_county | `maxlength="80", null=True, Blank=True` | models.CharField
-Postcode | default_postcode | `maxlength="20", null=True, Blank=True` | models.CharField
-Country | default_country | blank_label='Country', null=True, Blank=True` | CountryField
+Phone Number | default_phone_number | maxlength="20", blank=True| models.CharField
+Street Address 1 | default_street_address1 | maxlength="80", Blank=True | models.CharField
+Street Address 2 | default_street_address2 | maxlength="80", Blank=True | models.CharField
+Town or City | default_town_or_city | maxlength="40", Blank=True | models.CharField
+County, State or Locality | default_county | maxlength="80", Blank=True | models.CharField
+Postcode | default_postcode | maxlength="20", Blank=True | models.CharField
+Country | default_country | blank_label='Country', null=True, Blank=True | CountryField
 
 ### Checkout App
 #### Order
@@ -579,21 +795,23 @@ Country | default_country | blank_label='Country', null=True, Blank=True` | Coun
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
 Order Number | order_number | maxlength="32", null=False, editable=False | models.CharField 
-User Profile | user_profile | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name="orders"` | models.ForeignKey
-Full Name | full_name | `maxlength="50", null=True, blank=True` | models.CharField
-Email | Email | `maxlength="254", null=True, blank=True` | models.CharField 
-Phone Number | phone_number | `maxlength="20", null=True, blank=True` | models.CharField
-Street Address 1 | street_address1 | `maxlength="80", null=True, Blank=True` | models.CharField
-Street Address 2 | street_address2 | `maxlength="80", null=True, Blank=True` | models.CharField
-Town or City | town_or_city | `maxlength="40", null=True, Blank=True` | models.CharField
-County, State or Locality | county | `maxlength="80", null=True, Blank=True` | models.CharField
-Postcode | postcode | `maxlength="20", null=True, Blank=True` | models.CharField
-Country | country | blank_label='Country', null=True, Blank=True` | CountryField
+User Profile | user_profile | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name="orders" | models.ForeignKey
+Full Name | full_name | maxlength="50", blank=True | models.CharField
+Email | Email | maxlength="254", blank=True | models.CharField 
+Phone Number | phone_number | maxlength="20", blank=True | models.CharField
+Street Address 1 | street_address1 | maxlength="80", Blank=True | models.CharField
+Street Address 2 | street_address2 | maxlength="80", Blank=True | models.CharField
+Town or City | town_or_city | maxlength="40", Blank=True | models.CharField
+County, State or Locality | county | maxlength="80", Blank=True | models.CharField
+Postcode | postcode | maxlength="20", Blank=True | models.CharField
+Country | country | blank_label='Country', null=True, Blank=True | CountryField
 Date | date | auto_now_add=True | models.DateTimeField
 Delivery Cost | delivery_cost | max_digits=6 , decimal_places=2, null=False, default=0 | models.DecimalField
 Order Total | order_total | max_digits=10 , decimal_places=2, null=False, default=0 | models.DecimalField
+Lesson Total | lesson_total | max_digits=10 , decimal_places=2, null=False, default=0 | models.DecimalField
 Grand Total | grand_total | max_digits=10 , decimal_places=2, null=False, default=0 | models.DecimalField
 Original bag | original_bag | null=False, Blank=False | models.TextField
+Original lesson bag | original_lesson_bag | null=False, Blank=False | models.TextField
 Stripe Pid | stripe_pid | `maxlength="254", null=False, Blank=False | models.CharField
 
 #### Order Line Item
@@ -619,7 +837,7 @@ Lesson line item total | lesson_lineitem_total | ax_digits=6, decimal_places=2, 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
 Name | name | max_length=254 | models.CharField 
-Friendly Name | friendly_name | max_length=254, null=True, blank=True | models.CharField 
+Friendly Name | friendly_name | max_length=254, blank=True | models.CharField 
 
 #### Lessons
 
@@ -802,11 +1020,17 @@ python manage.py runserver
 10. Go to [Heroku](https://www.heroku.com/) and create an account if you havent already done so.
 
 11. From the Heroku dashboard select "New"
+![Create Heroku app step 1](readme-images/heroku1.png)
+
 12. Select "Create new app" from dropdown.
+![Create Heroku app step 2](readme-images/heroku2.png)
+
 13. On this page do the following:
     - Choose app name
     - Select region
     - Click create app
+![Create Heroku app step 3](readme-images/heroku3.png)
+
 14. From the Heroku dashboard, select the app from the list.
 15. Select Settings from the menu
 16. On the this page do the following:
@@ -831,8 +1055,12 @@ python manage.py runserver
 17. Create the database, by selecting the app from the list on Heroku
 18. Select 'Resources' from the menu
 20. In the 'addons' section select the search bar
+![Create Heroku app step 5](readme-images/heroku5.png)
+
     - Type 'Postgres' and select Heroku Postgres
     - From the order form select 'submit order form'
+![Create Heroku app step 6](readme-images/heroku6.png)
+
 ** Maybe migrate data
 21. Change the allowed hosts in settings.py to match your new heroku app
 22. Import the coaches, lessons, products app data by typing:
