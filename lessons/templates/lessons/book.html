@@ -81,7 +81,7 @@
                             <td>{{ lesson.coach }}</td>
                             <td>{{ lesson.date }}</td>
                             <td>{{ lesson.time }}</td>
-                            <td>&#163 {{ lesson.price }}</td>
+                            <td>&#163; {{ lesson.price }}</td>
                             {% if lesson.spots > 0 %}
                                 <td><input type="submit" class="btn btn-main btn-block text-uppercase mt-2" value="Book Lesson"></td>         
                             {% endif %}   
@@ -124,8 +124,8 @@
     {{ block.super }}
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
+			window.scrollTo(0,0);
+		});
 	</script>
     
     <script type="text/javascript">
@@ -148,6 +148,6 @@
 
                 window.location.replace(currentUrl);
             }
-        })
+        });
     </script>
 {% endblock %}

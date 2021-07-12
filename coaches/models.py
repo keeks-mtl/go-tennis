@@ -15,7 +15,7 @@ class Coach(models.Model):
     first_name = models.CharField(max_length=50, null=False, blank=False)
     last_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
-    phone_number = models.CharField(max_length=20, null=True, blank=True)    
+    phone_number = models.CharField(max_length=20, blank=True)
     description = models.TextField()
     image = models.ImageField(null=True, blank=True)
 
@@ -30,7 +30,8 @@ class Comment(models.Model):
     """
     A comment model
     """
-    coach = models.ForeignKey(Coach, on_delete=models.CASCADE, related_name="comments")
+    coach = models.ForeignKey(Coach, on_delete=models.CASCADE,
+                              related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField()
     date = models.DateField(auto_now_add=True)

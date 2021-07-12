@@ -66,7 +66,8 @@ def add_coach(request):
             messages.success(request, 'Successfully added coach!')
             return redirect(reverse('view_coach', args=[coach.id]))
         else:
-            messages.error(request, 'Failed to add coach. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to add coach. Please ensure the form is valid.'))
     else:
         form = CoachForm()
 
@@ -94,10 +95,11 @@ def edit_coach(request, coach_id):
             messages.success(request, 'Successfully updated coach!')
             return redirect(reverse('view_coach', args=[coach.id]))
         else:
-            messages.error(request, 'Failed to update coach. Please ensure the form is valid.')
+            messages.error(request, (
+                'Failed to update coach. Please ensure the form is valid.'))
     else:
         form = CoachForm(instance=coach)
-        messages.info(request, f"You are editing a coach's informaiton")
+        messages.info(request, f'You are editing {coach.first_name}')
 
     template = 'coaches/edit_coach.html'
     context = {

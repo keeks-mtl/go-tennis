@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
 
 from products.models import Product
@@ -28,17 +28,22 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
                 bag[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+                messages.success(request, f'Updated size {size.upper()} \
+                                {product.name} quantity to \
+                                {bag[item_id]["items_by_size"][size]}')
             else:
                 bag[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
+                messages.success(request, f'Added size {size.upper()} \
+                                {product.name} to your bag')
         else:
             bag[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
+            messages.success(request, f'Added size {size.upper()} \
+                            {product.name} to your bag')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity \
+                            to {bag[item_id]}')
         else:
             bag[item_id] = quantity
             messages.success(request, f'Added {product.name} to your bag')
@@ -55,10 +60,12 @@ def book_lesson(request, item_id):
     quantity = int(1)
 
     if item_id in list(lesson_bag.keys()):
-        messages.success(request, f'Lesson on {lesson.date} is already in your bag')
+        messages.success(request, f'Lesson on {lesson.date} \
+                        is already in your bag')
     else:
         lesson_bag[item_id] = quantity
-        messages.success(request, f"You've booked a lesson on {lesson.date} at {lesson.time}")
+        messages.success(request, f"You've booked a lesson on \
+                        {lesson.date} at {lesson.time}")
 
     request.session['lesson_bag'] = lesson_bag
     return redirect('all_lessons')
@@ -77,16 +84,19 @@ def adjust_bag(request, item_id):
     if size:
         if quantity > 0:
             bag[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+            messages.success(request, f'Updated size {size.upper()}{product.name} \
+                            quantity to {bag[item_id]["items_by_size"][size]}')
         else:
             del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
+            messages.success(request, f'Removed size {size.upper()} \
+                            {product.name} from your bag')
     else:
         if quantity > 0:
             bag[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'Updated {product.name} quantity \
+                            to {bag[item_id]}')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
@@ -109,7 +119,8 @@ def remove_from_bag(request, item_id):
             del bag[item_id]['items_by_size'][size]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
-            messages.success(request, f'Removed size {size.upper()} {product.name} from your bag')
+            messages.success(request, f'Removed size {size.upper()} \
+                            {product.name} from your bag')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
@@ -129,7 +140,8 @@ def remove_lesson(request, item_id):
         lesson = get_object_or_404(Lesson, pk=item_id)
         lesson_bag = request.session.get('lesson_bag', {})
         lesson_bag.pop(item_id)
-        messages.success(request, f'Removed lesson on {lesson.date} from your bag at {lesson.time}')
+        messages.success(request, f'Removed lesson on {lesson.date} \
+                        from your bag at {lesson.time}')
 
         request.session['lesson_bag'] = lesson_bag
         return HttpResponse(status=200)
