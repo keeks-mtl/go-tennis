@@ -120,50 +120,50 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 #### Desktop Wireframes
 <details><summary>Homepage</summary>
 <p>
-![Homepage](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/homepage-desktop.png)
+![Homepage](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/homepage-desktop.png)
 </p>
 </details>
 
 <details><summary>Coaches Page</summary>
 <p>
-![Coaches Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-page-desktop.png)
+![Coaches Page](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/coaches-page-desktop.png)
 </p>
 </details>
 
 <details><summary>Booking Page</summary>
 <p>
-![Booking Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/booking-desktop.png)
+![Booking Page](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/booking-desktop.png)
 </p>
 </details>
 
 <details><summary>Lessons Page</summary>
 <p>
-![Lessons Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/lessons-page-desktop.png)
+![Lessons Page](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/lessons-page-desktop.png)
 </p>
 </details>
 
 <details><summary>Shop Page</summary>
 <p>
-![Shop Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/shop-page-desktop.png)
+![Shop Page](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/shop-page-desktop.png)
 </p>
 </details>
     
 #### Mobile Wireframes
 <details><summary>Homepage</summary>
 <p>
-![Homepage](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/homepage-mobile.png)
+![Homepage](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/homepage-mobile.png)
 </p>
 </details>
 
 <details><summary>Coaches Page</summary>
 <p>
-![Coaches Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-page-mobile.png)
+![Coaches Page](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/coaches-page-mobile.png)
 </p>
 </details>
 
 <details><summary>Shop Page</summary>
 <p>
-![Shop Page](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/shop-page-mobile.png)
+![Shop Page](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/shop-page-mobile.png)
 </p>
 </details>
 
@@ -173,13 +173,13 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Desktop Navigation</summary>
 <p>
-![Desktop Navigation](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/desktop-nav.png)
+![Desktop Navigation](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/desktop-nav.png)
 </p>
 </details>
 
 <details><summary>Mobile Navigation</summary>
 <p>
-![Mobile Navigation](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/mobile-nav.png)
+![Mobile Navigation](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/mobile-nav.png)
 </p>
 </details>
 
@@ -205,7 +205,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/search-desktop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/search-desktop.png)
 </p>
 </details>
 
@@ -218,7 +218,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/search-desktop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/search-desktop.png)
 </p>
 </details>
 
@@ -233,13 +233,13 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image Desktop</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/footer-desktop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/footer-desktop.png)
 </p>
 </details>
 
 <details><summary>Image Mobile</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/footer-mobile.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/footer-mobile.png)
 </p>
 </details>
 
@@ -253,7 +253,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/signup.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/signup.png)
 </p>
 </details>
 
@@ -272,7 +272,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/login.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/login.png)
 </p>
 </details>
 
@@ -288,7 +288,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/logout.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/logout.png)
 </p>
 </details>
 
@@ -302,13 +302,13 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image Desktop</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-desktop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/coaches-desktop.png)
 </p>
 </details>
 
 <details><summary>Image Mobile</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coaches-mobile.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/coaches-mobile.png)
 </p>
 </details>
 
@@ -323,13 +323,13 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Coach Page Mobile Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coach-mobile.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/coach-mobile.png)
 </p>
 </details>
 
 <details><summary>Comment Image Desktop</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/comment-desktop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/comment-desktop.png)
 </p>
 </details>
 
@@ -344,7 +344,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/coach-management.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/coach-management.png)
 </p>
 </details>
 
@@ -363,7 +363,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/edit-coach.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/edit-coach.png)
 </p>
 </details>
 
@@ -377,7 +377,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/delete-coach.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/delete-coach.png)
 </p>
 </details>
 
@@ -395,7 +395,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image mobile</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/lessons-mobile.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/lessons-mobile.png)
 </p>
 </details>
 
@@ -408,13 +408,13 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Coach Book Lesson iPad image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/book-lesson-ipad.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/book-lesson-ipad.png)
 </p>
 </details>
 
 <details><summary>Book Lesson Desktop</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/book-lesson-desktop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/book-lesson-desktop.png)
 </p>
 </details>
 
@@ -436,7 +436,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image mobile</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/sort.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/sort.png)
 </p>
 </details>
 
@@ -464,7 +464,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/lesson-management.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/lesson-management.png)
 </p>
 </details>
 
@@ -491,7 +491,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/edit-lesson.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/edit-lesson.png)
 </p>
 </details>
 
@@ -505,7 +505,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/delete-lesson.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/delete-lesson.png)
 </p>
 </details>
 
@@ -519,7 +519,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/shop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/shop.png)
 </p>
 </details>
 
@@ -532,7 +532,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/product-management.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/product-management.png)
 </p>
 </details>
 
@@ -556,7 +556,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/edit-product.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/edit-product.png)
 </p>
 </details>
 
@@ -573,7 +573,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/delete-product.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/delete-product.png)
 </p>
 </details>
 
@@ -588,7 +588,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/product-detail.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/product-detail.png)
 </p>
 </details>
 
@@ -608,7 +608,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/bag.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/bag.png)
 </p>
 </details>
 
@@ -646,7 +646,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/checkout.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/checkout.png)
 </p>
 </details>
 
@@ -680,7 +680,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/checkout-success.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/checkout-success.png)
 </p>
 </details>
 
@@ -701,13 +701,13 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 <details><summary>Image Desktop</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/profile-desktop.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/profile-desktop.png)
 </p>
 </details>
 
 <details><summary>Image Mobile</summary>
 <p>
-![image](https://github.com/keeksmtl/go-tennis/tree/master/readme-mages/profile-mobile.png)
+![image](https://github.com/keeksmtl/go-tennis/blob/styling/readme-images/profile-mobile.png)
 </p>
 </details>
 
