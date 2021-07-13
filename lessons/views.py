@@ -20,8 +20,10 @@ def all_lessons(request):
 
     lessons = Lesson.objects.all().order_by("date")
     coaches = Coach.objects.all()
-    class_types = None
+    class_types = ClassType.objects.all()
+    class_type_search = None
     sort = None
+    sort_label = None
     direction = None
     coach_name = None
 
@@ -41,9 +43,10 @@ def all_lessons(request):
             lessons = lessons.order_by(sortkey)
 
         if 'class_type' in request.GET:
-            class_types = request.GET['class_type'].split(',')
-            lessons = lessons.filter(class_type__name__in=class_types)
-            class_types = ClassType.objects.filter(name__in=class_types)
+            class_type_search = request.GET['class_type']
+            lessons = lessons.filter(class_type__name=class_type_search)
+            sort_label = class_type_search
+            class_type_search = ClassType.objects.filter(name__in=class_type_search)
 
         if 'coach' in request.GET:
             coach_name = request.GET['coach']
@@ -56,9 +59,11 @@ def all_lessons(request):
     context = {
         'lessons': lessons,
         'coaches': coaches,
-        'current_class_types': class_types,
+        'current_class_types': class_type_search,
         'current_coach_name': coach_name,
         'current_sorting': current_sorting,
+        'class_types': class_types,
+        'sort_label': sort_label,
     }
 
     return render(request, 'lessons/book.html', context)

@@ -9,13 +9,13 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="image-container my-5">
                     <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1602012846858-0727988e215b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="tennis shoes on a tennis court">
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-8 text-center">
+            <div class="col-12 col-md-6 col-lg-6 text-center">
                 <div class="lessons-details-container mb-5 mt-md-5">
                     <p>
                         Go-Tennis provides adult tennis coaching located in Stoke Newington, Borough of Hackney, East London. Adult tennis lessons for 
@@ -28,13 +28,13 @@
                         using tennis as the vehicle for personal development. 
                     </p>
                 </div>
-                <a href="{% url 'view_coaches' %}" class="btn btn-info btn-large text-uppercase">Coaches</a>
-                <a href="{% url 'all_lessons' %}" class="btn btn-info btn-large text-uppercase">Book a Lesson</a>
+                <a href="{% url 'view_coaches' %}" class="btn btn-lightblue btn-large text-uppercase">Coaches</a>
+                <a href="{% url 'all_lessons' %}" class="btn btn-lightblue btn-large text-uppercase">Book a Lesson</a>
             </div>
         <hr class="w-50 mb-1">
         </div>
-        <div class="row">
-            <div class="col-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
                 <div class="lessons-details-container mb-5 mt-md-5">
                     <h2>Beginner Lessons</h2>
                     <p>
@@ -43,12 +43,12 @@
                         and approaches to the game of tennis, by learning tennis fundamentals and basic skills.
                     </p>
                 </div>
-                <a href="{% url 'all_lessons' %}?class_type=beginner_group" class="btn btn-info btn-med text-uppercase">Book Now</a>
+                <a href="{% url 'all_lessons' %}?class_type=beginner" class="btn btn-lightblue btn-med text-uppercase">Book Now</a>
             </div>
         <hr class="w-50 mb-1">
         </div>
-        <div class="row">
-            <div class="col-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
                 <div class="lessons-details-container mb-5 mt-md-5">
                     <h2>Intermediate Lessons</h2>
                     <p>
@@ -58,12 +58,12 @@
                         tactics.
                     </p>
                 </div>
-                <a href="{% url 'all_lessons' %}?class_type=intermediate_group" class="btn btn-info btn-med text-uppercase">Book Now</a>
+                <a href="{% url 'all_lessons' %}?class_type=intermediate" class="btn btn-lightblue btn-med text-uppercase">Book Now</a>
             </div>
         <hr class="w-50 mb-1">
         </div>
-        <div class="row">
-            <div class="col-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
                 <div class="lessons-details-container mb-5 mt-md-5">
                     <h2>Advanced Lessons</h2>
                     <p>
@@ -72,12 +72,12 @@
                         Players will be invited to join our tennis teams in order to start competing in local tournaments.
                     </p>
                 </div>
-                <a href="{% url 'all_lessons' %}?class_type=advanced_group" class="btn btn-info btn-med text-uppercase">Book Now</a>
+                <a href="{% url 'all_lessons' %}?class_type=advanced" class="btn btn-lightblue btn-med text-uppercase">Book Now</a>
             </div>
         <hr class="w-50 mb-1">
         </div>
-        <div class="row">
-            <div class="col-12 text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
                 <div class="lessons-details-container mb-5 mt-md-5">
                     <h2>Private Lessons</h2>
                     <p>
@@ -93,16 +93,15 @@
                         game to ensure that all players reach their highest level. 
                     </p>
                 </div>
-                <a href="{% url 'all_lessons' %}?class_type=private" class="btn btn-info btn-med text-uppercase">Book Now</a>
+                <a href="{% url 'all_lessons' %}?class_type=private" class="btn btn-lightblue btn-med text-uppercase">Book Now</a>
             </div>
-        <hr class="w-50 mb-1">
         </div>
     </div>
     <div class="container-fluid container-shop">
         <div class="row text-center">
             <div class="col">
                 <h2>Get Ready For Lessons</h2>
-                <a href="{% url 'products' %}" class="btn btn-grey btn-large text-uppercase">Shop Now</a>
+                <a href="{% url 'products' %}" class="btn btn-beige btn-large text-uppercase">Shop Now</a>
             </div>
         </div>
     </div>

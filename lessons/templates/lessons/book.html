@@ -6,26 +6,27 @@
         <div class="row text-center">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Lessons Schedule</h2>
-                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?class_type=beginner_group">
-                    <span class="p-2 mt-2 badge badge-green badge-pill">Beginner Class</span>
-                </a>
-                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?class_type=intermediate_group">
-                    <span class="p-2 mt-2 badge badge-green badge-pill">Intermediate Class</span>
-                </a>
-                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?class_type=advanced_group">
-                    <span class="p-2 mt-2 badge badge-green badge-pill">Advanced Class</span>
-                </a>
-                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?class_type=private">
-                    <span class="p-2 mt-2 badge badge-green badge-pill">Private Class</span>
-                </a>
+                {% for class_type in class_types %}
+                    <a href="{% url 'all_lessons' %}?class_type={{ class_type }}">
+                        {% if sort_label == class_type.name %}
+                            <span class="p-2 mt-2 badge badge-lightblue badge-pill text-capitalize">{{ class_type }}</span>
+                        {% else %}
+                            <span class="p-2 mt-2 badge badge-light-outline badge-pill text-capitalize">{{ class_type }}</span>
+                        {% endif %}
+                    </a>
+                {% endfor %}
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row text-center">
             <div class="col text-center">
                 {% for coach in coaches %}
-                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?coach={{ coach.id }}"">
-                    <span class="p-2 mt-2 mb-3 badge badge-blue badge-pill">{{ coach.first_name }}</span>
+                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?coach={{ coach.id }}">
+                    {% if current_coach_name == coach.id %}
+                        <span class="p-2 mt-2 mb-3 badge badge-darkblue badge-pill">{{ coach.first_name }}</span>
+                    {% else %}
+                        <span class="p-2 mt-2 mb-3 badge badge-dark-outline badge-pill">{{ coach.first_name }}</span>
+                    {% endif %}
                 </a>
                 {% endfor %}
             </div>
@@ -34,31 +35,37 @@
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="lesson-sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="price/asc" {% if current_sorting == 'price/asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price/desc" {% if current_sorting == 'price/desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="date/asc" {% if current_sorting == 'date/asc' %}selected{% endif %}>Date (low to high)</option>
-                                <option value="date/desc" {% if current_sorting == 'date/desc' %}selected{% endif %}>Date (high to low)</option>
-                                <option value="coach/asc" {% if current_sorting == 'coach/asc' %}selected{% endif %}>Coach (A-Z)</option>
-                                <option value="coach/desc" {% if current_sorting == 'coach/desc' %}selected{% endif %}>Coach (Z-A)</option>
-                                <option value="class_type/asc" {% if current_sorting == 'class_type/asc' %}selected{% endif %}>Class type (A-Z)</option>
-                                <option value="class_type/desc" {% if current_sorting == 'class_type/desc' %}selected{% endif %}>Class type(Z-A)</option>
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>
+                                    Sort by...
+                                </option>
+                                <option value="price/asc" {% if current_sorting == "price_asc" %} selected{% endif %}>
+                                    Price (low to high)
+                                </option>
+                                <option value="price/desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="date/asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date (low to high)</option>
+                                <option value="date/desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>Date (high to low)</option>
+                                <option value="coach/asc" {% if current_sorting == 'coach_asc' %} selected {% endif %}>Coach (A-Z)</option>
+                                <option value="coach/desc" {% if current_sorting == 'coach_desc' %}selected{% endif %}>Coach (Z-A)</option>
+                                <option value="class_type/asc" {% if current_sorting == 'class_type_asc' %}selected{% endif %}>Class type (A-Z)</option>
+                                <option value="class_type/desc" {% if current_sorting == 'class_type_desc' %}selected{% endif %}>Class type(Z-A)</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
-                        <p class="text-muted mt-3 text-center text-md-left">
-                            {% if current_class_types or current_coach_name or current_sorting != 'None_None' %}
-                                <span class="badge-pill badge badge-yellow"><a href="{% url 'all_lessons' %}">All Lessons</a></span>
+                        <p class="text-muted mt-3 text-center text-md-left text-capitalize">
+                            {% if sort_label or current_coach_name or current_sorting != 'None_None' %}
+                                <a href="{% url 'all_lessons' %}">
+                                    <span class="badge-darkblue badge badge-pill">
+                                        All Lessons
+                                    </span> 
+                                </a>
                             {% endif %}
-                            {{ lessons|length }} Lessons{% if current_class_types %} found
-                            {% endif %}
+                            {{ lessons|length }} {% if sort_label %} {{ sort_label }}{% endif %} lessons
                         </p>
-                        
                     </div>
                 </div>
         <div class="table-responsive">
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">Class Type</th>
@@ -83,7 +90,7 @@
                             <td>{{ lesson.time }}</td>
                             <td>&#163; {{ lesson.price }}</td>
                             {% if lesson.spots > 0 %}
-                                <td><input type="submit" class="btn btn-main btn-block text-uppercase mt-2" value="Book Lesson"></td>         
+                                <td><input type="submit" class="btn btn-lightblue btn-block text-uppercase mt-2" value="Book Lesson"></td>         
                             {% endif %}   
                             {% if request.user.is_staff %}
                             <td>
@@ -106,7 +113,7 @@
 
     <div class="container-fluid container-shop">
         <div class="row text-center">
-            <div class="col">
+            <div class="col-12">
                 <h2>Get Ready For Lessons</h2>
                 <a href="{% url 'products' %}" class="btn btn-grey btn-large text-uppercase">Shop Now</a>
             </div>
