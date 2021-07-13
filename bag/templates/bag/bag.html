@@ -16,7 +16,24 @@
             {% if lesson_bag_items %}
                 <div class="container-fluid">
                     <h3>Lesson Info:</h3>
-                    <!-- Row for headings on >medium screens -->
+                    <!-- lesson cards for small screens -->
+                    {% for item in lesson_bag_items%}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card d-md-none mb-4">
+                                <div class="card-header">
+                                    <p class='mb-0'>Lesson on {{ item.lesson.date }} at {{ item.lesson.time}}</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Coach: {{ item.lesson.coach }}</li>
+                                    <li class="list-group-item">Price: &#163 {{ item.lesson.price }}</li>
+                                    <li class="list-group-item"><a class="remove-lesson text-danger" id="remove_lesson_{{ item.item_id }}"<small>Remove</small></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- Row for headings on medium screens and larger -->
                     <div class="row">
                         <div class="d-none d-md-block col-md-6">
                             <p class="font-weight-bold mb-0">Date & Time</p>
@@ -27,18 +44,8 @@
                         <div class="d-none d-md-block col-md-2">
                             <p class="font-weight-bold mb-0">Price</p>
                         </div>
-                        <!-- lesson cards for small screens -->
+                        <!-- lesson info for medium and larger screens -->
                         {% for item in lesson_bag_items %}
-                            <div class="card d-md-none mb-4 offset-1">
-                                <div class="card-header">
-                                    <p class='mb-0'>Lesson on {{ item.lesson.date }} at {{ item.lesson.time}}</p>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">Coach: {{ item.lesson.coach }}</li>
-                                    <li class="list-group-item">Price: &#163 {{ item.lesson.price }}</li>
-                                    <li class="list-group-item"><a class="remove-lesson text-danger" id="remove_lesson_{{ item.item_id }}"<small>Remove</small></a></li>
-                                </ul>
-                            </div>
                             <div class="d-none d-md-block col-md-6">
                                 <p class="d-md-none mb-0 font-weight-bold">Date & time</p>
                                 <p>Lesson on {{ item.lesson.date }} at {{ item.lesson.time}} for 1 hour</p>
@@ -93,7 +100,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-main" 
+                                            <button class="decrement-qty btn btn-sm btn-darkblue" 
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
@@ -105,7 +112,7 @@
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-main"
+                                            <button class="increment-qty btn btn-sm btn-darkblue"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -152,7 +159,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-main" 
+                                            <button class="decrement-qty btn btn-sm btn-darkblue" 
                                                 data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-minus fa-sm"></i>
@@ -164,7 +171,7 @@
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-main"
+                                            <button class="increment-qty btn btn-sm btn-darkblue"
                                                 data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
@@ -212,13 +219,13 @@
                 </div>
                 <div class="row">
                     <div class="col-12 mb-3 text-right">
-                        <a href="{% url 'products' %}" class="btn btn-info btn-lg">
+                        <a href="{% url 'products' %}" class="btn btn-greige btn-lg">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
-                        <a href="{% url 'checkout' %}" class="btn btn-main btn-lg">
+                        <a href="{% url 'checkout' %}" class="btn btn-lightblue btn-lg">
                             <span class="text-uppercase">Secure Checkout</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
@@ -231,7 +238,7 @@
         <div class="row">
             <div class="col-10 mb-3">
                 <p class="lead mb-5">Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-info btn-lg">
+                <a href="{% url 'products' %}" class="btn btn-greige btn-lg">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
