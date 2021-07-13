@@ -10,7 +10,8 @@
             </div>
         </div>
         {% for coach in coaches %}
-            <div class="row text-center justify-content-center">
+        <div class="container-fluid d-md-none">
+            <div class="row align-items-center text-center justify-content-center">
                 <div class="col-12 col-md-5 px-4">
                     {% if coach.image %}
                         <a href="{% url 'view_coach' coach.id %}" target="_blank">
@@ -22,7 +23,7 @@
                         </a>
                     {% endif %}
                 </div>
-                <div class="col-12 col-md-5 px-5">
+                <div class="col-12 mt-3 col-md-5 px-5">
                     <h3> 
                         <a href="{% url 'view_coach' coach.id %}">
                             {{ coach.first_name }}
@@ -39,10 +40,83 @@
                     <p>
                         {{ coach.description}}
                     </p>
-                    <a href="{% url 'all_lessons' %}?coach={{ coach.id }}" class="btn btn-info btn-large">Book lesson with {{ coach.first_name}}</a>
+                    <a href="{% url 'all_lessons' %}?coach={{ coach.id }}" class="btn btn-lightblue btn-large">Book lesson with {{ coach.first_name}}</a>
                 </div>
             </div>
-            <hr class="w-50 mb-3">
+            <hr class="my-5">
+        </div>
+        <div class="container-fluid d-none d-md-block">
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="row align-items-center text-center justify-content-center">
+                    <div class="col-12 col-md-5 px-4">
+                        {% if coach.image %}
+                            <a href="{% url 'view_coach' coach.id %}" target="_blank">
+                                <img class="w-75" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'view_coach' coach.id %}">
+                                <img class="w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ coach.first_name }}">
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-5 px-5">
+                        <h3> 
+                            <a href="{% url 'view_coach' coach.id %}">
+                                {{ coach.first_name }}
+                            </a>
+                        </h3>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a class="text-info" href="{% url 'edit_coach' coach.id %}">Edit</a>
+                                <button type="button" class="btn-words" data-toggle="modal" data-target="#delete-modal" data-url="{% url 'delete_coach' coach.id %}" data-name="{{ coach.first_name }}" data-topic="Coach">
+                                    Delete
+                                </button>
+                            </small>
+                        {% endif %}
+                        <p>
+                            {{ coach.description}}
+                        </p>
+                        <a href="{% url 'all_lessons' %}?coach={{ coach.id }}" class="btn btn-lightblue btn-large">Book lesson with {{ coach.first_name}}</a>
+                    </div>
+                </div>
+                <hr class="my-5">                
+            {% else %}
+                <div class="row align-items-center text-center justify-content-center">
+                    <div class="col-12 col-md-5 px-5">
+                        <h3> 
+                            <a href="{% url 'view_coach' coach.id %}">
+                                {{ coach.first_name }}
+                            </a>
+                        </h3>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a class="text-info" href="{% url 'edit_coach' coach.id %}">Edit</a>
+                                <button type="button" class="btn-words" data-toggle="modal" data-target="#delete-modal" data-url="{% url 'delete_coach' coach.id %}" data-name="{{ coach.first_name }}" data-topic="Coach">
+                                    Delete
+                                </button>
+                            </small>
+                        {% endif %}
+                        <p>
+                            {{ coach.description}}
+                        </p>
+                        <a href="{% url 'all_lessons' %}?coach={{ coach.id }}" class="btn btn-lightblue btn-large">Book lesson with {{ coach.first_name}}</a>
+                    </div>
+                    <div class="col-12 col-md-5 px-4">
+                        {% if coach.image %}
+                            <a href="{% url 'view_coach' coach.id %}" target="_blank">
+                                <img class="w-75" src="{{ coach.image.url }}" alt="{{ coach.first_name }}">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'view_coach' coach.id %}">
+                                <img class="w-75" src="{{ MEDIA_URL }}noimage.png" alt="{{ coach.first_name }}">
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <hr class="my-5">                
+            {% endif %}
+        </div>
+               
         {% endfor %}    
     </div>
 {% endblock %}
