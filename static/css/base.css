@@ -25,6 +25,10 @@ html {
     background-color: var(--beige-color);
     color: black;
 }
+.btn-beige:hover {
+    background-color: var(--greige);
+    color: black;
+}
 .btn-yellow {
     background-color: var(--mustard);
     color: black;
@@ -34,11 +38,11 @@ html {
     color: white;
 }
 .btn-darkblue:hover {
-    background-color: var(--main-color);
+    background-color: var(--main-blue);
     color: black;
 }
 .btn-lightblue {
-    background-color: var(--main-color);
+    background-color: var(--main-blue);
     color: black;
 }
 .btn-lightblue:hover{
@@ -137,19 +141,33 @@ a:hover {
     border-color: var(--main-color);
 }
 
-.badge-green {
-    background-color: var(--main-color);
+.badge-light-outline {
+    border: 2px solid var(--main-blue);
+    color: black;
+}
+.badge-light-outline:hover {
+    background-color: var(--main-blue);
     color: white;
 }
-.badge-yellow {
-    background-color: var(--extra-color);
+.badge-lightblue {
+    background-color: var(--main-blue);
+    border: 2px solid var(--main-blue);
     color: black;
 }
-.badge-yellow a:hover {
+.badge-dark-outline {
+    border: 2px solid var(--dark-blue);
     color: black;
 }
-.badge-blue {
-    background-color: var(--secondary-color);
+.badge-dark-outline:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
+.badge-darkblue {
+    background-color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    color: white;
+}
+.badge-darkblue a:hover{
     color: white;
 }
 .btn-outline-black {
@@ -447,10 +465,16 @@ input[name='q']::placeholder {
           height: 135px;            /* Footer height */
       }
   }
+/* For very small screens */
+@media (max-width: 330px) {
+    .btn {
+        font-size: 12px !important;
+    }
 
+}
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     body {
         height: calc(100vh - 116px);
     }
-}
+} */
