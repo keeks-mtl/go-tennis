@@ -5,8 +5,8 @@ from coaches.models import Coach
 
 class ClassType(models.Model):
 
-    name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, blank=True)
+    name = models.CharField(max_length=100)
+    friendly_name = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return self.name
