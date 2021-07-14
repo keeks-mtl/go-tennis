@@ -2,8 +2,7 @@
 
 ## Goal For This Project
 
-Go-Tennis is a place that helps facilitate a love of tennis for those in the community. This lesson first space, creates an environment where people can become better tennis players and cater to their needs to do so. 
-First and foremost it is about teaching proper skills in tennis through lesson for all skill levels through either a pay per lesson model or subscription based model. In order to become better tennis players it helps having access to tennis merchandise which the community can through the shop feature. Another important part of becoming a better tennis player is regular practice. Go-Tennis allows those registered to set up matches to make sure they get their practice in and their skills up to par. 
+Go-Tennis is a place that helps facilitate a love of tennis for those in the community. This lesson first space, creates an environment where people can become better tennis players and cater to their needs to do so. First and foremost it is about teaching proper skills in tennis with lesson for all skill levels through a pay per lesson model. Also to facilitate students progressing into being better palyers, there is access to tennis merchandise through the shop feature.
 
 ## Table of Contents
 
@@ -59,17 +58,15 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 
 - The site is based around tennis and the particular logo for the site. 
 - The site itself needed to be easy to navigate, provide information users would find beneficial, and display said information in a way that is visually appealing. 
-- The overall design choice created a space that was malleable and gave space for an ecommerce functionality. 
-- The colour choices were centered around the logo and matched through [color.adobe](https://color.adobe.com/create/color-wheel) to find all the colours in the logo.  
-- The palette worked well at feeling familiar with known tennis colours but also felt fun. 
-- [Figma](https://www.figma.com) was used to create the wireframes and organise how the site flowed. 
-- Figma also helped visualise how the different pages would look on different screen sizes. 
+- The overall design choice created a space that was malleable and gave space for an ecommerce functionality.   
+- [Balsamiq](https://balsamiq.com/) was used to create the wireframes and organise how the site flowed. 
+- Balsamiq also helped visualise how the different pages would look on different screen sizes. 
 - Once the project was built following the planning stages, there were ways that the design changed while building the site. Because my background isn't in design, it is hard to come up with something that appeals visually from a blank slate. The design process was an evolving process that required tweeks and changes to improve Go-Tennis and create something that looked appeasing. 
 
 ### Fonts
 
 - The goal was to have a crisp and modern feel with a bit of punch. 
-- [Google Fonts](https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/) was used to find a font that had the right feel for Go-Tennis. The font chosen was 'Lara'. 'Lara' is a well balanced contemporary serif which is optimised for screen performance. 
 
 ### Icons
 
@@ -83,37 +80,21 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 ### Colours
 
 - The colour theme included six main colours that complimented one another.
-- The colours were chosen because of their contrast and were matched with the logo.
-- The colours felt appropriate because they of their connection to tennis. 
-    - Like the green of a tennis court, the light colour of the lines on the tennis court, and the yellow shade from a tennis ball. 
+- The colours were chosen because of their contrast and they way they complimented the logo.
+- The colours felt appropriate because of the way they went with the logo and the main photo on the homepage.  
 
 <div align="center"><img src="readme-images/color-theme.png" alt="image of the go-tennis color theme"></div>
 
-- #458F5F Middle Green
-    - See our upcoming lessons bar background
-    - Footer colour
-    - Class type badges
-    - Category badges
-    - Logout button
-- #3F596E Black Coral
-    - Search Icon
-    - Learn more button
-    - Get ready for lessons section bar background
-    - Coach badges
-    - Book lesson button
-    - Add comment button
-    - Secure Checkout button
-    - Add/Lesson/Coach/Product button
-- #F4EDDD EggShell
-    - Shop Now button
-- #867B6C Shadow
-    -
-- #E4C401 Yellow Munsell
-    - 1st navbar on mobile and 2nd navbar on larger screens
-    - Main button colour
-    - Stars colour
-    - Keep shopping button
-    - Increment/decrement button
+- #fffce6 Beige
+    - A soft beige colour to be used instead of white for a nice neutral light colour
+- #c2b8ad Pale Silver
+    - Another neutral colour to be used for things that shouldn't garner too much attention like back and cancel buttons. 
+- #a3cdd9 Light Blue
+    - The main colour of Go-Tennis. This shade of light blue is the dominant colour and can be seen all around the site. 
+- #3f596e Black Coral
+    - A darker blue used as a bit of contrast to the main blue of the site. Mostly used around the light blue where using more light blue would be overpowering. 
+- #d39e00 Goldenrod
+    - A pop of colour for things that are meant to stand out like the stars on the comment page. 
 
 ### Wireframes
 
@@ -204,11 +185,10 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 </details>
 
 - The navigation bar was created using Bootstrap to ensure that it was fully responsive.
-- An example of a responsiveness change includes a hamburger menu when viewed on smaller viewports and the
-    search icon and cart icon.
+- An example of a responsiveness change includes a hamburger menu when viewed on smaller viewports and the search icon and cart icon.
 - There are two navigation bars on large sized screens and bigger (>992px). 
-1.  The top nav bar has Go-Tennis logo beside Go-Tennis, a search bar, my account, and shopping bag links.
-2. The second navigational bar has Coaches, Lessons, Book Lesson, and Shop. 
+    1. The top nav bar has Go-Tennis logo beside Go-Tennis, a search bar, my account, and shopping bag links.
+    2. The second navigational bar has Coaches, Lessons, Book Lesson, and Shop. 
 - On smaller screens there is One navigational bar(<992px).
     - The hamburger icon which is a dropdown menu with Coaches, Lessons, Book Lesson, and Shop. 
     - And beside the hamburger icon, Home link, My Account dropdown, Search, and Shopping bag. 
@@ -470,7 +450,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 </details>
 
 - The Book page allows users to book a lesson.
-- The are badges that allow users to see just the lessons for each lesson type and another set of badges to allow users to see just the lessons by each individual coach. 
+- There are badges that allow users to see just the lessons for each lesson type and another set of badges to allow users to see just the lessons by each individual coach. 
 - The lessons are shown through a responsive table which has the following headings for information:
     - Class type
     - Coach
@@ -684,18 +664,19 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 </details>
 
 - The bag page shows the contents of the user's bag. 
-- Shown first is lesson info which shows a responsive table with the following headers:
+- Shown first is lesson info which shows information laid out with the following headers:
     - Date & Time
     - Coach 
     - Price
 - The table is then populated with the information on the lessons the user has added to their bag with the option to remove any lesson. 
     - If a lesson is removed a toast appears to tell the user they've succesfully removed the lesson. 
-- There is then another responsive table with the product info of what is in the bag with the following headers:
+- On smaller screens the lesson info is shown through cards with the specifics of each lesson the user has booked on it's own individual card. 
+- The product info of what is in the bag is shown with the following headers:
     - Product info
     - Price
     - Quantity
     - Subtototal
-- The table is then populated with the information pertaining to the headers such as:
+- The specifics are then populated with the information pertaining to the headers such as:
     - Product image
     - Product name
     - Size
@@ -704,8 +685,9 @@ First and foremost it is about teaching proper skills in tennis through lesson f
     - Quantity with buttons to increment or decrement the amount. 
     - Subtotal (Price * Quantity)
     - A button in update the quantity and a button to remove the product
-        - both buttons show a toast letting the user know they successfully updated the quantity or removed the product. 
-- Below the tables it shows the following information
+        - both buttons show a toast letting the user know they successfully updated the quantity or removed the product.
+- On smaller screens each product in the bag is shown in it's own individual card instead.  
+- Below the tables, The following information is shown:
     - Lesson Total
     - Shop Total
     - Delivery Price
@@ -730,7 +712,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
     - Delivery
     - Grand Total
 - The checkout page also has a form that the user has to submit in order to complete checkout. 
-- If the user has saved their information before the form will be prepopulated (excluding the credit card information)
+- If the user has saved their information before, the form will be prepopulated (excluding the credit card information).
 - The checkout form has the following fields:
     - Full name (required)
     - Email (required)
@@ -740,11 +722,11 @@ First and foremost it is about teaching proper skills in tennis through lesson f
     - Town or city (required)
     - County, State, or Locality
     - Postal code
-    - Country (required) and a dropdown with the country options. 
+    - Country (required) and a dropdown with the country options 
     - Credit card number, expiration date, cvc (required)
-    - There is also a check box which allows the user to save the delivery information to their profile.
+    - There is also a check box which allows the user to save the delivery information to their profile
 - The form has a Adjust Bag button which takes the user back to their bag page. 
-- There is also a Complete order button which then processes the information through Stripe to process the payment
+- There is also a Complete Order button which then processes the information through Stripe to process the payment.
 - After the user has correctly filled out the form and clicked the Complete Order button, a loading overlay appears to let the user know the payment is being processed.
 - Once the payment has been processed the user is redirected to checkout success page.
 - They are also shown a toast which lets the user know they successfully completed the order with their order number and a statement which informs them what email address the confirmation email was sent to. 
@@ -794,7 +776,7 @@ First and foremost it is about teaching proper skills in tennis through lesson f
 - The heading for the page is My Profile and the username of the user. 
 - The delivery information form allows users to update their delivery information and save it to file. 
 - The form is prepopulated with the data Go-Tennis has on file. 
-- There is the Update Information button at the bottom of the form which when clicked redirects the user to the updated profile page and a toast appears telling the user that they successfully updated their profile. 
+- There is the Update Information button at the bottom of the form which, when clicked, redirects the user to the updated profile page and a toast appears telling the user that they have successfully updated their profile. 
 - The other part of the profile page is the order history of the user. 
 - The order history is a table that has the following headings:
     - Order number
@@ -839,8 +821,8 @@ Stars | stars | null=False, blank=False | models.IntegerField
 | Name | Key | Validation | Field Type |
 --- | --- | --- | ---
 Category | category | 'Category', null=True, blank=True, on_delete=models.SET_NULL| models.ForeignKey  
-SKU | sku | max_length=254 | models.CharField 
-Name | name | maxlength="50" | models.CharField
+SKU | sku | max_length=50 | models.CharField 
+Name | name | maxlength=100 | models.CharField
 Description | description |  | models.TextField
 Price | price | max_digits=6, decimals_places=2 | models.DecimalField
 Image | image | upload_to='', null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
@@ -851,8 +833,8 @@ Has_sizes | has_sizes | default=False, null=True, blank=True | models.BooleanFie
 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
-Name | name | max_length=254 | models.CharField 
-Friendly_name | friendly_name | maxlength="254", blank=True | models.CharField
+Name | name | max_length=50 | models.CharField 
+Friendly_name | friendly_name | maxlength=50, blank=True | models.CharField
 
 ### Profile App
 #### User Profile
@@ -860,12 +842,12 @@ Friendly_name | friendly_name | maxlength="254", blank=True | models.CharField
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
 User | user | User, on_delete=models.CASCADE | models.OneToOneField 
-Phone Number | default_phone_number | maxlength="20", blank=True| models.CharField
-Street Address 1 | default_street_address1 | maxlength="80", Blank=True | models.CharField
-Street Address 2 | default_street_address2 | maxlength="80", Blank=True | models.CharField
-Town or City | default_town_or_city | maxlength="40", Blank=True | models.CharField
-County, State or Locality | default_county | maxlength="80", Blank=True | models.CharField
-Postcode | default_postcode | maxlength="20", Blank=True | models.CharField
+Phone Number | default_phone_number | maxlength=20, blank=True| models.CharField
+Street Address 1 | default_street_address1 | maxlength=80, Blank=True | models.CharField
+Street Address 2 | default_street_address2 | maxlength=80, Blank=True | models.CharField
+Town or City | default_town_or_city | maxlength=40, Blank=True | models.CharField
+County, State or Locality | default_county | maxlength=80, Blank=True | models.CharField
+Postcode | default_postcode | maxlength=20, Blank=True | models.CharField
 Country | default_country | blank_label='Country', null=True, Blank=True | CountryField
 
 ### Checkout App
@@ -899,6 +881,7 @@ Stripe Pid | stripe_pid | `maxlength="254", null=False, Blank=False | models.Cha
 --- | --- | --- | --- 
 Order | order | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' | models.ForeignKey 
 Product | product | Product, on_delete=models.CASCADE, null=False, blank=False | models.ForeignKey
+Product Size | product_size | max_length=2, blank=True | models.Charfield
 Quantity | quantity | null=False, blank=False, default=0 | models.IntegerField
 Item Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | models.DecimalField
 
@@ -908,23 +891,23 @@ Item Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=
 --- | --- | --- | --- 
 Order | order | Order, null=False, blank=False, on_delete=models.CASCADE | models.ForeignKey 
 Lesson | lesson | Lesson, null=False, blank=False, on_delete=models.CASCADE | models.ForeignKey 
-Lesson line item total | lesson_lineitem_total | ax_digits=6, decimal_places=2, null=False, blank=False, editable=False | models.DecimalField 
+Lesson line item total | lesson_lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | models.DecimalField 
 
 ### Lessons App
 #### Class Type
 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
-Name | name | max_length=254 | models.CharField 
-Friendly Name | friendly_name | max_length=254, blank=True | models.CharField 
+Name | name | max_length=100 | models.CharField 
+Friendly Name | friendly_name | max_length=100, blank=True | models.CharField 
 
 #### Lessons
 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
 Class Type | class_type | 'ClassType', null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
-Coach | coach | Profile, maxlength="40", null=True, blank=True | models.ForeignKey
-Description | description | null=True, blank=True | models.TextField 
+Coach | coach | Profile, maxlength="40", null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
+Description | description | blank=True | models.TextField 
 Date | date | default="2021-09-05" | models.DateField 
 Time | time |  | models.TimeField 
 Spots | spots | default=4 | models.IntegerField
@@ -938,8 +921,9 @@ Spots | spots | default=4 | models.IntegerField
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
   - Used for the styling of the site.
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - JavaScript was used throughout the site to make it interactive.
 - [JQuery](https://jquery.com/)
-    -  
+    -  A fast, small, and feature-rich JavaScript library.
 - [Python](https://www.python.org/)
     - used to write the logic that operates the site.
 - [Font Awesome](https://fontawesome.com/)
@@ -950,6 +934,8 @@ Spots | spots | default=4 | models.IntegerField
     - To construct and render pages.
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
     - To style django forms
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+    - Django allauth was used to create the user sign-in/login function for the site.
 - [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
     -  Simplify how data is displayed from the backend of this project in html.
 - [Pillow](https://pillow.readthedocs.io/en/stable/)
@@ -1040,7 +1026,11 @@ pip install -r requirements.txt
 | SECRET_KEY | your_value |
 | STRIPE_PUBLIC_KEY | your_value |
 | STRIPE_SECRET_KEY | your_value |
-| STRIPE_WH_SECRES | your_value |
+| STRIPE_WH_SECRET | your_value |
+| DEVELOPMENT | True |
+| EMAIL_HOST_USER | your_value |
+| EMAIL_HOST_PASS | your value |
+| USER_AWS| your value |
 
 4. Run this code below to test migration
 ```
@@ -1084,9 +1074,9 @@ python manage.py runserver
     - User
 5. Create a [Gmail](https://gmail.com/) account if you do not already have one. 
 6. Within Gmail, create an app password by selecting 'mail' as the app and 'other' as the device type (set this to 'Django')
-7. Create a requirements.txt file using the command:
+7. Install required packages from requirements.txt file using the command:
 ```
- pip freeze > requirements.txt
+ pip3 install -r requirements.txt
 ```
 
 8. Create a Procfile with the command:
@@ -1124,8 +1114,8 @@ python manage.py runserver
 | USE_AWS | True |
 | DATABASE_URL | your_value | 
 | DOMAIN_URL | your_value | 
-| EMAIL_HOST_PASSL | your_value | 
-| EMAIL_HOST_USERL | your_value | 
+| EMAIL_HOST_PASS | your_value | 
+| EMAIL_HOST_USER | your_value | 
 | SECRET_KEY | your_value |
 | STRIPE_PUBLIC_KEY | your_value |
 | STRIPE_SECRET_KEY | your_value |
@@ -1140,7 +1130,6 @@ python manage.py runserver
     - From the order form select 'submit order form'
 ![Create Heroku app step 6](readme-images/heroku6.png)
 
-** Maybe migrate data
 21. Change the allowed hosts in settings.py to match your new heroku app
 22. Import the coaches, lessons, products app data by typing:
 ```
