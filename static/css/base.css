@@ -1,9 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
 :root {
-  --main-color: #a3cdd9;
-  --secondary-color: #506ad4;
-  --third-color: #c2b8ad;
-  --fourth-color: #fffce6;
-  --extra-color: #f2e205;
   --main-blue: #a3cdd9;
   --dark-blue: #3f596e;
   --mustard: #d39e00;
@@ -16,7 +13,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lora", Helvetica, sans-serif;
 }
 
 a {
