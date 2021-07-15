@@ -68,7 +68,7 @@ def book_lesson(request, item_id):
                         {lesson.date} at {lesson.time}")
 
     request.session['lesson_bag'] = lesson_bag
-    return redirect('all_lessons')
+    return redirect('book_lessons')
 
 
 def edit_bag(request, item_id):
