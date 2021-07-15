@@ -28,4 +28,4 @@ class Lesson(models.Model):
     spots = models.IntegerField(default=4)
 
     def __str__(self):
-        return self.id
+        return f"Lesson on {self.date} by {self.coach.first_name}"
