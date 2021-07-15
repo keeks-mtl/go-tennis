@@ -15,7 +15,7 @@ def lessons(request):
     return render(request, 'lessons/lessons.html')
 
 
-def all_lessons(request):
+def book_lessons(request):
     """ A view to return the book lessons page """
 
     lessons = Lesson.objects.all().order_by("date")
@@ -111,7 +111,7 @@ def edit_lesson(request, lesson_id):
         if form.is_valid():
             lesson = form.save()
             messages.success(request, 'Successfully updated Lesson!')
-            return redirect(reverse('all_lessons'))
+            return redirect(reverse('book_lessons'))
         else:
             messages.error(request, (
                 'Failed to update lesson. Please ensure the form is valid.'))
@@ -139,4 +139,4 @@ def delete_lesson(request, lesson_id):
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     lesson.delete()
     messages.success(request, 'Lesson deleted!')
-    return redirect(reverse('all_lessons'))
+    return redirect(reverse('book_lessons'))
