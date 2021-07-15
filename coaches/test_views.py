@@ -23,6 +23,12 @@ class TestCoachViews(TestCase):
             description="test description",
             image="image.jpg"
         )
+        self.comment = Comment.objects.create(
+            coach=self.coach,
+            author=self.user,
+            comment="Test Comment",
+            stars="4",
+        )
         self.coaches = reverse("view_coaches")
         self.coach = reverse("view_coach",
                              kwargs={"coach_id": self.coach.id})
