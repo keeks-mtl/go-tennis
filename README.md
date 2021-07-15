@@ -450,14 +450,6 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </p>
 </details>
 
-<details><summary>Book Lesson Desktop</summary>
-<p>
-
-![image](readme-images/book-lesson-desktop.png)
-
-</p>
-</details>
-
 - The Book page allows users to book a lesson.
 - There are badges that allow users to see just the lessons for each lesson type and another set of badges to allow users to see just the lessons by each individual coach. 
 - The lessons are shown through a responsive table which has the following headings for information:
