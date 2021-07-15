@@ -46,3 +46,13 @@ class TestLessonViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "lessons/book.html")
         self.assertTemplateUsed(response, "base.html")
+
+    def test_book_lessons_views_with_sort(self):
+        ''' Test the book lessons view with a sort parameter '''
+
+        response = self.client.get(self.book_lessons,
+                                   {"sort": "price",
+                                    "direction": "desc"})
+        context = response.context
+        self.assertTrue(context['current_sorting'])
+        self.assertEqual(context['current_sorting'], "price_desc")
