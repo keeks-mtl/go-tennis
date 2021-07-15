@@ -7,7 +7,7 @@
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Lessons Schedule</h2>
                 {% for class_type in class_types %}
-                    <a href="{% url 'all_lessons' %}?class_type={{ class_type }}">
+                    <a href="{% url 'book_lessons' %}?class_type={{ class_type }}">
                         {% if sort_label == class_type.name %}
                             <span class="p-2 mt-2 badge badge-lightblue badge-pill text-capitalize">{{ class_type }}</span>
                         {% else %}
@@ -21,7 +21,7 @@
         <div class="row text-center">
             <div class="col text-center">
                 {% for coach in coaches %}
-                <a class="category-badge text-decoration-none" href="{% url 'all_lessons' %}?coach={{ coach.id }}">
+                <a class="category-badge text-decoration-none" href="{% url 'book_lessons' %}?coach={{ coach.id }}">
                     {% if current_coach_name == coach.id %}
                         <span class="p-2 mt-2 mb-3 badge badge-darkblue badge-pill">{{ coach.first_name }}</span>
                     {% else %}
@@ -54,7 +54,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left text-capitalize">
                             {% if sort_label or current_coach_name or current_sorting != 'None_None' %}
-                                <a href="{% url 'all_lessons' %}">
+                                <a href="{% url 'book_lessons' %}">
                                     <span class="badge-darkblue badge badge-pill">
                                         All Lessons
                                     </span> 

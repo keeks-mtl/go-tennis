@@ -95,7 +95,7 @@
                           <p class="card-text">Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                           <p class="card-text">Price: &#163 {{ item.product.price }}</p>
                           <p class="card-text">
-                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                            <form class="form update-form" method="POST" action="{% url 'edit_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
@@ -154,7 +154,7 @@
                             <p class="mt-2">&#163 {{ item.product.price }}</p>
                         </div>
                         <div class="d-none d-md-block col-md-2 text-center">
-                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                            <form class="form update-form" method="POST" action="{% url 'edit_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <div class="input-group">
