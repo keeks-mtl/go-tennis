@@ -1,8 +1,6 @@
 from django.contrib import admin
 from .models import Coach, Comment
 
-# Register your models here.
-
 
 class CoachAdmin(admin.ModelAdmin):
     list_display = (
