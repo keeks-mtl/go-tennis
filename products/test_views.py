@@ -50,3 +50,10 @@ class TestProductViews(TestCase):
         context = response.context
         self.assertTrue(context['current_sorting'])
         self.assertEqual(context['current_sorting'], "name_desc")
+
+    def test_view_product_detail_view(self):
+        ''' Test the product_detail view '''
+        response = self.client.get(self.product_detail)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "products/product_detail.html")
+        self.assertTemplateUsed(response, "base.html")
