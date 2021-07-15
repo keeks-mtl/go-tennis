@@ -34,3 +34,10 @@ class TestCoachViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "coaches/coaches.html")
         self.assertTemplateUsed(response, "base.html")
+
+    def test_view_coach_view(self):
+        ''' Test the coach view '''
+        response = self.client.get(self.coach)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "coaches/coach.html")
+        self.assertTemplateUsed(response, "base.html")
