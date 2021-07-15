@@ -33,10 +33,12 @@
                 </div>
             </div>
         </div>
-    <!-- comment section -->
-    <div class="container px-4">
-        <h3 class="text-center"><strong>Comments</strong></h3>
-        <div class="row">
+        <!-- comment section -->
+        <div class="container px-4">
+            <hr>
+            <h3 class="text-center"><strong>Comments</strong></h3>
+            <hr>
+            <div class="row justify-content-center">
                 {% for comment in comments %}
                     <div class="col-12 col-md-4 text-center ">
                         <div class="stars">
@@ -67,35 +69,36 @@
                         <p class="text-muted">{{ comment.date }}</p>
                     </div>
                 {% endfor %}
-                    <div class="col-12 col-md-4 "> 
-                        <form id="comment-form" method="POST" action="{% url 'view_coach' coach_id=coach.id %}">
-                            {% csrf_token %}
-                            {{ form.comment| as_crispy_field }}
-                                <div class="div stars-input flex-row-between">
-                                    <div class="mb-3">
-                                        <label for="stars" class="form-label">Stars</label>
-                                        <div>
-                                            <input class="form-control" type="number" name="stars" value="1" min="1" max="5" id="stars">
-                                        </div>
-                                    </div>
+                <div class="col-12 col-md-4 ">
+                    <form id="comment-form" method="POST" action="{% url 'view_coach' coach_id=coach.id %}">
+                        {% csrf_token %}
+                        {{ form.comment| as_crispy_field }}
+                        <div class="div stars-input flex-row-between">
+                            <div class="mb-3">
+                                <label for="stars" class="form-label">Stars</label>
+                                <div>
+                                    <input class="form-control" type="number" name="stars" value="1" min="1" max="5"
+                                        id="stars">
                                 </div>
-                            {% if request.user.is_authenticated %}
+                            </div>
+                        </div>
+                        {% if request.user.is_authenticated %}
                             <button class="btn btn-lightblue text-uppercase btn-block" type="submit">Add comment</button>
-                            {% else %}
-                                <p class="mb-2 text-center">Can only comment if you:</p>
-                                <p class="text-center">
-                                    <a class="text-blue" href="{% url 'account_login' %}"> Login</a> or
-                                    <a class="text-blue" href="{% url 'account_signup' %}"> Register </a>
-                                </p>
-                            {% endif %}
-                        </form>
-                    </div>
+                        {% else %}
+                            <p class="mb-2 text-center">Can only comment if you:</p>
+                            <p class="text-center">
+                                <a class="text-blue" href="{% url 'account_login' %}"> Login</a> or
+                                <a class="text-blue" href="{% url 'account_signup' %}"> Register </a>
+                            </p>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
     
 {% endblock %}
 {% block extra_js %}
 {{ block.super }}
-<script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 {% endblock %}
