@@ -22,6 +22,7 @@ a {
 
 a:hover {
     text-decoration: none;
+    color: #3f596e;
 }
 
 /* ------------------------------------------------Keep footer at bottom */
@@ -155,7 +156,7 @@ a:hover {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    /* color: black !important; use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -194,7 +195,9 @@ a:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
-
+input[name='price']::placeholder {
+    color: #aab7c4;
+}
 /* ------------------------------------------------containers */
 .container-shop {
     padding: 40px;
