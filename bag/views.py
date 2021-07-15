@@ -71,8 +71,8 @@ def book_lesson(request, item_id):
     return redirect('all_lessons')
 
 
-def adjust_bag(request, item_id):
-    """Adjust the quantity of the specified product to the specified amount"""
+def edit_bag(request, item_id):
+    """Edit the quantity of the specified product to the specified amount"""
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -105,7 +105,7 @@ def adjust_bag(request, item_id):
     return redirect('view_bag')
 
 
-def remove_from_bag(request, item_id):
+def remove_product(request, item_id):
     """Remove the item from the shopping bag"""
 
     try:
