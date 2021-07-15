@@ -40,3 +40,13 @@ class TestProductViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "products/products.html")
         self.assertTemplateUsed(response, "base.html")
+
+    def test_products_views_with_sort(self):
+        ''' Test the products view with a direction parameter '''
+
+        response = self.client.get(self.products,
+                                   {"sort": "name",
+                                    "direction": "desc"})
+        context = response.context
+        self.assertTrue(context['current_sorting'])
+        self.assertEqual(context['current_sorting'], "name_desc")
