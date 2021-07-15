@@ -218,10 +218,18 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Home Page
 
-<details><summary>Image</summary>
+<details><summary>Desktop Homepage</summary>
 <p>
 
-![image](readme-images/search-desktop.png)
+![image](readme-images/homepage-desktop.png)
+
+</p>
+</details>
+
+<details><summary>Mobile Homepage</summary>
+<p>
+
+![image](readme-images/homepage-mobile.png)
 
 </p>
 </details>
@@ -262,7 +270,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 <details><summary>Image</summary>
 <p>
 
-![image](readme-images/signup.png)
+![image](readme-images/signup-mobile.png)
 
 </p>
 </details>
@@ -324,6 +332,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 <details><summary>Image Mobile</summary>
 <p>
+
 ![image](readme-images/coaches-mobile.png)
 
 </p>
@@ -433,10 +442,10 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Book Lesson Page
 
-<details><summary>Coach Book Lesson iPad image</summary>
+<details><summary>Book Lesson iPad</summary>
 <p>
 
-![image](readme-images/book-lesson-ipad.png)
+![image](readme-images/book-lessons-ipad.png)
 
 </p>
 </details>
