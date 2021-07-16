@@ -430,8 +430,9 @@ input[name='price']::placeholder {
         margin-right: 3rem;
     }
 }
-l
+
 @media (min-width: 992px) {
+    
     .header-container {
         padding-top: 164px;
     }
