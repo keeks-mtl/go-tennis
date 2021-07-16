@@ -25,7 +25,7 @@ class TestCheckoutViews(TestCase):
             has_sizes=False,
         )
         self.add_to_bag = reverse("add_to_bag",
-                                   kwargs={"item_id": self.item.id})
+                                  kwargs={"item_id": self.item.id})
 
     def test_checkout_view_with_empty_bag(self):
         ''' Test the checkout view with an empty bag. '''

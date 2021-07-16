@@ -1,7 +1,7 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from coaches.views import (view_coaches, view_coach,
-                         add_coach, edit_coach, delete_coach)
+                           add_coach, edit_coach, delete_coach)
 
 
 class TestUrls(SimpleTestCase):
