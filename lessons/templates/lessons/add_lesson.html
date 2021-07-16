@@ -4,7 +4,7 @@
 {% block content %}
     <div class="container header-margin">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-11 col-md-8">
                 <hr>
                 <h2 class="logo-font mb-4">Lesson Management</h2>
                 <h5 class="text-muted">Add a Lesson</h5>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-11 col-md-8">
                 <form method="POST" action="{% url 'add_lesson' %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form.class_type | as_crispy_field }}
@@ -23,7 +23,7 @@
                         <div class="mb-3">
                             <label for="price" class="form-label">Price*</label>
                             <div>
-                                <input class="form-control btn-outline-black" type="number" name="price" min="0" max="1000" id="price" required>
+                                <input class="form-control btn-outline-black" type="number" name="price" min="0" max="1000" step=".01" id="price" required>
                             </div>
                         </div>
                     </div>
