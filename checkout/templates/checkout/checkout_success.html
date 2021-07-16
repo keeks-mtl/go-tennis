@@ -17,7 +17,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-md-11 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
@@ -57,7 +57,7 @@
                             </p>
                         </div>
                         <div class="col-12 col-md-7 text-md-right">
-                            <p class="text-muted mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
+                            <p class="text-muted mb-0">{{ item.quantity }} @ &#163; {{ item.product.price }} each</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -70,7 +70,7 @@
                             </p>
                         </div>
                         <div class="col-12 col-md-7 text-md-right">
-                            <p class="text-muted mb-0">${{ item.lesson.price }}</p>
+                            <p class="text-muted mb-0"> &#163; {{ item.lesson.price }}</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -171,7 +171,7 @@
                             <p class="mb-0">Shop Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0 text-muted">{{ order.order_total }}</p>
+                            <p class="mb-0 text-muted">&#163; {{ order.order_total }}</p>
                         </div>
                     </div>
 
@@ -180,7 +180,7 @@
                             <p class="mb-0">Delivery</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0 text-muted">{{ order.delivery_cost }}</p>
+                            <p class="mb-0 text-muted">&#163; {{ order.delivery_cost }}</p>
                         </div>
                     </div>
                     {% endif %}
@@ -191,7 +191,7 @@
                             <p class="mb-0">Lesson Cost</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0 text-muted">{{ order.lesson_total }}</p>
+                            <p class="mb-0 text-muted">&#163; {{ order.lesson_total }}</p>
                         </div>
                     </div>
                     {% endif %}
@@ -201,14 +201,14 @@
                             <p class="mb-0">Grand Total</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0 text-muted">{{ order.grand_total }}</p>
+                            <p class="mb-0 text-muted">&#163; {{ order.grand_total }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-			<div class="col-12 col-lg-7 text-right">
+			<div class="col-12 col-md-11 col-lg-7 text-right">
 				{% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-greige my-2">
                         <span class="icon mr-2">
