@@ -72,21 +72,16 @@
 ## Code Validators
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
   - No errors, the results are below:
-  <img src="./static/images/readme/cssvalidator.png"/>
+
+  <img src="readme-images/w3c-css-validator.png"/>
 
 - [W3C HTML Validator](https://validator.w3.org/)
+  - There were no issues after checking the HTML validator on all the pages except the book page. The HTML validator said an input couldn't be a child of tbody tag.
 - [Pep8Online](http://pep8online.com/)
-    - No errors, the results are below:
-    <img src="./static/images/readme/pep8.png"/>
+    - No errors, other than the migration files:
 - [JSHint](https://jshint.com/)
-    - No issues reported on script.js, results are below:
-    ```
-    Metrics
-    There are 3 functions in this file.
-    Function with the largest signature take 1 arguments, while the median is 1.
-    Largest function has 3 statements in it, while the median is 3.
-    The most complex function has a cyclomatic complexity value of 2 while the median is 1.
-    ```
+    - No issues reported on any of the javascript code.
+
 ## Manual Testing
 
 ### Elements on Every page
@@ -95,16 +90,16 @@
 - Check navbar when not logged in and make sure all proper links are showing.
   - Click on all the links and make sure they redirect to the proper pages.
 - Check navbar when logged in and make sure all the proper links are showing.
-  - Click on all the links and make sure they redirect to the proper pages
+- Check the links on the My Account when not logged in, logged in as a staff member, and as a superuser. 
+  - Click on all the links and make sure they redirect to the proper pages.
 - Check the navbar on all screen sizes and make sure it is responsive and the navbar changes on the different screen sizes. 
-- Make sure footer is at the bottom of the page on all pages (make sure to check pages with less content like login page)
 
 2. Footer
 - Click on all social media links and make sure they open in a new tab.
 - Click on the email address and make sure it is a link to email that email address.
 - Click on the phone number and make sure the phone dialer opens up with that number.
 - Check the spacing and links in all device sizes for responsiveness.
-- Make sure footer is at the bottom of the page on all pages on all device sizes (especially pages with less content like log in page)
+- Make sure footer is at the bottom of the page on all pages on all device sizes (especially pages with less content like log in page).
 
 ### Home Page
 #### General Testing
@@ -116,13 +111,14 @@
   - Google maps for Clissold Park
   
 #### Responsiveness Testing
-- Check the home page on all device sizes and make sure everything is well spaced on all size screens
+- Check the home page on all device sizes and make sure everything is well spaced on all size screens.
 
 ### Search Bar
 #### General Testing
 - Do a search for words in the description of a product and make sure it appears.
 - Do a search for a word that does not appear in any product name or description and make sure nothing shows on the shop page. 
 - Do a search for a name of a product and make sure it appears.
+- Click the search button when nothing is typed in the box and make sure a toasts informs the user hadn't searched for anything. 
 
 #### Responsiveness Testing
 - Make sure search bar is visible on all screen sizes. 
@@ -130,9 +126,9 @@
 
 ### Register
 #### General Testing
-- Make sure both log in links goes to log in page
-- Make sure email validation works
-- Make sure username validation works
+- Make sure both log in links goes to log in page.
+- Make sure email validation works.
+- Make sure username validation works.
 - Make sure validation works to ensure both passwords are the same. 
 - Check that once the form is properly filled out the log in button takes the user to the email verification page.
 
@@ -144,7 +140,7 @@
 - Check the sign up link works.
 - Check the home button works.
 - Check that the forgot password link takes the user to the password reset page.
-- Make sure the form validations work
+- Make sure the form validations work.
 - Make sure when the log in information is incorrect that the form tells the user that the password OR username is correct. 
 - Check that when a user logs in with the proper information that the page is redirected to the home page. 
 
@@ -154,22 +150,23 @@
 ### Logout
 #### General Testing
 - Check that if the cancel button is pressed that the user is redirected to the home page and they are still logged in. 
-- If The user presses the log out button make sure they are redirected to the home page and they are informed that they have been logged out. 
+- If the user presses the log out button make sure they are redirected to the home page and they are informed that they have been logged out. 
 
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
 
 ### Coaches Page
 #### General Testing
-- Click on the book lesson with "" button and make sure it redirects to the book lesson page with only that coach's lessons.
+- Click on the book lesson with "coach's name" button and make sure it redirects to the book lesson page with only that coach's lessons.
 - Check that the edit and delete links only are shown to the superuser.
+- Check that clicking on either the coach's image or name redirects to the Coach Page of that coach. 
 
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
 
 ### Coach Page
 #### General Testing
-- Check that the book lesson with "" button is linked to the book lesson page but only shows lessons with that coach. 
+- Check that the book lesson with "coach's name" button is linked to the book lesson page but only shows lessons with that coach. 
 - Make sure that the edit and delete links are only visible to the superuser. 
 - Make sure that the comments feature is visible. 
 
@@ -191,16 +188,16 @@
 
 ### Coach Management Page
 #### General Testing
-- Check the add coach form validation works on all the required fields
+- Check the add coach form validation works on all the required fields.
 - Make sure the cancel button redirects to coaches page. 
-- Once the form is properly filled and sent, make sure the user is redirected to the new coach's page and the a toast lets the user know they succesfully added a coach.
+- Once the form is properly filled and sent, make sure the user is redirected to the new coach's page and a toast lets the user know they succesfully added a coach.
 
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
 
 ### Edit Coach Page
 #### General Testing
-- Check that a toast let's the user know they are currently editing a user. 
+- Check that a toast let's the user know they are currently editing a coach. 
 - Check that the edit coach form is prepopulated with the information on the coach. 
 - Make sure the form validations still work. 
 - Once the form is submitted make sure the user is redirected to the coach's page.
@@ -222,10 +219,10 @@
 ### Lessons Page
 #### General Testing
 - Make sure all the links on the page take the user to the specific page.
-  - Coaches but to coaches page
+  - Coaches button to coaches page
   - Book a Lesson button to the book page
-  - Book now button the the respective book page with only that class type shown.
-  - Shop now button to the shop page. 
+  - Book now button the the respective book page with only that class type shown
+  - Shop now button to the shop page 
 
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
@@ -233,9 +230,9 @@
 ### Book Lesson Page
 #### General Testing
 - Check that the class type badges show only the respective lessons of that class type.
-- Check that the Coach names badges show only the respective lessons by that coach.
+- Check that the coach names badges show only the respective lessons by that coach.
 - Make sure the all lessons button resets the page to show all the lessons.
-- Check that the sort dropdown correctly sorts the lessons by each sort option
+- Check that the sort dropdown correctly sorts the lessons by each sort option.
 - Make sure the display that states how many lessons are being shown is correct.
 - Check that the book lesson button is putting the correct lesson in the user's bag.
 - Make sure the toast is stating the correct lesson is in the shopping bag. 
@@ -250,7 +247,7 @@
 - Make sure form validations on add lesson form work
 - Check that the cancel button takes the user back to the lessons page
 - Once the form is properly filled and submitted make sure the user is redirected to the lesson management page and a toast lets the user know they have successfully added the lesson. 
-- Make sure the lesson management page can only be accessed by an administrator. 
+- Make sure the lesson management page can only be accessed by a staff member. 
 
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
@@ -259,7 +256,7 @@
 #### General Testing
 - Check that the form validations work.
 - Check that cancel button takes the user back to the book lesson page.
-- Make sure the form can only be accessed by an administrator. 
+- Make sure the form can only be accessed by a staff member. 
 - Once the form is properly filled out and submitted, the user should be redirected to the book lesson page and a toast should tell the user they have successfully edited a lesson. 
 
 #### Responsiveness Testing
@@ -269,8 +266,8 @@
 #### General Testing
 - Make sure the delete button on the book lesson page activates a delete modal to confirm deletion. 
 - Check that the information displayed in the delete modal is correct.
-- Once an administrator has clicked the delete button on the delete modal, make sure the right lesson is deleted and a toast lets the user know they deleted a lesson. 
-- Check that the delete lesson route is protected.
+- Once a staff member has clicked the delete button on the delete modal, make sure the right lesson is deleted and a toast lets the user know they deleted a lesson.
+- Check that the delete lesson route is protected and can only be used by staff members.
 
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
@@ -278,7 +275,7 @@
 ### Shop Page
 #### General Testing
 - Check that pressing on the product category badge shows only those products in that category to the user.
-- Make sure the products home button resets the products to show all the products in their default sorting option
+- Make sure the all products button resets the products to show all the products in their default sorting option
 - Check each individual sorting option sorts the products in the correct order. 
 - Check that the edit and delete links are only shown to the superuser.
 - Make sure the up arrow in the bottom right corner of the screen takes the user back up to the top of the page. 
@@ -302,8 +299,8 @@
 
 ### Product Management Page
 #### General Testing
-- Make sure form validations on add product form work
-- Check that the cancel button takes the user back to the products page
+- Make sure form validations on add product form work.
+- Check that the cancel button takes the user back to the products page.
 - Once the form is properly filled and submitted make sure the user is redirected to the product detail page of that product and a toast lets the user know they have successfully added a product. 
 - Make sure the product management page can only be accessed by an administrator. 
 
@@ -312,8 +309,8 @@
 
 ### Edit Product Page
 #### General Testing
-- Make sure there is a toast that informs the user they are editing the product
-- Check that the form is prepopulated with the information on the product
+- Make sure there is a toast that informs the user they are editing the product.
+- Check that the form is prepopulated with the information on the product.
 - Check that the form validations work.
 - Check that cancel button takes the user back to the products page.
 - Make sure the form can only be accessed by an administrator. 
@@ -337,11 +334,11 @@
 - Add one lesson to shopping bag and then go to bag page.
   - Make sure the correct information is displayed in the toast.
   - Check that the correct information is displayed on lesson info table.
-  - Make sure shop total isn't displayed
+  - Make sure shop total isn't displayed.
   - Make sure there is no delivery cost.
   - Check that the grand total is correct.
   - Make sure the remove link removes the lesson from the bag and a toast appears to tell the user that the lesson has been removed from the bag.
-  - Click the secure checkout button and make sure you are redirected to checkout page
+  - Click the secure checkout button and make sure you are redirected to checkout page.
   - Make sure when the bag is empty the page lets the user know the bag is empty. 
 - Add a single quantity of one into the shopping bag, 2 of another product, 1 product a product with a size and 2x of another product with a size and then go to the bag page.
   - Make sure the correct information is displayed in the toast.
@@ -351,7 +348,7 @@
   - Make sure the validations for the quantity increment/decrement button validations work.
   - Make sure the update button updates the quantity of the product in the bag and a toasts informs the user that the quantity has been updated.
   - Make sure shop total, delivery, and Grand Total are correct. 
-  - Click the secure checkout button and make sure you are redirected to checkout page
+  - Click the secure checkout button and make sure you are redirected to checkout page.
 - Make sure the keep shopping button redirects the user to the shop page.
 - Add a lesson and a product to a user's shopping bag and navigate to the bag page. 
   - Make sure both lesson and product are in the shopping bag.
@@ -365,7 +362,7 @@
 ### Checkout Page
 #### General Testing
 - Make sure order summary has the correct information. 
-- Make sure Shop total & delivery only show if there is a product (and delivery is below the threshold)
+- Make sure Shop total & delivery only show if there is a product (and delivery is below the threshold).
 - Make sure lesson total only shows if there is a lesson.
 - Check that the checkout form is visible and prepopulated with any information that is in the database already about the user. 
 - Make sure the form validations work
@@ -379,7 +376,9 @@
 #### General Testing
 - Click on the "take a look at our products" button and see if the user is redirected to the products page. 
 - Make sure sure the heading says 'thank you, ?' where the ? is the user's full name. 
-- Check the chart and make sure all the information form the purchase is correct. 
+- Check the chart and make sure all the information form the purchase is correct.
+- Try a purchase with just a lesson, then just a product, and then a product and a lesson.
+  - Make sure the checkout success page shows all the corrrect information. 
 
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
@@ -394,32 +393,16 @@
 #### Responsiveness Testing
 - Make sure page is responsive and works on all device sizes.
 
-### Pagination Feature
-#### General Testing
-
-
 ## Bugs
 
 ### Checkout order total not correct Bug
 #### Bug
-- The grand total on the checkout success page and the order admin wasn't correct
+- The grand total on the checkout success page and the order admin wasn't correct.
 #### Fix
-- add lesson_lineitem_total to the checkout model order
+- add lesson_lineitem_total to the checkout model order. 
 
 ### lesson cost Bug
 #### Bug
 - the lesson cost doesn't show on the checkout_success.html when only a lesson is bought but shows when a lesson & product is bought. 
 #### Fix
-- fix description
-
-### Bugname Bug
-#### Bug
-- bug description
-#### Fix
-- fix description
-
-### Bugname Bug
-#### Bug
-- bug description
-#### Fix
-- fix description
+- change the signals file on the checkout app to have a lessonlineitem receiver. Then add a decimal.Decimal() to the self.grandtotal calculation on the checkout models file. 
