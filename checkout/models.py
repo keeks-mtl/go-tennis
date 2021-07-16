@@ -62,7 +62,9 @@ class Order(models.Model):
         else:
             self.delivery_cost = 0
         self.grand_total = (
-            decimal.Decimal(self.order_total) + decimal.Decimal(self.delivery_cost) + decimal.Decimal(self.lesson_total))
+            decimal.Decimal(self.order_total) +
+            decimal.Decimal(self.delivery_cost) +
+            decimal.Decimal(self.lesson_total))
         self.save()
 
     def save(self, *args, **kwargs):
