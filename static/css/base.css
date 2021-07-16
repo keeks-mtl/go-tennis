@@ -201,7 +201,7 @@ input[name='price']::placeholder {
 }
 
 .container-map img {
-    height: 300px;
+    height: 250px;
 }
 
 .header-margin {
@@ -357,7 +357,7 @@ input[name='price']::placeholder {
 /* ----------------------------------------------------Allauth form formatting */
 
 .allauth-form-inner-content {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .allauth-form-inner-content p {
