@@ -24,7 +24,7 @@
                         <a href="{% url 'add_coach' %}" class="dropdown-item">Coach Management</a>
                     {% endif %}
                 {% endif %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">My Profile</a>
+                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
             {% else %}
                 <a href="{% url 'account_signup' %}" class="dropdown-item">Signup</a>
@@ -54,7 +54,7 @@
             </form>
         </div>
     </li>
-    <li class="list-inline-item">
+    <li class="list-inline-item mobile-nav-mr">
         <a class="mobile-nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
