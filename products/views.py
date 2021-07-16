@@ -40,7 +40,8 @@ def products(request):
             category_search = request.GET['category']
             print(category_search)
             products = products.filter(category__name=category_search)
-            current_category = Category.objects.filter(name__in=category_search)
+            current_category = Category.objects.filter(
+                name__in=category_search)
             print(category_search)
 
         if 'q' in request.GET:

@@ -46,13 +46,13 @@ def book_lessons(request):
             class_type_search = request.GET['class_type']
             lessons = lessons.filter(class_type__name=class_type_search)
             sort_label = class_type_search
-            class_type_search = ClassType.objects.filter(name__in=class_type_search)
+            class_type_search = ClassType.objects.filter(
+                name__in=class_type_search)
 
         if 'coach' in request.GET:
             coach_name = request.GET['coach']
             coach_name = int(coach_name)
             lessons = lessons.filter(coach=coach_name)
-            all_coaches = Coach.objects.filter(first_name=coach_name)
 
     current_sorting = f'{sort}_{direction}'
 
