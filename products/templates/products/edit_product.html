@@ -4,7 +4,7 @@
 {% block content %}
     <div class="container header-margin">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-11 col-md-8">
                 <hr>
                 <h2 class="logo-font mb-4">Product Management</h2>
                 <h5 class="text-muted">Edit a Product</h5>
@@ -13,7 +13,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-11 col-md-8">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form.category | as_crispy_field }}
@@ -24,7 +24,7 @@
                         <div class="mb-3">
                             <label for="price" class="form-label">Price*</label>
                             <div>
-                                <input class="form-control btn-outline-black" type="number" value="{{ product.price }}" name="price" min="0" max="1000" id="price" required>
+                                <input class="form-control btn-outline-black" type="number" value="{{ product.price }}" name="price" min="0" max="1000" step=".01" id="price" required>
                             </div>
                         </div>
                     </div>
@@ -36,6 +36,7 @@
                                 </div>
                             </div>
                         </div>
+                    {{ form.image | as_crispy_field }}
                     {{ form.has_sizes | as_crispy_field }}
                     <div class="text-right">
                         <a class="btn btn-greige" href="{% url 'products' %}">Cancel</a>
