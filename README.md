@@ -1,5 +1,9 @@
 # Go-Tennis
 
+[View website on Heroku](go-tennis.herokuapp.com/)
+
+<div align="left"><img src="readme-images/go-tennis-intro.png" alt="Go-Tennis on mobile & iPhone"></div>
+
 ## Goal For This Project
 
 Go-Tennis is a place that helps facilitate a love of tennis for those in the community. This lesson first space, creates an environment where people can become better tennis players and cater to their needs to do so. First and foremost it is about teaching proper skills in tennis with lesson for all skill levels through a pay per lesson model. Also to facilitate students progressing into being better palyers, there is access to tennis merchandise through the shop feature.
@@ -102,7 +106,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 <details><summary>Homepage</summary>
 <p>
 
-![Homepage](readme-images/homepage-desktop.png)
+![Homepage](readme-images/home-desktop-wireframe.png)
 
 </p>
 </details>
@@ -143,7 +147,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 <details><summary>Homepage</summary>
 <p>
 
-![Homepage](readme-images/homepage-mobile.png)
+![Homepage](readme-images/home-mobile-wireframe.png)
 
 </p>
 </details>
@@ -189,7 +193,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 - There are two navigation bars on large sized screens and bigger (>992px). 
     1. The top nav bar has Go-Tennis logo beside Go-Tennis, a search bar, my account, and shopping bag links.
     2. The second navigational bar has Coaches, Lessons, Book Lesson, and Shop. 
-- On smaller screens there is One navigational bar(<992px).
+- On smaller screens (<992px) there is one navigational bar.
     - The hamburger icon which is a dropdown menu with Coaches, Lessons, Book Lesson, and Shop. 
     - And beside the hamburger icon, Home link, My Account dropdown, Search, and Shopping bag. 
 - When a user is not logged in, the My Account dropdown has links to Register and Log In.
@@ -238,12 +242,12 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 - The home page starts by giving users a brief description of what Go-Tennis offers.
 - That is followed by a longer description of the services and what Go-Tennis stands for. 
 - There is also call to action through a link to the shopping page to buy equipment. 
-- There are multiple links on the page to other sections of Go-Tennis so give quick links to areas       that a user would find most helpful.
-- Bellow the call to action and link to booking a lesson, there is an image showing the location of Go-Tennis as well as a link to google maps for more information on the location and how to get there. 
+- There are multiple links on the page to other sections of Go-Tennis to give quick links to areas that a user would find most helpful.
+- Below the call to action and link to booking a lesson, there is an image showing the location of Go-Tennis, as well as, a link to google maps for more information on the location and how to get there. 
  
 ### Footer
 
-<details><summary>Image Desktop</summary>
+<details><summary>Footer Desktop</summary>
 <p>
 
 ![image](readme-images/footer-desktop.png)
@@ -251,7 +255,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </p>
 </details>
 
-<details><summary>Image Mobile</summary>
+<details><summary>Footer Mobile</summary>
 <p>
 
 ![image](readme-images/footer-mobile.png)
@@ -259,7 +263,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </p>
 </details>
 
-- The footer is in a contrasting colour to stand out against the rest of the Go-Tennis pages. 
+- The footer is in the main blue colour to stand out against the mostly white background of the Go-Tennis pages. 
 - On the footer there is the contact information for Go-tennis including the telephone number and email address which both link to either calling the number (on mobiles) or emailing the email address. 
 - Following the contact information there are social media icons which are links that open on another page so that people can stay connected to Go-Tennis.
 - Below the social media links is the copyright.
@@ -267,7 +271,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Signup
 
-<details><summary>Image</summary>
+<details><summary>Signup Image</summary>
 <p>
 
 ![image](readme-images/signup-mobile.png)
@@ -275,7 +279,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </p>
 </details>
 
-- The signup page allows users to register to use Go-Tennis' features.
+- The signup page allows users to register to use Go-Tennis's features.
 - The signup form requires all of the following information to create an account:
     - User's email
     - Email confirmation
@@ -288,7 +292,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Log In
 
-<details><summary>Image</summary>
+<details><summary>Login Image</summary>
 <p>
 
 ![image](readme-images/login.png)
@@ -306,7 +310,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Log Out
 
-<details><summary>Image</summary>
+<details><summary>Logout Image</summary>
 <p>
 
 ![image](readme-images/logout.png)
@@ -322,7 +326,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Coaches Page
 
-<details><summary>Image Desktop</summary>
+<details><summary>Coaches Desktop</summary>
 <p>
 
 ![image](readme-images/coaches-desktop.png)
@@ -330,7 +334,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </p>
 </details>
 
-<details><summary>Image Mobile</summary>
+<details><summary>Coaches Mobile</summary>
 <p>
 
 ![image](readme-images/coaches-mobile.png)
@@ -365,12 +369,12 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 - There is an image of the coach, their name, a description, and a link to book a lesson with that particular coach.
 - If the user is a superuser then they have the ability to edit or delete the coach. 
 - The coach page differs from the coaches page because it gives users the ability to comment on the coach and give a rating. 
-- Below the coach's information the is a form for users to write a comment, give up to 5 stars and submit the form if the user is logged in (otherwise they are asked to log in or register).
-- Past comments are shown with the amount of stars they were give, the user who made the comment, the comment, and the date they commented. 
+- Below the coach's information there is a form for users to write a comment, give up to 5 stars, and submit the form if the user is logged in (otherwise they are asked to log in or register).
+- Past comments are shown with the amount of stars they were given, the user who made the comment, the comment, and the date they commented. 
 
 ### Coach Management Page
 
-<details><summary>Image</summary>
+<details><summary>Coach Management Image</summary>
 <p>
 
 ![image](readme-images/coach-management.png)
@@ -383,15 +387,14 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
     - First name (required)
     - Last name (required)
     - Email (required)
-    - Phone number (required)
+    - Phone number
     - Description (required)
-    - Image url
     - Select image button (when once an image is selected text that tells the user what image was selected)
-- Once the form has be filled in properly (must pass validations) the user is redirected to the coach's page with a toast that pops up in the top right hand corner letting the user know they succesfully added coach. 
+- Once the form has be filled in properly (must pass validations) the user is redirected to the coach's page with a toast that pops up in the top right hand corner letting the user know they succesfully added a coach. 
 
 ### Edit Coach Page
 
-<details><summary>Image</summary>
+<details><summary>Edit Coach Image</summary>
 <p>
 
 ![image](readme-images/edit-coach.png)
@@ -402,12 +405,12 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 - The edit coach page gives a superuser the ability to edit a particular coach.
 - Once the superuser has been redirected to the edit coach page a toast pops up in the top right hand corner letting the user know that they are editing the information on a coach. 
 - The edit coach form is prepopulated with all the information in the database about the coach.
-- The user has the ability to click the cancel button to be redirected to the coaches page or the update coach button or the update coach button to submit the form and be redirected to that coach's page. 
+- The user has the ability to click the cancel button to be redirected to the coaches page or the update coach button to submit the form and be redirected to that coach's page. 
 - Once the form has been submitted, a toast pops up in the top right hand corner letting the user know they have successfully edited the coach's information. 
 
 ### Delete Coach
 
-<details><summary>Image</summary>
+<details><summary>Delete Coach Image</summary>
 <p>
 
 ![image](readme-images/delete-coach.png)
@@ -416,18 +419,18 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </details>
 
 - The delete coach functionality allows a superuser to delete a coach from the database permanently. 
-- Once the staff member clicks the delete link next to the coach's name on either the coach page or coaches page, a confirmation modal pops up. 
+- Once the superuser clicks the delete link next to the coach's name on either the coach page or coaches page, a confirmation modal pops up. 
 - The delete confirmation modal has the following:
     - Title: Delete Coach
     - Confirmation question
     - Close button
     - Delete button
 - The user is asked if they are sure if they'd like to delete (coach's name) and if they press the delete button they are redirected to the coaches page. 
-- There is also a toast that pops up in the top right hand corner that tells the user they deleted the coach. 
+- There is also a toast that pops up in the top right hand corner that tells the user they successfully deleted the coach. 
 
 ### Lessons Page
 
-<details><summary>Image mobile</summary>
+<details><summary>Lessons Mobile Page</summary>
 <p>
 
 ![image](readme-images/lessons-mobile.png)
@@ -466,7 +469,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Sort Feature
 
-<details><summary>Image mobile</summary>
+<details><summary>Sort mobile</summary>
 <p>
 
 ![image](readme-images/sort.png)
@@ -496,7 +499,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Lesson Management Page
 
-<details><summary>Image</summary>
+<details><summary>Lesson Management Image</summary>
 <p>
 
 ![image](readme-images/lesson-management.png)
@@ -525,7 +528,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Edit Lesson Page
 
-<details><summary>Image</summary>
+<details><summary>Edit Lesson Image</summary>
 <p>
 
 ![image](readme-images/edit-lesson.png)
@@ -541,7 +544,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Delete Lesson
 
-<details><summary>Image</summary>
+<details><summary>Delete Lesson Image</summary>
 <p>
 
 ![image](readme-images/delete-lesson.png)
@@ -557,7 +560,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Shop Page
 
-<details><summary>Image</summary>
+<details><summary>Shop Image</summary>
 <p>
 
 ![image](readme-images/shop.png)
@@ -566,13 +569,13 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </details>
 
 - The shop page is available to everyone. 
-- There will be 3 badges at the top with the 3 product lines available in the product shop.
-    - When a particular badge is clicked only those products in the product line are shown.
+- There are 3 badges at the top with the 3 product lines available in the product shop.
+    - When a particular badge is clicked only those products in that product line are shown.
 - The users will have the ability to sort through the products by price, rating, name and category.
 
 ### Product Management Page
 
-<details><summary>Image</summary>
+<details><summary>Product Management Image</summary>
 <p>
 
 ![image](readme-images/product-management.png)
@@ -598,7 +601,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Edit Product Page
 
-<details><summary>Image</summary>
+<details><summary>Edit Product Image</summary>
 <p>
 
 ![image](readme-images/edit-product.png)
@@ -608,7 +611,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 - The edit product page can be reached by the edit button on either the shop page or the product detail page. 
 - The edit product page allows the superuser to edit a particular product's information.
-- When a user visits the edit product page a toast appears to notify the user they are editing the product. 
+- When the user visits the edit product page a toast appears to notify the user they are editing the product. 
 - The edit product page form is prepopulated with all the information there currently is on that particular product.
 - The cancel button redirects the user to the products page.
 - When the user is finished editing the product they can click the update product button.
@@ -617,7 +620,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Delete Product Feature
 
-<details><summary>Image</summary>
+<details><summary>Delete Product Image</summary>
 <p>
 
 ![image](readme-images/delete-product.png)
@@ -634,7 +637,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 #### Product Detail Page
 
-<details><summary>Image</summary>
+<details><summary>Product Detail Image</summary>
 <p>
 
 ![image](readme-images/product-detail.png)
@@ -651,12 +654,13 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
     - Rating
     - Description
 - The user also has ability on the product detail page to choose the quantity of the product they'd like and the ability to add it to their bag.
+- If the product has sizes, the user also has the option of picking a size from the dropdown menu. 
 - There is also a button that links the user to the shop page.
 - If the user adds the product to their bag they are shown a toast that tells them it was added to their bag. 
 
 ### Bag Page
 
-<details><summary>Image</summary>
+<details><summary>Bag Page Image</summary>
 <p>
 
 ![image](readme-images/bag.png)
@@ -676,7 +680,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
     - Product info
     - Price
     - Quantity
-    - Subtototal
+    - Subtotal
 - The specifics are then populated with the information pertaining to the headers such as:
     - Product image
     - Product name
@@ -686,7 +690,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
     - Quantity with buttons to increment or decrement the amount. 
     - Subtotal (Price * Quantity)
     - A button in update the quantity and a button to remove the product
-        - both buttons show a toast letting the user know they successfully updated the quantity or removed the product.
+        - Both buttons show a toast letting the user know they successfully updated the quantity or removed the product.
 - On smaller screens each product in the bag is shown in it's own individual card instead.  
 - Below the tables, The following information is shown:
     - Lesson Total
@@ -698,7 +702,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Checkout
 
-<details><summary>Image</summary>
+<details><summary>Checkout Image</summary>
 <p>
 
 ![image](readme-images/checkout.png)
@@ -719,22 +723,22 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
     - Email (required)
     - Phone number (required)
     - Street Address 1 (required)
-    - Street Address 2 (required)
+    - Street Address
     - Town or city (required)
     - County, State, or Locality
     - Postal code
-    - Country (required) and a dropdown with the country options 
+    - Country (required), a dropdown with the country options 
     - Credit card number, expiration date, cvc (required)
     - There is also a check box which allows the user to save the delivery information to their profile
-- The form has a Adjust Bag button which takes the user back to their bag page. 
-- There is also a Complete Order button which then processes the information through Stripe to process the payment.
-- After the user has correctly filled out the form and clicked the Complete Order button, a loading overlay appears to let the user know the payment is being processed.
+- The form has an adjust bag button which takes the user back to their bag page. 
+- There is also a complete order button which then processes the information through Stripe to process the payment.
+- After the user has correctly filled out the form and clicked the complete order button, a loading overlay appears to let the user know the payment is being processed.
 - Once the payment has been processed the user is redirected to checkout success page.
 - They are also shown a toast which lets the user know they successfully completed the order with their order number and a statement which informs them what email address the confirmation email was sent to. 
 
 ### Checkout Success Page
 
-<details><summary>Image</summary>
+<details><summary>Checkout Success Image</summary>
 <p>
 
 ![image](readme-images/checkout-success.png)
@@ -744,11 +748,11 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 - A user is redirected to the checkout success page once they've successfully purchased the things in their bag. 
 - The Heading is a thank you message with the user's full name.
-- The user is also reminded to what email the confirmation email was sent to.
+- The user is also reminded what email the confirmation email was sent to.
 - The page has the following information on their order.
     - Order number
     - Order date
-    - Products & Lessons they bought
+    - Products & lessons they bought
     - Full name with their full address details they submitted
     - Order total
     - Delivery cost
@@ -757,7 +761,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 
 ### Profile
 
-<details><summary>Image Desktop</summary>
+<details><summary>Profile Desktop</summary>
 <p>
 
 ![image](readme-images/profile-desktop.png)
@@ -765,7 +769,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 </p>
 </details>
 
-<details><summary>Image Mobile</summary>
+<details><summary>Profile Mobile</summary>
 <p>
 
 ![image](readme-images/profile-mobile.png)
@@ -777,7 +781,7 @@ Go-Tennis is a place that helps facilitate a love of tennis for those in the com
 - The heading for the page is My Profile and the username of the user. 
 - The delivery information form allows users to update their delivery information and save it to file. 
 - The form is prepopulated with the data Go-Tennis has on file. 
-- There is the Update Information button at the bottom of the form which, when clicked, redirects the user to the updated profile page and a toast appears telling the user that they have successfully updated their profile. 
+- There is the update information button at the bottom of the form which, when clicked, redirects the user to the updated profile page and a toast appears telling the user that they have successfully updated their profile. 
 - The other part of the profile page is the order history of the user. 
 - The order history is a table that has the following headings:
     - Order number
@@ -856,16 +860,16 @@ Country | default_country | blank_label='Country', null=True, Blank=True | Count
 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
-Order Number | order_number | maxlength="32", null=False, editable=False | models.CharField 
+Order Number | order_number | maxlength=32, null=False, editable=False | models.CharField 
 User Profile | user_profile | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name="orders" | models.ForeignKey
-Full Name | full_name | maxlength="50", blank=True | models.CharField
+Full Name | full_name | maxlength=50, blank=True | models.CharField
 Email | Email | maxlength="254", blank=True | models.CharField 
-Phone Number | phone_number | maxlength="20", blank=True | models.CharField
-Street Address 1 | street_address1 | maxlength="80", Blank=True | models.CharField
-Street Address 2 | street_address2 | maxlength="80", Blank=True | models.CharField
-Town or City | town_or_city | maxlength="40", Blank=True | models.CharField
-County, State or Locality | county | maxlength="80", Blank=True | models.CharField
-Postcode | postcode | maxlength="20", Blank=True | models.CharField
+Phone Number | phone_number | maxlength=20, blank=True | models.CharField
+Street Address 1 | street_address1 | maxlength=80, Blank=True | models.CharField
+Street Address 2 | street_address2 | maxlength=80, Blank=True | models.CharField
+Town or City | town_or_city | maxlength=40, Blank=True | models.CharField
+County, State or Locality | county | maxlength=80, Blank=True | models.CharField
+Postcode | postcode | maxlength=20, Blank=True | models.CharField
 Country | country | blank_label='Country', null=True, Blank=True | CountryField
 Date | date | auto_now_add=True | models.DateTimeField
 Delivery Cost | delivery_cost | max_digits=6 , decimal_places=2, null=False, default=0 | models.DecimalField
@@ -874,7 +878,7 @@ Lesson Total | lesson_total | max_digits=10 , decimal_places=2, null=False, defa
 Grand Total | grand_total | max_digits=10 , decimal_places=2, null=False, default=0 | models.DecimalField
 Original bag | original_bag | null=False, Blank=False | models.TextField
 Original lesson bag | original_lesson_bag | null=False, Blank=False | models.TextField
-Stripe Pid | stripe_pid | `maxlength="254", null=False, Blank=False | models.CharField
+Stripe Pid | stripe_pid | maxlength=254, null=False, Blank=False | models.CharField
 
 #### Order Line Item
 
@@ -906,8 +910,8 @@ Friendly Name | friendly_name | max_length=100, blank=True | models.CharField
 
 | Name | Key | Validation | Field Type |
 --- | --- | --- | --- 
-Class Type | class_type | 'ClassType', null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
-Coach | coach | Profile, maxlength="40", null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
+Class Type | class_type | ClassType, null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
+Coach | coach | Profile, maxlength=40, null=True, blank=True, on_delete=models.SET_NULL | models.ForeignKey
 Description | description | blank=True | models.TextField 
 Date | date | default="2021-09-05" | models.DateField 
 Time | time |  | models.TimeField 
@@ -984,14 +988,10 @@ Spots | spots | default=4 | models.IntegerField
     - To store static and media files in production
 - [Favicon](https://favicon.io/)
     - Used to generate the Favicon on the webpage tab.
-- [AmIResponsive](http://ami.responsivedesign.is/#)
-    - Used to create responsive images.
-- [Dbdiagram](https://dbdiagram.io/home)
-    - Used to create model relationship diagrams of the database.
 
 ## Testing
 
-Testing information can be found in this file : [testing.md](testing.md)
+Testing information can be found in this file : [TESTING.md](TESTING.md)
 
 ## Deployment
 
@@ -1177,8 +1177,10 @@ I have used the following websites to get info & images for my website.
     - How to keep footer at bottom.
 - [Django Docs](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#now)
     - Add copyright
-- [Django Dcs](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
+- [Django Docs](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)
     - is_staff for lessons views.
+- [Stackoverflow](https://stackoverflow.com/questions/17507784/consolidating-multiple-post-save-signals-with-one-receiver)
+    - signal receiver for multiple senders
 
 ### Acknowledgements
 
