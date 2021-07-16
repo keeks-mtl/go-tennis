@@ -1,7 +1,6 @@
-from django.test import TestCase, Client
+from django.test import TestCase
 from lessons.models import ClassType, Lesson
 from coaches.models import Coach
-from django.contrib.auth.models import User
 
 
 class TestLessonModels(TestCase):

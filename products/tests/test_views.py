@@ -1,7 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
-from django.contrib.messages import get_messages
 from products.models import Category, Product
 
 
@@ -31,7 +30,7 @@ class TestProductViews(TestCase):
         )
         self.products = reverse("products")
         self.product_detail = reverse("product_detail",
-                                   kwargs={"product_id": self.product.id})
+                                      kwargs={"product_id": self.product.id})
 
     def test_products_view(self):
         ''' Test the products view '''
