@@ -60,7 +60,7 @@
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}"">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
@@ -139,7 +139,7 @@
 		});
 	</script>
     
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             let selector = $(this);
             let currentUrl = new URL(window.location);
