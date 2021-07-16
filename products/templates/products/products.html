@@ -133,13 +133,10 @@
 {% block postloadjs %}
     {{ block.super }}
     <script src="{% static 'js/main.js' %}"></script>
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
+    <script>
+        $('.btt-link').click(function(e) {
 			window.scrollTo(0,0);
 		});
-	</script>
-    
-    <script>
         $('#sort-selector').change(function() {
             let selector = $(this);
             let currentUrl = new URL(window.location);
